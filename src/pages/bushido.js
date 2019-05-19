@@ -1,16 +1,16 @@
 import React from "react"
 // import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/layoutBushido"
 import SEO from "../components/seo"
 
 import "../styles/global.css"
 
-const IndexPage = () => (
+const BushidoPage = () => (
   <Layout>
     <SEO title="Dusan Tatransky" keywords={[`dusan tatransky`]} />
     
   </Layout>
 )
 
-export default IndexPage
+export default BushidoPage

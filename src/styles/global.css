@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap&subset=latin-ext');
+
+/* @import url(''); */
+
+:root {
+  --bg_black: #111111;
+  --white: #ffffff;
+  --orange: #f68848;
+  --green: #27fb6b;
+  --grey: #484A47;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  background: var(--bg_black);
+}
+
+p {
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: var(--white);
+  line-height: 0.9;
+  margin-left: 50px;
+  margin-top: 55px;
+  max-width: 250px;
+}
+
+h2 {
+  font-family: 'Source Code Pro', monospace;
+  color: var(--bg_black);
+  font-size: 24px;
+  line-height: 1.17;
+  margin: 0 auto 54px;
+  text-transform: uppercase;
+}
