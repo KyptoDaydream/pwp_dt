@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
-import { Controller, Scene } from 'react-scrollmagic'
+// import { Controller, Scene } from 'react-scrollmagic'
 // import { DistortionText } from 'react-text-fun'
 
 import Burger from "./burger"
@@ -235,8 +235,6 @@ const Layout = ({ children }) => (
           <img className="window_photo_1" src={window_photo_1} alt=''/>
           <img className="window_photo_2" src={window_photo_2} alt=''/>
         </HomeWrapper>
-        <Controller>
-          <Scene classToggle="turn_orange" triggerElement="#trigger_turn_orange">
             <DusanstvoWrapper>
               <Dusanstvo className="d1" src={dusanstvo} alt=''/>
               <Dusanstvo className="d2" src={dusanstvo} alt=''/>
@@ -245,8 +243,6 @@ const Layout = ({ children }) => (
               <Dusanstvo className="d2" src={dusanstvo} alt=''/>
             </DusanstvoWrapper>
             <BushidoWrapper/>
-          </Scene>
-        </Controller>
         <main>{children}</main>
       </PageWrapper>
     )}
