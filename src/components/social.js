@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import linkedin from "../images/linkedin.svg"
-import linkedin_hover from "../images/linkedin_hover.svg"
+// import linkedin_hover from "../images/linkedin_hover.svg"
 import medium from "../images/medium.svg"
-import medium_hover from "../images/medium_hover.svg"
+// import medium_hover from "../images/medium_hover.svg"
 import goodreads from "../images/goodreads.svg"
-import goodreads_hover from "../images/goodreads_hover.svg"
+// import goodreads_hover from "../images/goodreads_hover.svg"
 import linkedin_nav from "../images/linkedin_nav.svg"
 import linkedin_nav_hover from "../images/linkedin_nav_hover.svg"
 import medium_nav from "../images/medium_nav.svg"
@@ -25,10 +25,15 @@ const SocialIcon = styled.div `
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    bottom: 30px;
+    bottom: 2px;
     left: 40px;
+    width: 26px;
+    height: 26px;
+    background: var(--green);
+    border-radius: 50px;
+    border: 1px solid var(--black);
     :hover {
-      background-image: url(${linkedin_hover});
+      background-image: url(${linkedin});
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -39,10 +44,15 @@ const SocialIcon = styled.div `
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    bottom: 30px;
-    left: 85px;
+    bottom: 2px;
+    left: 60px;
+    width: 26px;
+    height: 26px;
+    background: var(--green);
+    border-radius: 50px;
+    border: 1px solid var(--black);
     :hover {
-      background-image: url(${medium_hover});
+      background-image: url(${medium});
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -53,10 +63,15 @@ const SocialIcon = styled.div `
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    bottom: 30px;
-    left: 125px;
+    bottom: 2px;
+    left: 80px;
+    width: 26px;
+    height: 26px;
+    background: var(--green);
+    border-radius: 50px;
+    border: 1px solid var(--black);
     :hover {
-      background-image: url(${goodreads_hover});
+      background-image: url(${goodreads});
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;

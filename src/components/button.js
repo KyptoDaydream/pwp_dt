@@ -15,8 +15,8 @@ const ButtonWrapper = styled.a`
   transition: 0.25s;
   text-decoration: none;
   &:hover {
-    margin-left: -2.5px;
-    margin-top: -2.5px;
+    margin-left: -8px;
+    margin-top: -8px;
     font-size: 14px;
     padding: 12px 20px;
     background-size: 100% 88%;

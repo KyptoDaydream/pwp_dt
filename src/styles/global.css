@@ -1,31 +1,65 @@
 
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900&display=swap&subset=latin-ext');
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Erica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Sniglet:800&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Passion+One:900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Titan+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Corben:400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Seymour+One&display=swap&subset=latin-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:900&display=swap&subset=latin-ext');
 
 /* @import url(''); */
 
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Titan+One&display=swap&subset=latin-ext');
+
 :root {
-  --bg_black: #111111;
+  --bg_black: #000000;
   --white: #ffffff;
   --orange: #f68848;
   --green: #27fb6b;
-  --grey: #484A47;
+  --grey: #dedede;
   --black: #000000;
 }
+/* --grey: #484A47; */
 
 * {
+  font-size: 13px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none !important;
+}
+
+a, .bm-burger-button, .bm-burger-cross {
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 *:focus {
   outline: none;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 body {
   font-family: 'Source Code Pro', monospace;
-  background: var(--bg_black);
+  background-color: var(--black);
+  background-image: url('../images/bg.png');
+  background-size: cover;
+  cursor: none !important;
 }
 
 p {
@@ -35,19 +69,131 @@ p {
 }
 
 h1 {
-  font-family: 'Rubik Mono One', sans-serif;
-  color: var(--white);
+  
+  font-family: 'Source Code Pro', monospace;
+  color: var(--black);
   line-height: 0.9;
-  margin-left: 50px;
-  margin-top: 55px;
-  max-width: 250px;
+  font-size: 20px;
+  font-weight: 900;
+  
+}
+
+h1.name {
+  top: 50%;
+  left: 100px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: fixed;
+  transform: translate(-50%, -50%) rotate(180deg);
+  -webkit-text-stroke: 1px white; 
+}
+
+h1.headlines {
+  position: relative;
+  /* 
+
+  text-transform: uppercase;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Work Sans', sans-serif; 
+  font-family: 'Modak', cursive;
+  font-family: 'Erica One', cursive;
+  font-family: 'Sniglet', cursive;
+  font-family: 'Passion One', cursive;
+  font-family: 'Titan One', cursive;
+  font-family: 'Corben', cursive;
+  font-family: 'Kanit', sans-serif;
+  */
+  text-transform: uppercase;
+  font-family: 'Titan One', cursive;
+  color: var(--white);
+  font-weight: 200;
+  line-height: 0.9;
+  font-size: 60px;
+  font-weight: 900;
+  padding-bottom: 20px;
+  mix-blend-mode: difference;
+  background-size: 0% 0.2em;
+  transition: background-size 0.25s ease-in;
+}
+
+h1.headlines {
+  text-align: center;
+}
+
+h1.headlines.home:hover {
+  background-image: linear-gradient(120deg, var(--green) 0%, var(--green) 100%); 
+  background-repeat: no-repeat;
+  background-size: 40% 0.3em;
+  background-position: 0 75%;
+  transition: background-size 0.25s ease-in;
+}
+
+h1.headlines span {
+  font-size: 60px;
+  text-decoration: none;
+  color: var(--black);
+  -webkit-text-stroke: 0.1px white; 
+  mix-blend-mode: difference;
+}
+
+h1.headlines span.word_fill {
+  display: none;
+  font-size: 60px;
+  color: var(--white);
+  -webkit-text-stroke: 0); 
+  mix-blend-mode: difference;
+}
+
+h1.headlines:hover span.word_fill {
+  display: inline-block;
+}
+
+h1.headlines span.typewritter {
+  
+  /*
+  text-transform: lowercase;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 40px;
+  color: var(--orange);*/
+
+  font-size: 60px;
+  color: var(--orange);
+  -webkit-text-stroke: 0.1px var(--black); 
+  mix-blend-mode: difference;
+
+  margin: 0 auto;
+  margin-left: 20px;
+  display: none;
+}
+
+h1.headlines:hover span.typewritter {
+  display: inline-block;
 }
 
 h2 {
+  font-family: 'Titan One', cursive;
+  letter-spacing: 1px;
+  color: var(--black); 
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  margin: 0 auto 20px;
+}
+
+h3 {
   font-family: 'Source Code Pro', monospace;
-  color: var(--bg_black);
+  color: var(--white);
   font-size: 24px;
   line-height: 1.17;
   margin: 0 auto 54px;
+  font-size: 50px;
+  font-weight: 400;
   text-transform: uppercase;
+  margin-top: 200px;
+  margin-left: 50px;
 }
+
+  /* 
+  -webkit-text-stroke: 5px white; 
+  mix-blend-mode: difference;
+  */
