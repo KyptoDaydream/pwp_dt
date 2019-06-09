@@ -14,8 +14,8 @@ import goodreads_nav from "../images/goodreads_nav.svg"
 import goodreads_nav_hover from "../images/goodreads_nav_hover.svg"
 
 const SocialIcon = styled.div `
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   position: fixed;
   transition: 0.3s;
   z-index: 1002;

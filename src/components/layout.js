@@ -14,9 +14,12 @@ import styled from "styled-components"
 // import { DistortionText } from 'react-text-fun'
 
 import Burger from "./burger"
+import Footer from "./footerHome"
+import GlitchImage from "./glitchImage"
+import Avatar from "./avatar"
 // import Social from "./social"
 // import Footer from "./footer"
-import WindowedImage from "./windowedImage"
+// import WindowedImage from "./windowedImage"
 // import Button from "./button"
 
 // import avatar_default from "../images/avatar_new.png"
@@ -28,13 +31,15 @@ import WindowedImage from "./windowedImage"
 // import dusanstvo from "../images/dusanstvo.svg"
 // import window_photo_1 from "../images/window_photo_1.png"
 // import window_photo_2 from "../images/window_photo_2.png"
-import dusanstvo_landing from "../images/dusanstvo_landing_alt.jpg"
+import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
-import avatar from "../images/avatar.svg"
-import banana from "../images/banana.svg"
+// import avatar from "../images/avatar_new.png"
+// import banana from "../images/banana.svg"
 // import samurai from "../images/samurai.svg"
 // import boom from "../images/boom.svg"
+// import bushido_avatar from "../images/bushido_avatar.svg"
+//import bushido_avatar_hover from "../images/bushido_avatar_hover.svg"
 
 // import Header from "./header"
 //  <Header siteTitle={data.site.siteMetadata.title} />
@@ -62,188 +67,181 @@ const BurgerWrapper = styled.div `
   right: 0;
   z-index: 99999;
 `
-const CustomCursor = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  width: 100px;
-  height: 100px;
-  left: -2.5px;
-  top: -2.5px;
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  z-index: 10000000;
-  background: var(--white);
-  transition: width 500ms ease 0s, height 500ms ease 0s, border 500ms ease 0s, background-color 250ms ease 0s;
-  display: block;
-`
 const Menu = styled.div`
   display: block;
   position: relative;
   z-index: 3;
-  .home_1:hover {
-    div {
-      display: block;
-      position: fixed;
-      width: 400px;
-      top: 60px;
-      right: 120px;
-      animation: reveal_1 1.5s;
+  a {
+    position: relative;
+    display: block;
+  }
+  .home_1:hover + div {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: -150px;
+    margin-left: -200px;
+  }
+  .home_2:hover + div {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: -150px;
+    margin-left: -200px;
+  }
+  .link_wrapper:hover h1 {
+    opacity: 0.3;
+  }
+  .text_hide {
+    opacity: 0;
+    animation: text_hide 0.3s linear;
+  }
+  @keyframes text_hide {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
-  .home_2:hover {
-    div {
-      display: block;
-      position: fixed;
-      width: 400px;
-      bottom: 20px;
-      left: 40px;
-      animation: reveal_1 1.5s;
-    }
-  }
-  @keyframes reveal_1 {
-    0% {width: 0px;}
-    100% {background-position: 400px;}
-    }
 `
+
 const ImageWrapper = styled.div`
-  position: absolute;
+  /* position: absolute;
   width: 700px;
   overflow: hidden;
-  right: -270px;
-  top: 170px;
+  right: -150px;
+  bottom: -40px;
+  z-index: 2; */
+  
+  /*position: absolute;
   z-index: 2;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;*/
+
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  width: 700px;
+  height: 100vh;
+  left: 50%;
+  animation: slide_in 0.3s ease-out;
   img {
-    margin-left: -100px;
+    width: auto;
+    width: 100%;
+    object-fit: cover;
   }
-`
-const Avatar = styled.img`
-  width: 100px;
-  position: absolute;
-  left: 200px;
-  top: 50px;
-`
-const TextSlide = styled.div`
-  position: absolute;
-  padding: 20px;
-  bottom: 20px;
-  z-index: 1;
-  width: 3125px;
-  p {
-    overflow-x:auto;
-    overflow-y:hidden;
-    display: inline-block;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    color: var(--white);
-    animation: slide 40s linear infinite;
-    height: 50px;
-    line-height: 50px;
-    span {
-      float: left;
-      font-size: 18px;
-      font-weight: 600;
+  &.image_hide {
+    opacity: 0.2;
+    left: 100%;
+    animation: slide_away 0.5s linear;
+  }
+  @keyframes slide_in {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 50%;
     }
   }
-  @keyframes slide {
-  0% {
-    transform: translate(100px, 0);
+  @keyframes slide_away {
+    0% {
+      left: 50%;
+    }
+    100% {
+      left: 100%;
+    }
   }
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-`
-const MenuText = styled.p`
-  position: fixed;
-  top: 55px;
-  right: 120px;
-  color: var(--white);
-  
-`
-const Banana = styled.span`
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 0 25px 0 25px;
-  background-image: url(${banana});
-  background-size: cover;
-  background-repeat: no-repeat;
 `
 
 const H1ImageWrapper = styled.div`
-  display: none;
+  transition: 0.3s;
+  position: absolute;
+  opacity: 0;
   z-index: -1;
+  width: 400px;
+  left: 150%;
+  top: -150px;
+  margin-right: 200px;
 `
 const H2ImageWrapper = styled.div`
-  display: none;
+  transition: 0.3s;
+  position: absolute;
+  opacity: 0;
   z-index: -1;
+  width: 400px;
+  left: 150%;
+  top: -150px;
+  margin-right: 200px;
 `
-class Layout extends React.Component {
-  constructor () {
-    super()
- 
-    this.state = {
-      clientX: -100,
-      clientY: -100,
+const Headline = styled.p`
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 1;
+  animation: text_show 0.4s linear;
+  @keyframes text_show {
+    0% {
+      opacity: 0;
     }
-    this.handleMouseMove = this.handleMouseMove.bind(this)
-    this.custom_cursor = React.createRef()
+    100% {
+      opacity: 1;
+    }
   }
+`
 
-  componentDidUpdate () {
-    this.custom_cursor.current.style.transform = `translate(${this.state.clientX}px, ${this.state.clientY}px)`;
+class Layout extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+        isHovered: false
+    };
+    this.handleHover = this.handleHover.bind(this);
   }
-
-  handleMouseMove(e) {
-    this.setState({ 
-      clientX: e.clientX - 50, 
-      clientY: e.clientY - 50
-      
-    });
+  handleHover(){
+      this.setState(prevState => ({
+          isHovered: !prevState.isHovered
+      }));
   }
-
   render () {
+    const imageClass = this.state.isHovered ? "image_hide" : "";
+    const textClass = this.state.isHovered ? "text_hide" : "";
     return (
-      <PageWrapper onMouseMove={this.handleMouseMove}>
-        <CustomCursor ref={this.custom_cursor}/>
-        <Avatar src={avatar}/>
-        <MenuText>
-          menu
-        </MenuText>
+      <PageWrapper>
         <BurgerWrapper>
           <Burger burder_color="burger_white"/>
         </BurgerWrapper>
         <h1 className="name">Dušan Tatranský</h1>
         <WelcomeWrapper>
+          <Avatar />
           <Menu>
-            <Link to="/aboutMe">
-              <h1 className="headlines home home_1"><span>01 </span><span className="word_fill"> pre</span>Čítaj<span className="typewritter"> si o mne</span>
-              <H1ImageWrapper>
-                <WindowedImage url={dusanstvo_omne} />
-              </H1ImageWrapper>
-              </h1>
-            </Link>
-            <h1 className="headlines home home_2"><span>02 </span><span className="word_fill"> na</span>Píš<span className="typewritter"> mi o sebe</span>
-              <H2ImageWrapper>
-                <WindowedImage url={dusanstvo_otebe} />
-              </H2ImageWrapper>
-            </h1>
+            <Headline className={textClass}>Som Online Bodyguard z ďalekého východu ... z Košíc</Headline>
+            <div className="link_wrapper" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+              <Link to="/aboutMe">
+                <h1 className="headlines home_1">Prečítaj si o mne</h1>
+                <H1ImageWrapper>
+                  <img src={dusanstvo_omne} alt='' />
+                </H1ImageWrapper>
+              </Link>
+              <Link to="/aboutYou">
+              <h1 className="headlines home_2">Napíš mi</h1>
+                <H2ImageWrapper>
+                  <img src={dusanstvo_otebe} alt='' />
+                </H2ImageWrapper>
+              </Link>  
+            </div>
           </Menu>
         </WelcomeWrapper>
-        <ImageWrapper>
-          <WindowedImage url={dusanstvo_landing} />
+        <ImageWrapper className={imageClass}>
+          <GlitchImage url={dusanstvo_landing}/>
         </ImageWrapper>
-        <TextSlide>
-          <p className="first_slide"> <span>Som Dušan Tatranský a ty nie </span> <Banana />
-           <span>Som Online Bodyguard z ďalekého východu ... z Košíc </span><Banana />
-           <span>Od roku 2008 ma baví a od roku 2011 ma živí marketing </span><Banana />
-           <span>Chcem aby sa viac ľudí dokázalo uživiť tým, čo ich baví </span><Banana />
-           <span>Preto ľudom ako si ty pomáham budovať osobnú značku </span><Banana />
-           </p>
-        </TextSlide>
+        <Footer />
       </PageWrapper>
     )
   }

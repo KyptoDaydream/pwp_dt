@@ -8,8 +8,7 @@ import "../styles/global.css"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Dusan Tatransky" keywords={[`dusan tatransky`]} />
-    
+    <SEO title="Dusan Tatransky" keywords={[`dusan tatransky`]} />   
   </Layout>
 )
 
