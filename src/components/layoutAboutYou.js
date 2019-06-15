@@ -8,7 +8,7 @@ import { Controller, Scene } from 'react-scrollmagic'
 import Avatar from "./avatar"
 import Burger from "./burger"
 import FooterHome from "./footerHome"
-import Footer from "./footer"
+import FooterContact from "./footerContact"
 import ScrollDown from "./scrollDown"
 
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
@@ -197,13 +197,7 @@ svete viditeľný a akým zas neviditeľný?</p>
             <h1 id="trigger_hide_scroll">trollovia</h1>
           </BlokRight>
       </TextWrapper>
-      <Footer
-      link_1="Ziskaj brand review"
-      url_1="/aboutYou"
-      image_1={dusanstvo_otebe}
-      link_2="Moji klienti"
-      url_2="/clients"
-      image_2={dusanstvo_otebe} />
+      <FooterContact />
     </PageWrapper>   
     </Scene>
   </Controller>
