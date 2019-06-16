@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const Hurray = () => (
   <Layout>
-    <SEO title="Ozvem sa čoskoro" />
+    <SEO title="HURRAY! Ozvem sa čoskoro" />
   </Layout>
 )
 

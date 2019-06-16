@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 // import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { Link } from "gatsby"
@@ -22,6 +21,9 @@ const PageWrapper = styled.div `
   width: 100vw;
   background: var(--white);
   transition: 0.4s;
+  .hide_social {
+    opacity: 0;
+  }
 `
 const TextWrapper = styled.div`
   width: 900px;
@@ -47,7 +49,7 @@ const Trigger = styled.div`
   display: block;
 `
 
-const LayoutClients = ({ children }) => ( 
+const LayoutClients = () => ( 
     <PageWrapper>
       <BurgerWrapper>
         <Burger burder_color="burger_white"/>
@@ -55,7 +57,7 @@ const LayoutClients = ({ children }) => (
       <Link to="/">
         <Avatar />
       </Link>
-      <Controller>
+      <Controller globalSceneOptions={{ triggerHook: "onEnter" }}>
         <Scene classToggle="hide_social" triggerElement="#trigger_hide_social">
           <div><FooterHome /></div>
         </Scene>
@@ -74,9 +76,5 @@ const LayoutClients = ({ children }) => (
       image_2={dusanstvo_otebe} />
     </PageWrapper>  
 )
-
-LayoutClients.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default LayoutClients
