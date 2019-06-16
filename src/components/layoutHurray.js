@@ -9,7 +9,7 @@ import FooterHome from "./footerHome"
 import Footer from "./footer"
 
 
-import hurray from "../images/hurray.gif"
+import hurray from "../images/hurray_opt.gif"
 
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"

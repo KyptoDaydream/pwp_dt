@@ -10,7 +10,7 @@ import FooterHome from "./footerHome"
 import Footer from "./footer"
 
 
-import not_found from "../images/404.gif"
+import not_found from "../images/404_opt.gif"
 
 import dusanstvo_mne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
