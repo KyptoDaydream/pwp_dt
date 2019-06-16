@@ -247,7 +247,7 @@ fungovať unikátne pre teba a tvoje možnosti. </p>
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="/pages/hurray/"
+          action="/hurray/"
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
