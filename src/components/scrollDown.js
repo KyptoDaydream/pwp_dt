@@ -13,11 +13,14 @@ const ScrollDownWrapper = styled.div `
   bottom: 40px;
   right: 50px;
   z-index: 99998;
-  animation:spin 8s linear infinite;
+	animation:spin 8s linear infinite;
   @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
   .scroll_icon_class{
     fill: var(--black);
-    }
+	}
+	@media (max-width: 700px) {
+		display: none;
+  }	
 `
 
 class ScrollDown extends React.Component {

@@ -71,6 +71,10 @@ const TextWrapper = styled.div`
   .second_paragraph {
     padding-top: 0;
   }
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    padding: 0px 25px 150px 25px;
+  }
 `
 
 const BurgerWrapper = styled.div `
@@ -160,6 +164,17 @@ const BlokRight = styled.div`
     opacity: 1;
     top: -200px;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    p {
+    padding: 25px 0 25px 0;
+    }
+    h1 {
+      font-size: 14vw;
+    }
+  }
 `
 
 
@@ -168,10 +183,10 @@ const LayoutClients = ({ children }) => (
     <Scene classToggle="change_color" triggerElement="#trigger_hide_text">
     <PageWrapper>
       <BurgerWrapper>
-        <Burger burder_color="burger_white"/>
+        <Burger burder_color="burger_white" services="active"/>
       </BurgerWrapper>
       <Link to="/">
-        <Avatar />
+        <Avatar white="true"/>
       </Link>
       <Controller>
         <Scene classToggle="hide_text" triggerElement="#trigger_hide_text">
@@ -189,13 +204,11 @@ const LayoutClients = ({ children }) => (
         </Scene>
       </Controller>
       <TextWrapper>
-        <h2>Ako online bodybuilder ti pomôžem budovať tvoju osobnú značku a chrániť reputáciu.</h2>
+        <h2>Ako online bodybuilder ti pomôžem budovať tvoju osobnú značku.</h2>
         <ImageWrapper>
           <img src={dusanstvo_sluzby} alt='' />
         </ImageWrapper>
-        <h2 className="second_paragraph" id="trigger_hide_text">Pomôžem ti  budovať 
-a zabezpečiť tvoju osobnú 
-značku a chrániť reputáciu.</h2>
+        <h2 className="second_paragraph" id="trigger_hide_text">Ako online bodyguard ti pomôžem chrániť tvoju osobnú značku a reputáciu.</h2>
           <BlokRight>
           <p id="trigger_hide_text">
           Som freelancer a robím marketing s dušou. Vďaka tomu, že spolupracujem s inými osvedčenými
@@ -223,6 +236,9 @@ zorganizujem event. Alebo čokoľvek marketingové.
             <h1 className="four">Brand Design</h1>
             <h1 className="five" id="trigger_hide_social">Brand Strategy</h1>
             <h1 className="six" id="trigger_hide_scroll">Brand Monitoring</h1>
+            <p className="padding_top">
+            Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje možnosti.
+</p>
           </BlokRight>
       </TextWrapper>
       <Footer

@@ -15,7 +15,7 @@ import ScrollDown from "./scrollDown"
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
-import banana_surf from "../images/banana_surf.svg"
+import banana_surf from "../images/banana_surf_4.gif"
 import samurai from "../images/samurai.svg"
 
 
@@ -46,6 +46,10 @@ const TextWrapper = styled.div`
   margin: 0 auto;
   padding-bottom: 150px;
   position: relative;
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    padding: 0px 25px 150px 25px;
+  }
 `
 
 const BurgerWrapper = styled.div `
@@ -94,6 +98,20 @@ const BushidoRule = styled.div`
       -webkit-text-stroke: 0px; 
     }
   }
+  @media (max-width: 1000px) {
+    h2 {
+    width: 100%;
+    font-size: 32px;
+    }
+    &:hover {
+      background-image: none;
+    }
+  }
+  @media (max-width: 440px) {
+    h2 {
+    font-size: 24px;
+    }
+  }
 `
 const Samurai = styled.div`
   position: absolute;
@@ -111,7 +129,7 @@ const LayoutBushido = ({ children }) => (
     <Scene classToggle="change_color" triggerElement="#trigger_orange">
       <PageWrapper>
         <BurgerWrapper>
-          <Burger burder_color="burger_white"/>
+          <Burger burder_color="burger_white" bushido="active"/>
         </BurgerWrapper>
         <Link to="/">
           <Avatar />

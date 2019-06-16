@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 
 import burger from "../images/burger.svg"
 import burger_hover from "../images/burger_hover.svg"
-import burger_close from "../images/burger_close.svg"
+// import burger_close from "../images/burger_close.svg"
 import hand from "../images/monkey_menu.gif"
 
 const MenuWrapper = styled.div `
@@ -46,40 +46,36 @@ const MenuWrapper = styled.div `
     height: 10px;
     position: absolute;
     right: 50px;
-    top: 25px;
+    top: 50px;
   }
   }
   .bm-overlay {
     background: rgba(0, 0, 0, 0.8) !important;
   }
   .bm-burger-bars {
-    background-image: linear-gradient(var(--black), var(--black));
-    background-repeat: no-repeat;
-    transition: 0.3s;
-    &:nth-child(1) {
-      background-size: 50px 100%;
-      animation: slide_1 2s linear infinite;
+    background: var(--black);
+    /*background-image: linear-gradient(var(--black), var(--black));
+    background-repeat: no-repeat;*/
+    position:relative;
+    overflow: hidden;
+    &:before {
+      display: block;
+      content: '';
+      background-image: linear-gradient(var(--orange), var(--orange));
+      margin-left: -100%;
+      transition: 0.2s;
+      height: 100%;
+      width: 100%;
     }
-    &:nth-child(2) {
-      background-size: 75px 100%;
-      animation: slide_2 2.5s linear infinite;
-    }
-    &:nth-child(3) {
-      background-size: 100px 100%;
-      animation: slide_3 3s linear infinite;
-    }
-    /*@keyframes slide_1 {
-      0% {background-position: 50px;}
-      100% {background-position: -50px;}
-    }
-    @keyframes slide_2 {
-      0% {background-position: 75px;}
-      100% {background-position: -75px;}
-    }
-    @keyframes slide_3 {
-      0% {background-position: 100px;}
-      100% {background-position: -100px;}
-    }*/
+  }
+  &:hover .bm-burger-bars:before {
+    display: block;
+      content: '';
+      background-image: linear-gradient(var(--orange), var(--orange));
+      margin-left: 0;
+      transition: 0.2s;
+      height: 100%;
+      width: 100%;
   }
   &.burger_black {
     .bm-burger-bars {
@@ -90,28 +86,25 @@ const MenuWrapper = styled.div `
     position: absolute;
     top: 50px !important;
     right: 70px !important;
-    width: 20px !important;
-    height: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
     cursor: pointer !important;
     span {
-      display: none;
-    }
-    button {
-      background: url(${burger_close}) !important;
-      background-size: cover !important;
-      background-repeat: no-repeat;
+      background: var(--white);
+      display: block;
     }
   }
   .bm-burger-button:hover .bm-burger-bars {
-    background-image: linear-gradient(var(--orange), var(--orange));
+    background: var(--orange);
+    /* background-image: linear-gradient(var(--orange), var(--orange)); */
     opacity: 1 !important;
   }
   .bm-cross {
     margin-top: 2px;
     margin-left: -7px;
     background: var(--black);
-    width: 4px !important;
-    height: 20px !important;
+    width: 5px !important;
+    height: 40px !important;
     transition: 0.3s;
   }
   .bm-cross-button:hover .bm-cross{
@@ -144,6 +137,30 @@ const MenuWrapper = styled.div `
   div.bm-item {
     margin-top: 60px;
   }
+  @media (max-width: 1000px) {
+    .bm-menu {
+      background: url(${hand});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+    }
+  }
+  @media (max-width: 550px) {
+    .bm-item-list {
+      height: auto !important;
+      width: auto;
+      margin-top: 50px;
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 390px) {
+    .bm-menu {
+      background: url(${hand});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: -100px;
+    }
+  }
 `
 const MenuItem = styled.span`
   font-family: 'Raleway', sans-serif;
@@ -160,20 +177,62 @@ const MenuItem = styled.span`
   text-transform: uppercase;
   */
   cursor: pointer;
+  &.active_link {
+    color: transparent !important;
+    -webkit-text-stroke: 1px var(--white); 
+  }
   @media (max-width: 550px) {
     font-size: 32px;
   }
 `
 class Burger extends React.Component {
+  constructor(){
+    super();
+    this.overAboutme = this.overAboutme.bind(this);
+    this.overAboutyou = this.overAboutyou.bind(this);
+    this.overSerivces = this.overSerivces.bind(this);
+    this.overClients = this.overClients.bind(this);
+    this.overBushido = this.overBushido.bind(this);
+  }
+  overAboutme(e){
+    if (this.props.aboutMe) {
+      e.preventDefault();
+    }
+  }
+  overAboutyou(e){
+    if (this.props.aboutYou) {
+      e.preventDefault();
+    }
+  }
+  overSerivces(e){
+    if (this.props.services) {
+      e.preventDefault();
+    }
+  }
+  overClients(e){
+    if (this.props.clients) {
+      e.preventDefault();
+    }
+  }
+  overBushido(e){
+    if (this.props.bushido) {
+      e.preventDefault();
+    }
+  }
   render () {
+    const aboutMe_class = this.props.aboutMe ? 'active_link' : '';
+    const aboutYou_class = this.props.aboutYou ? 'active_link' : '';
+    const services_class = this.props.services ? 'active_link' : '';
+    const clients_class = this.props.clients ? 'active_link' : '';
+    const bushido_class = this.props.bushido ? 'active_link' : '';
     return (
       <MenuWrapper className={this.props.burger_color}>
         <Menu right width={ '100%' }>
-          <Link to="/aboutMe"><MenuItem>O Mne</MenuItem></Link>
-          <Link to="/aboutYou"><MenuItem>O Tebe</MenuItem></Link>  
-          <Link to="/services"><MenuItem>Služby</MenuItem></Link>  
-          <Link to="/clients"><MenuItem>Klienti</MenuItem></Link>  
-          <Link to="/bushido"><MenuItem>Bushido</MenuItem></Link>
+          <Link to="/aboutMe" onClick={this.overAboutme}><MenuItem className={aboutMe_class}>O Mne</MenuItem></Link>
+          <Link to="/aboutYou" onClick={this.overAboutyou}><MenuItem className={aboutYou_class}>O Tebe</MenuItem></Link>  
+          <Link to="/services" onClick={this.overSerivces}><MenuItem className={services_class}>Služby</MenuItem></Link>  
+          <Link to="/clients" onClick={this.overClients}><MenuItem className={clients_class}>Klienti</MenuItem></Link>  
+          <Link to="/bushido" onClick={this.overBushido}><MenuItem className={bushido_class}>Bushido</MenuItem></Link>
         </Menu>
       </MenuWrapper>
     );

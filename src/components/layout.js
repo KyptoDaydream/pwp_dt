@@ -111,20 +111,6 @@ const Menu = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  /* position: absolute;
-  width: 700px;
-  overflow: hidden;
-  right: -150px;
-  bottom: -40px;
-  z-index: 2; */
-  
-  /*position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
-  margin-left: -250px;
-  margin-top: -250px;*/
-
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -158,6 +144,13 @@ const ImageWrapper = styled.div`
       left: 100%;
     }
   }
+  @media (max-width: 800px) {
+   bottom: 0;
+   left: 0;
+   height: 300px;
+   width: 100%;
+  }
+  
 `
 
 const H1ImageWrapper = styled.div`
@@ -193,6 +186,11 @@ const Headline = styled.p`
     100% {
       opacity: 1;
     }
+  }
+  @media (max-width: 800px) {
+    padding: 0 25px;
+    margin-bottom: 5px;
+    font-size: 14px;
   }
 `
 

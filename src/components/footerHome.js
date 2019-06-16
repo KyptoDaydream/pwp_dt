@@ -14,6 +14,7 @@ const FooterWrapper = styled.div`
       position: relative;
       margin: 25px 20px;
       transition: 0.3;
+      background-color: none;
     &:before {
       content: '';
       width: 100%;
@@ -46,6 +47,9 @@ const FooterWrapper = styled.div`
     }
   }
   }
+  @media (max-width: 700px) {
+		display: none;
+  }	
 `
 class Footer extends React.Component {
   render () {

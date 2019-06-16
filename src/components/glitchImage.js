@@ -7,6 +7,13 @@ const ImageWrapper = styled.div`{
   background: url(${props => props.props});
   background-size: 190%;
   position: relative;
+  @media (max-width: 1000px) {
+    background-position: -150px 0;
+  }
+  @media (max-width: 800px) {
+    background-size: cover;
+    background-position: inherit;
+  }
 }
 `
 class GlitchImage extends React.Component {

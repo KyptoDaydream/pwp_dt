@@ -13,7 +13,7 @@ import ScrollDown from "./scrollDown"
 
 
 import dusanstvo_klienti from "../images/dusanstvo_klienti.jpg"
-import dusanstvo_klienti_2 from "../images/dusanstvo_klienti_3.jpg"
+import dusanstvo_klienti_2 from "../images/dusanstvo_klienti_4.gif"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import dusanstvo_bushido from "../images/dusanstvo_landing.jpg"
 
@@ -44,6 +44,10 @@ const TextWrapper = styled.div`
   width: 900px;
   margin: 0 auto;
   padding-bottom: 150px;
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    padding: 0px 25px 150px 25px;
+  }
 `
 
 const BurgerWrapper = styled.div `
@@ -67,6 +71,13 @@ const BlokLeft = styled.div`
   p {
     padding: 25px;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0;
+    p {
+    padding: 25px 0 25px 0;
+    }
+  }
 `
 const BlokRight = styled.div`
   position: relative;
@@ -82,6 +93,17 @@ const BlokRight = styled.div`
   p {
     padding: 50px 25px 25px 0;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    p {
+    padding: 25px 0 25px 0;
+    }
+    h1 {
+      font-size: 19vw;
+    }
+  }
 `
 
 const ImageWrapper2 = styled.div`
@@ -91,6 +113,7 @@ const ImageWrapper2 = styled.div`
   width: 400px;
   height: 500px;
   background: url(${dusanstvo_klienti_2});
+  background-position: center;
   opacity: 0;
   background-size: cover;
   transition: 0.6s;
@@ -106,7 +129,7 @@ const LayoutClients = ({ children }) => (
     <Scene classToggle="change_color" triggerElement="#trigger_orange">
     <PageWrapper>
       <BurgerWrapper>
-        <Burger burder_color="burger_white"/>
+        <Burger burder_color="burger_white" clients="active"/>
       </BurgerWrapper>
       <Link to="/">
         <Avatar />

@@ -13,6 +13,9 @@ const FooterWrapper = styled.div`
   background: var(--black);
   justify-content: center;
   align-items: center;
+  h2 {
+    color: var(--white) !important;
+  }
   .hand_gif {
     width: 80px;
     padding: 5px;
@@ -20,7 +23,7 @@ const FooterWrapper = styled.div`
   }
   form {
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 120px;
   }
   form .field {
     position: relative;
@@ -34,7 +37,7 @@ const FooterWrapper = styled.div`
   form .field input{
     padding:25px 25px 6px 25px !important;
     height:100%;
-    width: 50%;
+    width: 80%;
     border:none !important;
     color: var(--white);
     font-size: 18px;
@@ -57,6 +60,9 @@ const FooterWrapper = styled.div`
     transition: all 0.2s ease-in-out;
     line-height: 100px;
   }
+  form .field:hover label {
+    color: var(--white);
+  }
   form .field input:valid {
     background-color: var(--black);
   }
@@ -70,9 +76,74 @@ const FooterWrapper = styled.div`
     transform: translate3d(0, -10px, 0);
   }
   form ul.actions {
-    position: absolute;
-    bottom: 50px;
-    right: 0;
+    margin-top: 25px;
+    position: relative;
+    li {
+      list-style: none;
+      input {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        padding-left: 25px;
+        height: 100px;
+        background: transparent;
+        font-size: 48px;
+        color: var(--orange);
+        border: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 25px 25px 0 25px;
+    form {
+      margin-top: 70px;
+    }
+    p {
+    padding: 25px 0 25px 0;
+    }
+    form .field input:-webkit-autofill,
+    form .field input:-webkit-autofill:hover, 
+    form .field input:-webkit-autofill:focus, 
+    form .field input:-webkit-autofill:active,
+    form .field input{
+      width: 100%;
+    }
+    
+  }
+  @media (max-width: 700px) {
+    form .field {
+      height: 70px;
+    }
+    form .field label {
+      font-size: 24px;
+      line-height: 70px;
+    }
+    form ul.actions li input {
+      font-size: 32px;
+    }
+  }
+  @media (max-width: 600px) {
+    .hand_gif {
+      display: none;
+    }
+  }
+  @media (max-width: 440px) {
+    form .field label {
+      left: 10px;
+      font-size: 20px;
+      line-height: 70px;
+    }
+    form .field input:-webkit-autofill,
+    form .field input:-webkit-autofill:hover, 
+    form .field input:-webkit-autofill:focus, 
+    form .field input:-webkit-autofill:active,
+    form .field input{
+      padding:25px 10px 6px 10px !important;
+    }
+    form ul.actions li input {
+      font-size: 24px;
+    }
   }
 `
 
@@ -124,11 +195,54 @@ const BottomWrapper = styled.div`
     transform-origin: 0% 0%;
     }
   }
+  @media (max-width: 600px) {
+    height: 50px;
+    a.social {
+      line-height: 24px;
+      margin: 10px 10px;
+      font-size: 12px;
+      letter-spacing: 0;
+    }
+  }
 `
+const BlokLeft = styled.div`
+  position: relative;
+  width: 50%;
+  padding: 100px 0;
+  p {
+    padding: 25px;
+    color: var(--white) !important;
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0;
+    p {
+    padding: 25px 0 25px 0;
+    }
+  }
+`
+const TextWrapper = styled.div`
+  width: 900px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  position: relative;
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    padding: 0px 25px 0px 25px;
+  }
+`
+
 class Footer extends React.Component {
   render () {
     return (
       <FooterWrapper>
+        <TextWrapper>
+        <h2 id="contactForm">Na začiatok zanalyzujem tvoju online stopu a vypracujem ti zdarma Brand Review.</h2>
+        <BlokLeft>
+        <p >
+Nepoužívam žiadne zaručené návody. Zanalyzujem tvoju situáciu a prídem s riešením, ktoré bude
+fungovať unikátne pre teba a tvoje možnosti. </p>
+        </BlokLeft>
         <form name="contact"
           method="post"
           data-netlify="true"
@@ -150,10 +264,12 @@ class Footer extends React.Component {
           </div>
           <ul className="actions">
             <li>
-              <input type="submit" value="Send Message" className="special" />
+              <input type="submit" value="Poslať." className="special" />
             </li>
           </ul>
         </form>
+        </TextWrapper>
+        
         <BottomWrapper>
           <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">LINKEDIN</a>
           <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">MEDIUM</a>

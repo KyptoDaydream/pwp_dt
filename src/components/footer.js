@@ -28,6 +28,20 @@ const FooterWrapper = styled.div`
     -webkit-text-stroke: 1px var(--black);
     }
   }
+  @media (max-width: 1000px) {
+    padding: 25px 25px 0 25px;
+  }
+  @media (max-width: 460px) {
+    .footer_mail {
+      margin-top: 50px; 
+      margin-bottom: 70px;
+    }
+  }
+  @media (max-width: 600px) {
+    .hand_gif {
+      display: none;
+    }
+  }
 `
 const Menu = styled.div`
   margin-top: 190px;
@@ -69,7 +83,21 @@ const Menu = styled.div`
   &:hover h1 {
     opacity: 0.3;
   }
-  
+  @media (max-width: 600px) {
+    margin-top: 70px;
+    h1.headlines {
+      font-size: 32px;
+    }
+    .home_1:hover + div,
+    .home_2:hover + div {
+      display: none;
+    }
+  }
+  @media (max-width: 460px) {
+    h1.headlines {
+      font-size: 24px;
+    }
+  }
 `
 const H1ImageWrapper = styled.div`
   transition: 0.3s;
@@ -108,6 +136,7 @@ const BottomWrapper = styled.div`
       line-height: 37px;
       color: var(--white);
       flex: 0;
+      background-color: none;
     &:before {
       content: '';
       width: 100%;
@@ -137,6 +166,15 @@ const BottomWrapper = styled.div`
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     transform-origin: 0% 0%;
+    }
+  }
+  @media (max-width: 600px) {
+    height: 50px;
+    a.social {
+      line-height: 24px;
+      margin: 10px 10px;
+      font-size: 12px;
+      letter-spacing: 0;
     }
   }
 `

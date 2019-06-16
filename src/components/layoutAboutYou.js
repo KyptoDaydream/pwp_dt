@@ -9,12 +9,10 @@ import Avatar from "./avatar"
 import Burger from "./burger"
 import FooterHome from "./footerHome"
 import FooterContact from "./footerContact"
-import ScrollDown from "./scrollDown"
+import ScrollDown from "./scrollDownMail"
 
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import dusanstvo_otebe_2 from "../images/dusanstvo_otebe_2.jpg"
-import dusanstvo_otebe_3 from "../images/dusanstvo_otebe_3.jpg"
-import dusanstvo_otebe_4 from "../images/dusanstvo_otebe_4.jpg"
 import monkey from "../images/monkey_head.png"
 // import monkey from "../images/monkey.svg"
 
@@ -44,8 +42,7 @@ const PageWrapper = styled.div `
     }
   }
   .subpage {
-    font-size: 45vw;
-    top: 25%;
+    font-size: 29vw;
   }
   .hide_text {
     opacity: 0;
@@ -64,9 +61,13 @@ const PageWrapper = styled.div `
 const TextWrapper = styled.div`
   width: 900px;
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   .second_paragraph {
     padding-top: 0;
+  }
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    padding: 0px 25px 150px 25px;
   }
 `
 
@@ -131,22 +132,38 @@ const BlokRight = styled.div`
     opacity: 1;
     margin-left: -200px;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    p {
+    padding: 25px 0 25px 0;
+    }
+    h1 {
+      font-size: 19vw;
+    }
+  }
 `
-
+const Trigger = styled.div`
+  width: 100%;
+  height: 1px;
+  position: relative;
+  display: block;
+`
 
 const LayoutAboutYou = ({ children }) => ( 
   <Controller globalSceneOptions={{ triggerHook: 'onEnter' }}>
     <Scene classToggle="change_color" triggerElement="#trigger_hide_text">
     <PageWrapper>
       <BurgerWrapper>
-        <Burger burder_color="burger_white"/>
+        <Burger burder_color="burger_white" aboutYou="active"/>
       </BurgerWrapper>
       <Link to="/">
-        <Avatar />
+        <Avatar white="true"/>
       </Link>
       <Controller>
         <Scene classToggle="hide_text" triggerElement="#trigger_hide_text">
-          <h1 className="subpage">YOU</h1>
+          <h1 className="subpage">FREE</h1>
         </Scene>
       </Controller>
       <Controller>
@@ -155,7 +172,7 @@ const LayoutAboutYou = ({ children }) => (
         </Scene>
       </Controller>
       <Controller>
-        <Scene classToggle="hide_scroll" triggerElement="#trigger_hide_scroll">
+        <Scene classToggle="hide_scroll" triggerElement="#trigger_hide_social">
           <div><ScrollDown /></div>
         </Scene>
       </Controller>
@@ -171,19 +188,9 @@ const LayoutAboutYou = ({ children }) => (
 freelancer, influencer alebo známa osobnosť. Podstatné je, že robíš čo ťa baví a chceš aby
 ťa v online svete bolo vidieť a počuť. Uvedomuješ si akým spôsobom chceš byť v online
 svete viditeľný a akým zas neviditeľný?</p>
-          <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+          <Controller globalSceneOptions={{ triggerHook: 'onCenter' }}>
             <Scene classToggle="reveal_image" triggerElement="#trigger_reveal_image_1">
-              <img src={dusanstvo_otebe_2} alt="" id="trigger_reveal_image_2"/>
-            </Scene>
-          </Controller>
-          <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-            <Scene classToggle="reveal_image" triggerElement="#trigger_reveal_image_2">
-              <img src={dusanstvo_otebe_3} alt="" id="trigger_reveal_image_3"/>
-            </Scene>
-          </Controller>
-          <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-            <Scene classToggle="reveal_image" triggerElement="#trigger_reveal_image_3">
-              <img src={dusanstvo_otebe_4} alt=""/>
+              <img src={dusanstvo_otebe_2} alt="" id="trigger_reveal_image_1"/>
             </Scene>
           </Controller>
           <p className="padding_top">
@@ -193,8 +200,14 @@ svete viditeľný a akým zas neviditeľný?</p>
             <h1>hoaxy</h1>
             <h1>fake news</h1>
             <h1>hackeri</h1>
-            <h1 id="trigger_hide_social">boti</h1>
-            <h1 id="trigger_hide_scroll">trollovia</h1>
+            <h1>boti</h1>
+            <h1>trollovia</h1>
+            <p className="padding_top">
+            Preto je potrebné aby si sa prezentoval premyslene, a strážil si svoje dobré meno. S mojou pomocou
+budeš svoju osobnú značku, reputáciu a publikum vlastniť. Ja ich budem pre teba strážiť, pravidelne
+monitorovať a navrhovať aktualizácie.
+</p>
+<Trigger id="trigger_hide_social" />
           </BlokRight>
       </TextWrapper>
       <FooterContact />
