@@ -162,7 +162,7 @@ h1.headlines {
 }
 
 h1.headlines:hover {
-  color: var(--orange);
+  color: var(--orange) !important;
   -webkit-text-stroke: 1px var(--white); 
   opacity: 1 !important;
 }

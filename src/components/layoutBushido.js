@@ -73,6 +73,13 @@ const BlokLeft = styled.div`
   p {
     padding: 25px;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0;
+    p {
+    padding: 25px 0 125px 0;
+    }
+  }
 `
 const BushidoRule = styled.div`
   width: 100vw;

@@ -11,10 +11,10 @@ import FooterHome from "./footerHome"
 import Footer from "./footer"
 
 
-import not_found from "../images/404.gif"
+import hurray from "../images/hurray.gif"
 
-import dusanstvo_mne from "../images/dusanstvo_omne.jpg"
-import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
+import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
+import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 
 
 
@@ -61,17 +61,17 @@ const LayoutClients = ({ children }) => (
         </Scene>
       </Controller>
       <TextWrapper>
-        <h2>Ooops! Stránka sa nenašla</h2>
-        <img src={not_found} alt="" />
+        <h2>Výborne! Ozvem sa čoskoro ;)</h2>
+        <img src={hurray} alt="" />
       </TextWrapper>
       <Trigger id="trigger_hide_social" />
       <Footer 
-      link_1="Prečítaj si o mne"
+      link_1="Ako som sa k tomu dopracoval"
       url_1="/aboutMe"
-      image_1={dusanstvo_mne}
-      link_2="Napíš mi"
-      url_2="/aboutYou"
-      image_2={dusanstvo_otebe} />
+      image_1={dusanstvo_omne}
+      link_2="Moje zásady"
+      url_2="/bushido"
+      image_2={dusanstvo_landing} />
     </PageWrapper>  
 )
 
