@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 // import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { Controller, Scene } from 'react-scrollmagic'
+import { Controller, Scene } from "react-scrollmagic"
 
 import Avatar from "./avatar"
 import Burger from "./burger"
@@ -11,21 +11,27 @@ import FooterHome from "./footerHome"
 import Footer from "./footer"
 import ScrollDown from "./scrollDown"
 
-
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import banana_surf from "../images/banana_surf_4_opt.gif"
 import samurai from "../images/samurai.svg"
 
-
-
-const PageWrapper = styled.div `
+const PageWrapper = styled.div`
   width: 100vw;
+  overflow-x: hidden;
   background: var(--white);
   transition: 0.4s;
   &.change_color {
     background: var(--orange);
+    .bm-burger-bars {
+      &:before {
+        background-image: linear-gradient(
+          var(--white),
+          var(--white)
+        ) !important;
+      }
+    }
   }
   .subpage {
     font-size: 23vw;
@@ -40,6 +46,9 @@ const PageWrapper = styled.div `
   .hide_scroll {
     opacity: 0;
   }
+  .hide_burger {
+    opacity: 0;
+  }
 `
 const TextWrapper = styled.div`
   width: 900px;
@@ -52,7 +61,7 @@ const TextWrapper = styled.div`
   }
 `
 
-const BurgerWrapper = styled.div `
+const BurgerWrapper = styled.div`
   position: fixed;
   width: 100vw;
   height: 30px;
@@ -77,7 +86,7 @@ const BlokLeft = styled.div`
     width: 100%;
     padding: 0;
     p {
-    padding: 25px 0 125px 0;
+      padding: 25px 0 125px 0;
     }
   }
 `
@@ -93,7 +102,7 @@ const BushidoRule = styled.div`
     font-size: 40px;
     font-weight: 900;
     color: transparent;
-    -webkit-text-stroke: 1px var(--black); 
+    -webkit-text-stroke: 1px var(--black);
   }
   &:hover {
     background-image: url(${banana_surf});
@@ -102,13 +111,13 @@ const BushidoRule = styled.div`
     background-size: 200px;
     h2 {
       color: var(--white);
-      -webkit-text-stroke: 0px; 
+      -webkit-text-stroke: 0px;
     }
   }
   @media (max-width: 1000px) {
     h2 {
-    width: 100%;
-    font-size: 32px;
+      width: 100%;
+      font-size: 32px;
     }
     &:hover {
       background-image: none;
@@ -116,7 +125,7 @@ const BushidoRule = styled.div`
   }
   @media (max-width: 440px) {
     h2 {
-    font-size: 24px;
+      font-size: 24px;
     }
   }
 `
@@ -131,12 +140,21 @@ const Samurai = styled.div`
   background-size: cover;
 `
 
-const LayoutBushido = ({ children }) => ( 
+const LayoutBushido = ({ children }) => (
   <Controller>
     <Scene classToggle="change_color" triggerElement="#trigger_orange">
       <PageWrapper>
         <BurgerWrapper>
-          <Burger burder_color="burger_white" bushido="active"/>
+          <Controller>
+            <Scene
+              classToggle="hide_burger"
+              triggerElement="#trigger_hide_burger"
+            >
+              <div>
+                <Burger burder_color="burger_white" bushido="active" />
+              </div>
+            </Scene>
+          </Controller>
         </BurgerWrapper>
         <Link to="/">
           <Avatar />
@@ -147,63 +165,83 @@ const LayoutBushido = ({ children }) => (
           </Scene>
         </Controller>
         <Controller>
-          <Scene classToggle="hide_social" triggerElement="#trigger_hide_social">
-            <div><FooterHome /></div>
+          <Scene
+            classToggle="hide_social"
+            triggerElement="#trigger_hide_social"
+          >
+            <div>
+              <FooterHome />
+            </div>
           </Scene>
         </Controller>
         <Controller>
-          <Scene classToggle="hide_scroll" triggerElement="#trigger_hide_scroll">
-            <div><ScrollDown /></div>
+          <Scene
+            classToggle="hide_scroll"
+            triggerElement="#trigger_hide_scroll"
+          >
+            <div>
+              <ScrollDown />
+            </div>
           </Scene>
         </Controller>
         <TextWrapper>
           <h2>Som freelancer, ktorý túži mať svätý pokoj.</h2>
           <ImageWrapper>
-            <img src={dusanstvo_landing} alt='' />
+            <img src={dusanstvo_landing} alt="" />
           </ImageWrapper>
           <BlokLeft>
-            <p id="trigger_hide_text">Mám to premyslené. Pri svojej práci sa riadim týmito zásadami:
+            <p id="trigger_hide_text">
+              Mám to premyslené. Pri svojej práci sa riadim týmito zásadami:
             </p>
           </BlokLeft>
-          <Samurai id="trigger_orange"/>
+          <Samurai id="trigger_orange" />
         </TextWrapper>
-          <BushidoRule>
-            <h2>Šťastní je ten, kto dosiahne poznanie a slobodu, nie slávu alebo bohatstvo</h2>
-          </BushidoRule>
-          <BushidoRule>
-            <h2>Úspešný je ten, kto so svojim časom môže naložiť, ako uzná za vhodné</h2>
-          </BushidoRule>
-          <BushidoRule>
-            <h2>Menej je niekedy viac, uprednostňuj kvalitu pred kvantitou</h2>
-          </BushidoRule>
-          <BushidoRule>
-            <h2>Rob výhradne pre spriaznené duše, nervy tvoje ušetrí to</h2>
-          </BushidoRule>
-          <BushidoRule>
-            <h2>Keď niečo robíš, snaž sa urobiť viac ako sa od teba očakáva</h2>
-          </BushidoRule>
-          <BushidoRule>
-            <h2>Nesľúb nikdy klientovi svojmu, čo splniť nedokážeš</h2>
-          </BushidoRule>
-          <BushidoRule>
-            <h2>Napriek tomu, že freelancer si, snaž sa o budovanie dlhodobých vzťahov</h2>
-          </BushidoRule>
-          <BushidoRule>
-            <h2>Konaj premyslene, a vyhýbaj sa neuváženým rozhodnutiam</h2>
-          </BushidoRule>
-          <BushidoRule id="trigger_hide_social">
-            <h2>Váž si svoj a druhých čas, a štíť sa otravovať ich pozornosť</h2>
-          </BushidoRule>
-          <BushidoRule id="trigger_hide_scroll">
-            <h2>Nevezmeš meno klientovo nadarmo, lež ochraňovať budeš ho</h2>
-          </BushidoRule>
-        <Footer 
-        link_1="Premysli si to aj ty"
-        url_1="/aboutYou"
-        image_1={dusanstvo_otebe}
-        link_2="Ako som sa k tomu dopracoval "
-        url_2="/aboutMe"
-        image_2={dusanstvo_omne} />
+        <BushidoRule>
+          <h2>
+            Šťastní je ten, kto dosiahne poznanie a slobodu, nie slávu alebo
+            bohatstvo
+          </h2>
+        </BushidoRule>
+        <BushidoRule>
+          <h2>
+            Úspešný je ten, kto so svojim časom môže naložiť, ako uzná za vhodné
+          </h2>
+        </BushidoRule>
+        <BushidoRule>
+          <h2>Menej je niekedy viac, uprednostňuj kvalitu pred kvantitou</h2>
+        </BushidoRule>
+        <BushidoRule>
+          <h2>Rob výhradne pre spriaznené duše, nervy tvoje ušetrí to</h2>
+        </BushidoRule>
+        <BushidoRule>
+          <h2>Keď niečo robíš, snaž sa urobiť viac ako sa od teba očakáva</h2>
+        </BushidoRule>
+        <BushidoRule>
+          <h2>Nesľúb nikdy klientovi svojmu, čo splniť nedokážeš</h2>
+        </BushidoRule>
+        <BushidoRule>
+          <h2>
+            Napriek tomu, že freelancer si, snaž sa o budovanie dlhodobých
+            vzťahov
+          </h2>
+        </BushidoRule>
+        <BushidoRule>
+          <h2>Konaj premyslene, a vyhýbaj sa neuváženým rozhodnutiam</h2>
+        </BushidoRule>
+        <BushidoRule id="trigger_hide_social">
+          <h2>Váž si svoj a druhých čas, a štíť sa otravovať ich pozornosť</h2>
+        </BushidoRule>
+        <BushidoRule id="trigger_hide_scroll">
+          <h2>Nevezmeš meno klientovo nadarmo, lež ochraňovať budeš ho</h2>
+        </BushidoRule>
+        <Footer
+          link_1="Premysli si to aj ty"
+          url_1="/oTebe"
+          image_1={dusanstvo_otebe}
+          link_2="Ako som sa k tomu dopracoval "
+          url_2="/oMne"
+          image_2={dusanstvo_omne}
+        />
       </PageWrapper>
     </Scene>
   </Controller>

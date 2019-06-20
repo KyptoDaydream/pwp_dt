@@ -8,7 +8,8 @@ import "../styles/global.css"
 
 const ServicesPage = () => (
   <Layout>
-    <SEO title="Dusan Tatransky | služby" keywords={[`dusan tatransky`]} />
+    <SEO title="Dušan Tatranský – Osobná Značka a Marketing pre Freelancerov" keywords={[`online bodyguard, tatransky marketing, tatransky branding, 
+    celebrity branding, online reputacia`]} />
     
   </Layout>
 )

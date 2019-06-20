@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 // import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { Controller, Scene } from 'react-scrollmagic'
+import { Controller, Scene } from "react-scrollmagic"
 
 import Avatar from "./avatar"
 import Burger from "./burger"
@@ -22,14 +22,15 @@ import four from "../images/4.svg"
 import five from "../images/5.svg"
 import six from "../images/6.svg"
 
-const PageWrapper = styled.div `
+const PageWrapper = styled.div`
   width: 100vw;
+  overflow-x: hidden;
   background: var(--black);
   * {
     color: var(--white);
   }
   .bm-burger-bars {
-    background-image: linear-gradient(var(--white),var(--white));
+    background-image: linear-gradient(var(--white), var(--white));
   }
   transition: 0.4s;
   &.change_color {
@@ -38,7 +39,7 @@ const PageWrapper = styled.div `
       color: var(--black);
     }
     .bm-burger-bars {
-      background-image: linear-gradient(var(--black),var(--black));
+      background-image: linear-gradient(var(--black), var(--black));
     }
     .scroll_icon_class {
       fill: var(--black);
@@ -63,6 +64,9 @@ const PageWrapper = styled.div `
   .scroll_icon_class {
     fill: var(--white);
   }
+  .hide_burger {
+    opacity: 0;
+  }
 `
 const TextWrapper = styled.div`
   width: 900px;
@@ -77,7 +81,7 @@ const TextWrapper = styled.div`
   }
 `
 
-const BurgerWrapper = styled.div `
+const BurgerWrapper = styled.div`
   position: fixed;
   width: 100vw;
   height: 30px;
@@ -100,13 +104,13 @@ const BlokRight = styled.div`
     -webkit-text-stroke: 1px var(--white);
     font-size: 130px;
     margin-bottom: 40px;
-   &:before {
+    &:before {
       position: absolute;
       margin-left: -120px;
       margin-top: 25px;
       width: 80px;
       height: 80px;
-      content: '';
+      content: "";
       display: inline-block;
     }
     &.one:before {
@@ -150,7 +154,7 @@ const BlokRight = styled.div`
     margin-top: 200px;
   }
   .padding_top {
-    padding-top: 100px
+    padding-top: 100px;
   }
   img {
     width: 500px;
@@ -169,7 +173,7 @@ const BlokRight = styled.div`
     margin-left: 0;
     padding: 0;
     p {
-    padding: 25px 0 25px 0;
+      padding: 25px 0 25px 0;
     }
     h1 {
       font-size: 14vw;
@@ -177,78 +181,117 @@ const BlokRight = styled.div`
   }
 `
 
-
-const LayoutClients = ({ children }) => ( 
-  <Controller globalSceneOptions={{ triggerHook: 'onEnter' }}>
+const LayoutClients = ({ children }) => (
+  <Controller globalSceneOptions={{ triggerHook: "onEnter" }}>
     <Scene classToggle="change_color" triggerElement="#trigger_hide_text">
-    <PageWrapper>
-      <BurgerWrapper>
-        <Burger burder_color="burger_white" services="active"/>
-      </BurgerWrapper>
-      <Link to="/">
-        <Avatar white="true"/>
-      </Link>
-      <Controller>
-        <Scene classToggle="hide_text" triggerElement="#trigger_hide_text">
-          <h1 className="subpage">BRAND</h1>
-        </Scene>
-      </Controller>
-      <Controller>
-        <Scene classToggle="hide_social" triggerElement="#trigger_hide_social">
-          <div><FooterHome /></div>
-        </Scene>
-      </Controller>
-      <Controller>
-        <Scene classToggle="hide_scroll" triggerElement="#trigger_hide_scroll">
-          <div><ScrollDown /></div>
-        </Scene>
-      </Controller>
-      <TextWrapper>
-        <h2>Ako online bodybuilder ti pomôžem budovať tvoju osobnú značku.</h2>
-        <ImageWrapper>
-          <img src={dusanstvo_sluzby} alt='' />
-        </ImageWrapper>
-        <h2 className="second_paragraph" id="trigger_hide_text">Ako online bodyguard ti pomôžem chrániť tvoju osobnú značku a reputáciu.</h2>
+      <PageWrapper>
+        <BurgerWrapper>
+          <Controller>
+            <Scene
+              classToggle="hide_burger"
+              triggerElement="#trigger_hide_burger"
+            >
+              <div>
+                <Burger burder_color="burger_white" services="active" />
+              </div>
+            </Scene>
+          </Controller>
+        </BurgerWrapper>
+        <Link to="/">
+          <Avatar white="true" />
+        </Link>
+        <Controller>
+          <Scene classToggle="hide_text" triggerElement="#trigger_hide_text">
+            <h1 className="subpage">BRAND</h1>
+          </Scene>
+        </Controller>
+        <Controller>
+          <Scene
+            classToggle="hide_social"
+            triggerElement="#trigger_hide_social"
+          >
+            <div>
+              <FooterHome />
+            </div>
+          </Scene>
+        </Controller>
+        <Controller>
+          <Scene
+            classToggle="hide_scroll"
+            triggerElement="#trigger_hide_scroll"
+          >
+            <div>
+              <ScrollDown />
+            </div>
+          </Scene>
+        </Controller>
+        <TextWrapper>
+          <h2>
+            Ako online bodybuilder ti pomôžem budovať tvoju osobnú značku.
+          </h2>
+          <ImageWrapper>
+            <img src={dusanstvo_sluzby} alt="" />
+          </ImageWrapper>
+          <h2 className="second_paragraph" id="trigger_hide_text">
+            Ako online bodyguard ti zas tvoju osobnú značku a reputáciu pomôžem
+            chrániť.
+          </h2>
           <BlokRight>
-          <p id="trigger_hide_text">
-          Som freelancer a robím marketing s dušou. Vďaka tomu, že spolupracujem s inými osvedčenými
-freelancermi z oblasti dizajnu, programovania, IT bezpečnosti a duševného vlastníctva, dokážem pre
-teba zabezpečiť komplexné brandingové služby a riešenia.</p>
+            <p id="trigger_hide_text">
+              Som freelancer a robím marketing s dušou. Vďaka tomu, že
+              spolupracujem s inými osvedčenými freelancermi z oblasti dizajnu,
+              produkcie, programovania, IT bezpečnosti a duševného vlastníctva,
+              dokážem pre teba zabezpečiť komplexné brandingové služby a
+              riešenia.
+            </p>
           </BlokRight>
           <BlokRight className="margin-top" id="trigger_reveal_image">
-            <Controller globalSceneOptions={{ triggerHook: 'onEnter' }}>
-              <Scene classToggle="reveal_image" triggerElement="#trigger_reveal_image">
-                <img src={dusanstvo_sluzby_2} alt=""/>
+            <Controller globalSceneOptions={{ triggerHook: "onEnter" }}>
+              <Scene
+                classToggle="reveal_image"
+                triggerElement="#trigger_reveal_image"
+              >
+                <img src={dusanstvo_sluzby_2} alt="" />
               </Scene>
             </Controller>
-          <p className="padding_top">
-            Pozriem sa na tvoje čísla a štatistiky, navrhnem ti bezpečnostnú aktualizáciu, zadefinujem tvoju
-značku, vymyslím ti stratégiu, vytvorím ti logo a webstránku, zabezpečím tvoje publikum, nastavím
-email marketing, optimalizujem vyhľadávače, monitorujem tvoju reputáciu, necením spolupráce, či
-zorganizujem event. Alebo čokoľvek marketingové.
+            <p className="padding_top">
+              Pozriem sa na tvoje čísla a štatistiky, navrhnem ti bezpečnostnú
+              aktualizáciu, zadefinujem tvoju značku, vymyslím ti stratégiu,
+              vytvorím ti logo a webstránku, zabezpečím tvoje publikum, nastavím
+              email marketing, optimalizujem vyhľadávače, monitorujem tvoju
+              reputáciu, nacením spolupráce, či zorganizujem event. Alebo
+              čokoľvek marketingové.
             </p>
             <p>
-            Ak chceš vlastniť svoju Identitu, Reputáciu a Publikum, môj postup je nasledovný:
+              Ak chceš vlastniť svoju Identitu, Reputáciu a Publikum, môj postup
+              je nasledovný:
             </p>
             <h1 className="one">Brand Review</h1>
             <h1 className="two">Brand Storming</h1>
             <h1 className="three">Brand Book</h1>
             <h1 className="four">Brand Design</h1>
-            <h1 className="five" id="trigger_hide_social">Brand Strategy</h1>
-            <h1 className="six" id="trigger_hide_scroll">Brand Monitoring</h1>
+            <h1 className="five" id="trigger_hide_social">
+              Brand Strategy
+            </h1>
+            <h1 className="six" id="trigger_hide_scroll">
+              Brand Monitoring
+            </h1>
             <p className="padding_top">
-            Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje možnosti.
-</p>
+              Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a
+              návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje
+              možnosti.
+            </p>
           </BlokRight>
-      </TextWrapper>
-      <Footer
-      link_1="Ziskaj brand review"
-      url_1="/aboutYou"
-      image_1={dusanstvo_otebe}
-      link_2="Moji klienti"
-      url_2="/clients"
-      image_2={dusanstvo_klienti} />
-    </PageWrapper>   
+        </TextWrapper>
+        <Footer
+          link_1="Ziskaj brand review"
+          url_1="/oTebe"
+          image_1={dusanstvo_otebe}
+          link_2="Moji klienti"
+          url_2="/klienti"
+          image_2={dusanstvo_klienti}
+        />
+      </PageWrapper>
     </Scene>
   </Controller>
 )

@@ -1,8 +1,10 @@
-import * as React from 'react'
-import styled from 'styled-components'
+import * as React from "react"
+import styled from "styled-components"
 import { Link } from "gatsby"
 
 import hand from "../images/hand.gif"
+import cursor from "../images/cursor.png"
+
 
 const FooterWrapper = styled.div`
   display: block;
@@ -21,11 +23,11 @@ const FooterWrapper = styled.div`
   .footer_mail {
     color: var(--black);
     -webkit-text-stroke: 1px var(--white);
-    margin-top: 100px; 
+    margin-top: 100px;
     margin-bottom: 100px;
     &:hover {
-      color:var(--orange);
-    -webkit-text-stroke: 1px var(--black);
+      color: var(--orange);
+      -webkit-text-stroke: 1px var(--black);
     }
   }
   @media (max-width: 1000px) {
@@ -33,7 +35,7 @@ const FooterWrapper = styled.div`
   }
   @media (max-width: 460px) {
     .footer_mail {
-      margin-top: 50px; 
+      margin-top: 50px;
       margin-bottom: 70px;
     }
   }
@@ -53,13 +55,14 @@ const Menu = styled.div`
     display: block;
   }
   h1.headlines {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 900;
     color: var(--white);
     font-size: 40px;
     text-align: left;
+    cursor: url(${cursor}), auto !important;
     &:hover {
-      -webkit-text-stroke: 0px; 
+      -webkit-text-stroke: 0px;
     }
   }
   .home_1:hover + div {
@@ -130,15 +133,15 @@ const BottomWrapper = styled.div`
     flex: 1;
   }
   a.social {
-      position: relative;
-      margin: 25px 20px;
-      transition: 0.3;
-      line-height: 37px;
-      color: var(--white);
-      flex: 0;
-      background-color: none;
+    position: relative;
+    margin: 25px 20px;
+    transition: 0.3;
+    line-height: 37px;
+    color: var(--white);
+    flex: 0;
+    background-color: none;
     &:before {
-      content: '';
+      content: "";
       width: 100%;
       position: absolute;
       left: 0;
@@ -162,10 +165,10 @@ const BottomWrapper = styled.div`
       transform-origin: 0% 0%;
     }
     &:hover:after {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    transform-origin: 0% 0%;
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      transform-origin: 0% 0%;
     }
   }
   @media (max-width: 600px) {
@@ -179,30 +182,47 @@ const BottomWrapper = styled.div`
   }
 `
 class Footer extends React.Component {
-  render () {
+  render() {
     return (
-      <FooterWrapper>
+      <FooterWrapper id="trigger_hide_burger">
         <Menu onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
           <Link to={this.props.url_1}>
             <h1 className="headlines home_1">- {this.props.link_1}</h1>
             <H1ImageWrapper>
-              <img src={this.props.image_1} alt='' />
+              <img src={this.props.image_1} alt="" />
             </H1ImageWrapper>
           </Link>
           <Link to={this.props.url_2}>
-          <h1 className="headlines home_2">- {this.props.link_2}</h1>
+            <h1 className="headlines home_2">- {this.props.link_2}</h1>
             <H2ImageWrapper>
-              <img src={this.props.image_2} alt='' />
+              <img src={this.props.image_2} alt="" />
             </H2ImageWrapper>
-          </Link>  
+          </Link>
         </Menu>
-        <a className="footer_mail" href="mailto:dusan@tatransky.sk">dusan@tatransky.sk</a>
+        <a className="footer_mail" href="mailto:dusan@tatransky.sk">
+          dusan@tatransky.sk
+        </a>
         <BottomWrapper>
-          <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">LINKEDIN</a>
-          <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">MEDIUM</a>
-          <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">GOODREADS</a>
+          <a
+            className="footerLink social"
+            href="https://www.linkedin.com/in/dusantatransky/"
+          >
+            LINKEDIN
+          </a>
+          <a
+            className="footerLink social"
+            href="https://medium.com/@dusantatransky"
+          >
+            MEDIUM
+          </a>
+          <a
+            className="footerLink social"
+            href="https://www.goodreads.com/user/show/69845863-dusan-tatransky"
+          >
+            GOODREADS
+          </a>
           <div className="filler" />
-          <img className="hand_gif" src={hand} alt='' />
+          <img className="hand_gif" src={hand} alt="" />
         </BottomWrapper>
       </FooterWrapper>
     )

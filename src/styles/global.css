@@ -1,31 +1,31 @@
 @font-face {
-  font-family: 'MyWebFont';
-  src: url('../fonts/FREEFATFONT-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/FREEFATFONT-Regular.woff') format('woff') /* Pretty Modern Browsers */
+  font-family: "MyWebFont";
+  src: url("../fonts/FREEFATFONT-Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/FREEFATFONT-Regular.woff")
+      format("woff"); /* Pretty Modern Browsers */
 }
 
 @font-face {
-  font-family: 'MyWebFont1';
-  src: url('../fonts/FivoSans-Regular.woff') format('woff') /* Super Modern Browsers */
+  font-family: "MyWebFont1";
+  src: url("../fonts/FivoSans-Regular.woff") format("woff"); /* Super Modern Browsers */
 }
-
 
 @font-face {
-  font-family: 'MyWebFont2';
-  src: url('../fonts/SpaceGrotesk-Medium.woff') format('woff') /* Super Modern Browsers */
+  font-family: "MyWebFont2";
+  src: url("../fonts/SpaceGrotesk-Medium.woff") format("woff"); /* Super Modern Browsers */
 }
 @font-face {
-  font-family: 'MyWebFont3';
-  src: url('../fonts/FivoSans-Black.woff') format('woff') /* Super Modern Browsers */
+  font-family: "MyWebFont3";
+  src: url("../fonts/FivoSans-Black.woff") format("woff"); /* Super Modern Browsers */
 }
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext");
 
 :root {
   --white: #f5f5f5;
   --white_bright: #ffffff;
   --orange: #f68848;
-  --orange_alt: #D63230;
+  --orange_alt: #d63230;
   --grey: #dedede;
   --black: #030303;
 }
@@ -36,12 +36,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url('../images/cursor.png'), auto;	
+  cursor: url("../images/cursor_default.png"), auto;
   color: var(--black);
 }
 
-a, .bm-burger-button, .bm-burger-cross {
+a,
+.bm-burger-button,
+.bm-burger-cross {
   text-decoration: none;
+  cursor: url("../images/cursor.png"), auto;
 }
 
 a:hover {
@@ -58,10 +61,10 @@ img {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: var(--white);
   background-size: cover;
-  cursor: url('../images/cursor.png'), auto;
+  cursor: url("../images/cursor_default.png"), auto;
 }
 
 p {
@@ -77,18 +80,17 @@ p {
 }
 
 .footer_mail {
-  font-family: 'MyWebFont', sans-serif;
+  font-family: "MyWebFont", sans-serif;
   font-size: 72px;
   display: block;
   text-align: center;
 }
 
 h1 {
-  font-family: 'MyWebFont', sans-serif;
+  font-family: "MyWebFont", sans-serif;
   line-height: 0.9;
   font-size: 20px;
   font-weight: normal;
-  
 }
 
 h1.name {
@@ -103,7 +105,7 @@ h1.name {
   text-transform: uppercase;
   color: var(--white);
   font-weight: normal;
-  transform: translate(-50%, -50%) rotate(180deg); 
+  transform: translate(-50%, -50%) rotate(180deg);
   -webkit-text-stroke: 1px var(--black);
   transition: 0.3s;
   user-select: none;
@@ -128,7 +130,7 @@ h1.subpage {
 
 h1.headlines {
   position: relative;
-  font-family: 'MyWebFont', sans-serif;
+  font-family: "MyWebFont", sans-serif;
   line-height: 1;
   font-size: 90px;
   font-weight: normal;
@@ -139,7 +141,7 @@ h1.headlines {
 
 h1.headlines:hover {
   color: var(--orange) !important;
-  -webkit-text-stroke: 1px var(--white); 
+  -webkit-text-stroke: 1px var(--white);
   opacity: 1 !important;
 }
 
@@ -162,47 +164,47 @@ h3 {
 
 h4 {
   position: relative;
-  font-family: 'MyWebFont', sans-serif;
+  font-family: "MyWebFont", sans-serif;
   line-height: 1;
   font-size: 72px;
-  -webkit-text-stroke: 1px white; 
+  -webkit-text-stroke: 1px white;
   font-weight: normal;
   padding-bottom: 0px;
   letter-spacing: 0px;
 }
 
-  /* 
+/* 
   -webkit-text-stroke: 5px white; 
   mix-blend-mode: difference;
   */
-  @media (max-width: 1000px) {
-    h1 {
-      font-size: 19vw;
-    }
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 19vw;
   }
-  @media (max-width: 850px) {
-    .footer_mail {
-      font-size: 7vw;
-    }
+}
+@media (max-width: 850px) {
+  .footer_mail {
+    font-size: 7vw;
   }
+}
 
-  @media (max-width: 800px) {
-    h1.headlines {
-      font-size: 10vw;
-    }
+@media (max-width: 800px) {
+  h1.headlines {
+    font-size: 10vw;
   }
+}
 
-  @media (max-width: 700px) {
-    h1.subpage {
-      display: none;
-    }
-    h2 {
-      font-size: 48px;
-    }
+@media (max-width: 700px) {
+  h1.subpage {
+    display: none;
   }
+  h2 {
+    font-size: 48px;
+  }
+}
 
-  @media (max-width: 420px) {
-    h2 {
-      font-size: 32px;
-    }
+@media (max-width: 420px) {
+  h2 {
+    font-size: 32px;
   }
+}

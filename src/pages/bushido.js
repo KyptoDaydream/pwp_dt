@@ -8,8 +8,8 @@ import "../styles/global.css"
 
 const BushidoPage = () => (
   <Layout>
-    <SEO title="Dusan Tatransky" keywords={[`dusan tatransky`]} />
-    
+    <SEO title="Dušan Tatranský – Osobná Značka a Marketing pre Freelancerov" keywords={[`online bodyguard, freelance zasady, tatransky freelancer, 
+    marketer na volnej nohe, dusan nic nebavi`]} />
   </Layout>
 )
 

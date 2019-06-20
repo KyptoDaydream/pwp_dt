@@ -1,17 +1,17 @@
-import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from "react-burger-menu"
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
 // import Social from "./social"
 
-
 import burger from "../images/burger.svg"
 import burger_hover from "../images/burger_hover.svg"
 // import burger_close from "../images/burger_close.svg"
 import hand from "../images/monkey_menu.gif"
+import cursor from "../images/cursor.png"
 
-const MenuWrapper = styled.div `
+const MenuWrapper = styled.div`
   .bm-burger-button {
     z-index: 1000;
     width: 40px;
@@ -69,13 +69,7 @@ const MenuWrapper = styled.div `
     }
   }
   &:hover .bm-burger-bars:before {
-    display: block;
-      content: '';
-      background-image: linear-gradient(var(--orange), var(--orange));
       margin-left: 0;
-      transition: 0.2s;
-      height: 100%;
-      width: 100%;
   }
   &.burger_black {
     .bm-burger-bars {
@@ -88,7 +82,7 @@ const MenuWrapper = styled.div `
     right: 70px !important;
     width: 50px !important;
     height: 50px !important;
-    cursor: pointer !important;
+    cursor: url(${cursor}), auto !important;
     span {
       background: var(--white);
       display: block;
@@ -163,79 +157,89 @@ const MenuWrapper = styled.div `
   }
 `
 const MenuItem = styled.span`
-  font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    color: var(--white) !important;
-    font-size: 40px;
-    text-align: left;
-    &:hover {
-      color: var(--orange) !important;
-    }
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: var(--white) !important;
+  font-size: 40px;
+  text-align: left;
+  cursor: url(${cursor}), auto !important;
+  &:hover {
+    color: var(--orange) !important;
+  }
   /* 
   font-family: 'Rubik Mono One', sans-serif; 
   font-weight: 900;
   text-transform: uppercase;
   */
-  cursor: pointer;
   &.active_link {
     color: transparent !important;
-    -webkit-text-stroke: 1px var(--white); 
+    -webkit-text-stroke: 1px var(--white);
   }
   @media (max-width: 550px) {
     font-size: 32px;
   }
 `
 class Burger extends React.Component {
-  constructor(){
-    super();
-    this.overAboutme = this.overAboutme.bind(this);
-    this.overAboutyou = this.overAboutyou.bind(this);
-    this.overSerivces = this.overSerivces.bind(this);
-    this.overClients = this.overClients.bind(this);
-    this.overBushido = this.overBushido.bind(this);
+  constructor() {
+    super()
+    this.overAboutme = this.overAboutme.bind(this)
+    this.overAboutyou = this.overAboutyou.bind(this)
+    this.overSerivces = this.overSerivces.bind(this)
+    this.overClients = this.overClients.bind(this)
+    this.overBushido = this.overBushido.bind(this)
   }
-  overAboutme(e){
+  overAboutme(e) {
     if (this.props.aboutMe) {
-      e.preventDefault();
+      e.preventDefault()
     }
   }
-  overAboutyou(e){
+  overAboutyou(e) {
     if (this.props.aboutYou) {
-      e.preventDefault();
+      e.preventDefault()
     }
   }
-  overSerivces(e){
+  overSerivces(e) {
     if (this.props.services) {
-      e.preventDefault();
+      e.preventDefault()
     }
   }
-  overClients(e){
+  overClients(e) {
     if (this.props.clients) {
-      e.preventDefault();
+      e.preventDefault()
     }
   }
-  overBushido(e){
+  overBushido(e) {
     if (this.props.bushido) {
-      e.preventDefault();
+      e.preventDefault()
     }
   }
-  render () {
-    const aboutMe_class = this.props.aboutMe ? 'active_link' : '';
-    const aboutYou_class = this.props.aboutYou ? 'active_link' : '';
-    const services_class = this.props.services ? 'active_link' : '';
-    const clients_class = this.props.clients ? 'active_link' : '';
-    const bushido_class = this.props.bushido ? 'active_link' : '';
+  render() {
+    const aboutMe_class = this.props.aboutMe ? "active_link" : ""
+    const aboutYou_class = this.props.aboutYou ? "active_link" : ""
+    const services_class = this.props.services ? "active_link" : ""
+    const clients_class = this.props.clients ? "active_link" : ""
+    const bushido_class = this.props.bushido ? "active_link" : ""
     return (
       <MenuWrapper className={this.props.burger_color}>
-        <Menu right width={ '100%' }>
-          <Link to="/aboutMe" onClick={this.overAboutme}><MenuItem className={aboutMe_class}>O Mne</MenuItem></Link>
-          <Link to="/aboutYou" onClick={this.overAboutyou}><MenuItem className={aboutYou_class}>O Tebe</MenuItem></Link>  
-          <Link to="/services" onClick={this.overSerivces}><MenuItem className={services_class}>Služby</MenuItem></Link>  
-          <Link to="/clients" onClick={this.overClients}><MenuItem className={clients_class}>Klienti</MenuItem></Link>  
-          <Link to="/bushido" onClick={this.overBushido}><MenuItem className={bushido_class}>Bushido</MenuItem></Link>
+        <Menu right width={"100%"}>
+          <Link to="/oMne" onClick={this.overAboutme}>
+            <MenuItem className={aboutMe_class}>O Mne</MenuItem>
+          </Link>
+          <Link to="/oTebe" onClick={this.overAboutyou}>
+            <MenuItem className={aboutYou_class}>O Tebe</MenuItem>
+          </Link>
+          <Link to="/sluzby" onClick={this.overSerivces}>
+            <MenuItem className={services_class}>Služby</MenuItem>
+          </Link>
+          <Link to="/klienti" onClick={this.overClients}>
+            <MenuItem className={clients_class}>Klienti</MenuItem>
+          </Link>
+          <Link to="/bushido" onClick={this.overBushido}>
+            <MenuItem className={bushido_class}>Bushido</MenuItem>
+          </Link>
         </Menu>
       </MenuWrapper>
-    );
+    )
   }
 }
 

@@ -6,49 +6,38 @@
  */
 
 import React from "react"
-// import PropTypes from "prop-types"
-// import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import styled from "styled-components"
-// import { Controller, Scene } from 'react-scrollmagic'
-// import { DistortionText } from 'react-text-fun'
 
 import Burger from "./burger"
 import Footer from "./footerHome"
+import FooterNarrow from "./footerHomeNarrow"
 import GlitchImage from "./glitchImage"
 import Avatar from "./avatar"
-// import Social from "./social"
-// import Footer from "./footer"
-// import WindowedImage from "./windowedImage"
-// import Button from "./button"
 
-// import avatar_default from "../images/avatar_new.png"
-// import avatar_hover from "../images/avatar_green.png"
-// import bushido from "../images/bushido.jpg"
-// import scroll_down_img from "../images/scrolldown.svg"
-// import arrow_down from "../images/arrow_down.svg"
-// import stripes from "../images/stripes.png"
-// import dusanstvo from "../images/dusanstvo.svg"
-// import window_photo_1 from "../images/window_photo_1.png"
-// import window_photo_2 from "../images/window_photo_2.png"
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
-// import avatar from "../images/avatar_new.png"
-// import banana from "../images/banana.svg"
-// import samurai from "../images/samurai.svg"
-// import boom from "../images/boom.svg"
-// import bushido_avatar from "../images/bushido_avatar.svg"
-//import bushido_avatar_hover from "../images/bushido_avatar_hover.svg"
-
-// import Header from "./header"
-//  <Header siteTitle={data.site.siteMetadata.title} />
-// import "./layout.css"
+import cursor from "../images/cursor.png"
 
 const PageWrapper = styled.div `
   width: 100vw;
   position: relative;
   overflow: hidden;
+  h1 {
+    cursor: url(${cursor}), auto !important;
+  }
+  @media (min-width: 1600px) {
+    h1.headlines {
+      font-size: 130px;
+    }
+  }
+  @media (max-width: 800px) {
+    h1.headlines {
+      text-align: left;
+      padding-left: 25px;
+    }
+  }
 `
 const WelcomeWrapper = styled.div `
   display: flex;
@@ -58,6 +47,9 @@ const WelcomeWrapper = styled.div `
   position: relative;
   justify-content: center;
   align-items: center;
+  @media (max-width: 800px) {
+    align-items: flex-start;
+  }
 `
 const BurgerWrapper = styled.div `
   position: fixed;
@@ -108,6 +100,29 @@ const Menu = styled.div`
       opacity: 0;
     }
   }
+  @media (min-width: 1600px) {
+    .home_1:hover + div,
+    .home_2:hover + div {
+      width: 600px;
+      top: -250px;
+      margin-left: -300px;
+    }
+  }
+  @media (max-width: 800px) {
+   .link_wrapper {
+     margin-top: 80px;
+   }
+  }
+  @media (max-height: 667px) {
+   .link_wrapper {
+     margin-top: 40px;
+   }
+  }
+  @media (max-height: 568px) {
+   .link_wrapper {
+     margin-top: 30px;
+   }
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -147,10 +162,37 @@ const ImageWrapper = styled.div`
   @media (max-width: 800px) {
    bottom: 0;
    left: 0;
-   height: 300px;
+   height: 500px;
    width: 100%;
   }
-  
+  @media (max-width: 414px) and (max-height: 800px) {
+   height: 440px;
+   width: 210%;
+  }
+  @media (max-height: 667px) {
+   height: 400px;
+   width: 200%;
+  }
+  @media (max-width: 370px) {
+   height: 370px;
+   width: 210%;
+  }
+  @media (max-width: 330px) {
+   height: 330px;
+   width: 200%;
+  }
+  @media (min-width: 1400px) {
+    width: 800px;
+  }
+  @media (min-width: 1600px) {
+    width: 900px;
+  }
+  @media (min-width: 1800px) {
+    width: 1000px;
+  }
+  @media (min-width: 2000px) {
+    width: 1100px;
+  }
 `
 
 const H1ImageWrapper = styled.div`
@@ -162,6 +204,11 @@ const H1ImageWrapper = styled.div`
   left: 150%;
   top: -150px;
   margin-right: 200px;
+  @media (min-width: 1600px) {
+    width: 600px;
+    top: -250px;
+    margin-left: -300px;
+  }
 `
 const H2ImageWrapper = styled.div`
   transition: 0.3s;
@@ -172,6 +219,11 @@ const H2ImageWrapper = styled.div`
   left: 150%;
   top: -150px;
   margin-right: 200px;
+  @media (min-width: 1600px) {
+    width: 600px;
+    top: -250px;
+    margin-left: -300px;
+  }
 `
 const Headline = styled.p`
   font-size: 18px;
@@ -190,7 +242,17 @@ const Headline = styled.p`
   @media (max-width: 800px) {
     padding: 0 25px;
     margin-bottom: 5px;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 190px;
+  }
+  @media (max-height: 667px) {
     font-size: 14px;
+    margin-top: 190px;
+  }
+  @media (max-height: 568px) {
+    font-size: 14px;
+    margin-top: 170px;
   }
 `
 
@@ -221,13 +283,13 @@ class Layout extends React.Component {
           <Menu>
             <Headline className={textClass}>Som Online Bodyguard z ďalekého východu ... z Košíc</Headline>
             <div className="link_wrapper" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-              <Link to="/aboutMe">
+              <Link to="/oMne">
                 <h1 className="headlines home_1">Prečítaj si o mne</h1>
                 <H1ImageWrapper>
                   <img src={dusanstvo_omne} alt='' />
                 </H1ImageWrapper>
               </Link>
-              <Link to="/aboutYou">
+              <Link to="/oTebe">
               <h1 className="headlines home_2">Napíš mi</h1>
                 <H2ImageWrapper>
                   <img src={dusanstvo_otebe} alt='' />
@@ -240,6 +302,7 @@ class Layout extends React.Component {
           <GlitchImage url={dusanstvo_landing}/>
         </ImageWrapper>
         <Footer />
+        <FooterNarrow />
       </PageWrapper>
     )
   }

@@ -1,8 +1,9 @@
-import * as React from 'react'
-import styled from 'styled-components'
-// import { Link } from "gatsby"
+import * as React from "react"
+import styled from "styled-components"
 
 import hand from "../images/hand.gif"
+import arrow from "../images/arrow_right.svg"
+import cursor from "../images/cursor.png"
 
 const FooterWrapper = styled.div`
   display: block;
@@ -31,23 +32,23 @@ const FooterWrapper = styled.div`
     margin-bottom: 25px;
   }
   form .field input:-webkit-autofill,
-  form .field input:-webkit-autofill:hover, 
-  form .field input:-webkit-autofill:focus, 
+  form .field input:-webkit-autofill:hover,
+  form .field input:-webkit-autofill:focus,
   form .field input:-webkit-autofill:active,
-  form .field input{
-    padding:25px 25px 6px 25px !important;
-    height:100%;
+  form .field input {
+    padding: 25px 25px 6px 25px !important;
+    height: 100%;
     width: 80%;
-    border:none !important;
+    border: none !important;
     color: var(--white);
     font-size: 18px;
-    box-shadow:none !important;
-    border-bottom:solid 1px var(--orange) !important;
+    box-shadow: none !important;
+    border-bottom: solid 1px var(--orange) !important;
     border-radius: 0px;
     background-color: var(--black) !important;
   }
   form .field label {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 900;
     color: var(--black);
     -webkit-text-stroke: 1px var(--white);
@@ -67,11 +68,11 @@ const FooterWrapper = styled.div`
     background-color: var(--black);
   }
   form .field input:valid + label,
-  form .field input:focus + label { 
-    color: var(--orange); 
+  form .field input:focus + label {
+    color: var(--orange);
     -webkit-text-stroke: 0px var(--white);
-    font-weight: 700; 
-    font-size: 12px; 
+    font-weight: 700;
+    font-size: 12px;
     line-height: 80px;
     transform: translate3d(0, -10px, 0);
   }
@@ -80,8 +81,19 @@ const FooterWrapper = styled.div`
     position: relative;
     li {
       list-style: none;
+      .arrow {
+        display: inline-block;
+        transition: 0.3s;
+        width: 0px;
+        height: 30px;
+        margin-left: 40px;
+        background: url(${arrow});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
       input {
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 900;
         padding-left: 25px;
         height: 100px;
@@ -89,7 +101,10 @@ const FooterWrapper = styled.div`
         font-size: 48px;
         color: var(--orange);
         border: 0;
-        cursor: pointer;
+        cursor: url(${cursor}), auto;
+        &:hover + div {
+          width: 45px;
+        }
       }
     }
   }
@@ -100,16 +115,15 @@ const FooterWrapper = styled.div`
       margin-top: 70px;
     }
     p {
-    padding: 25px 0 25px 0;
+      padding: 25px 0 25px 0;
     }
     form .field input:-webkit-autofill,
-    form .field input:-webkit-autofill:hover, 
-    form .field input:-webkit-autofill:focus, 
+    form .field input:-webkit-autofill:hover,
+    form .field input:-webkit-autofill:focus,
     form .field input:-webkit-autofill:active,
-    form .field input{
+    form .field input {
       width: 100%;
     }
-    
   }
   @media (max-width: 700px) {
     form .field {
@@ -135,11 +149,11 @@ const FooterWrapper = styled.div`
       line-height: 70px;
     }
     form .field input:-webkit-autofill,
-    form .field input:-webkit-autofill:hover, 
-    form .field input:-webkit-autofill:focus, 
+    form .field input:-webkit-autofill:hover,
+    form .field input:-webkit-autofill:focus,
     form .field input:-webkit-autofill:active,
-    form .field input{
-      padding:25px 10px 6px 10px !important;
+    form .field input {
+      padding: 25px 10px 6px 10px !important;
     }
     form ul.actions li input {
       font-size: 24px;
@@ -158,14 +172,14 @@ const BottomWrapper = styled.div`
     flex: 1;
   }
   a.social {
-      position: relative;
-      margin: 25px 20px;
-      transition: 0.3;
-      line-height: 37px;
-      color: var(--white);
-      flex: 0;
+    position: relative;
+    margin: 25px 20px;
+    transition: 0.3;
+    line-height: 37px;
+    color: var(--white);
+    flex: 0;
     &:before {
-      content: '';
+      content: "";
       width: 100%;
       position: absolute;
       left: 0;
@@ -189,10 +203,10 @@ const BottomWrapper = styled.div`
       transform-origin: 0% 0%;
     }
     &:hover:after {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    transform-origin: 0% 0%;
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      transform-origin: 0% 0%;
     }
   }
   @media (max-width: 600px) {
@@ -217,7 +231,7 @@ const BlokLeft = styled.div`
     width: 100%;
     padding: 0;
     p {
-    padding: 25px 0 25px 0;
+      padding: 25px 0 25px 0;
     }
   }
 `
@@ -233,50 +247,72 @@ const TextWrapper = styled.div`
 `
 
 class Footer extends React.Component {
-  render () {
+  render() {
     return (
-      <FooterWrapper>
+      <FooterWrapper id="trigger_hide_burger">
         <TextWrapper>
-        <h2 id="contactForm">Na začiatok zanalyzujem tvoju online stopu a vypracujem ti zdarma Brand Review.</h2>
-        <BlokLeft>
-        <p >
-Nepoužívam žiadne zaručené návody. Zanalyzujem tvoju situáciu a prídem s riešením, ktoré bude
-fungovať unikátne pre teba a tvoje možnosti. </p>
-        </BlokLeft>
-        <form name="contact"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          action="/hurray/"
-        >
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
-          <div className="field">
-            <input type="text" name="name" id="name" required/>
-            <label htmlFor="name">Meno a priezvisko</label>
-          </div>
-          <div className="field">
-            <input type="text" name="social_link" id="social_link" required/>
-            <label htmlFor="social_link">Social media profil (link)</label>
-          </div>
-          <div className="field">
-            <input type="text" name="email" id="email" required/>
-            <label htmlFor="email">Email</label> 
-          </div>
-          <ul className="actions">
-            <li>
-              <input type="submit" value="Poslať." className="special" />
-            </li>
-          </ul>
-        </form>
+          <h2 id="contactForm">
+            Na začiatok zanalyzujem tvoju online stopu a vypracujem ti zdarma
+            Brand Review.
+          </h2>
+          <BlokLeft>
+            <p>
+              Nepoužívam žiadne zaručené návody. Zanalyzujem tvoju situáciu a
+              prídem s riešením, ktoré bude fungovať unikátne pre teba a tvoje
+              možnosti.{" "}
+            </p>
+          </BlokLeft>
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/hurray/"
+          >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
+            <div className="field">
+              <input type="text" name="name" id="name" required />
+              <label htmlFor="name">Meno a priezvisko</label>
+            </div>
+            <div className="field">
+              <input type="text" name="social_link" id="social_link" required />
+              <label htmlFor="social_link">Social media profil (link)</label>
+            </div>
+            <div className="field">
+              <input type="text" name="email" id="email" required />
+              <label htmlFor="email">Email</label>
+            </div>
+            <ul className="actions">
+              <li>
+                <input type="submit" value="Poslať." className="special" />
+                <div className="arrow" />
+              </li>
+            </ul>
+          </form>
         </TextWrapper>
-        
+
         <BottomWrapper>
-          <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">LINKEDIN</a>
-          <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">MEDIUM</a>
-          <a className="footerLink social" href="https://www.facebook.com/dusan.tatransky">GOODREADS</a>
+          <a
+            className="footerLink social"
+            href="https://www.linkedin.com/in/dusantatransky/"
+          >
+            LINKEDIN
+          </a>
+          <a
+            className="footerLink social"
+            href="https://medium.com/@dusantatransky"
+          >
+            MEDIUM
+          </a>
+          <a
+            className="footerLink social"
+            href="https://www.goodreads.com/user/show/69845863-dusan-tatransky"
+          >
+            GOODREADS
+          </a>
           <div className="filler" />
-          <img className="hand_gif" src={hand} alt='' />
+          <img className="hand_gif" src={hand} alt="" />
         </BottomWrapper>
       </FooterWrapper>
     )

@@ -8,8 +8,8 @@ import "../styles/global.css"
 
 const AboutYouPage = () => (
   <Layout>
-    <SEO title="Dusan Tatransky | o tebe" keywords={[`dusan tatransky`]} />
-    
+    <SEO title="Dušan Tatranský – Osobná Značka a Marketing pre Freelancerov" keywords={[`influencer marketing, freelancer marketing, marketing pre umelcov, 
+    brand review, boj o pozornost`]} />
   </Layout>
 )
 
