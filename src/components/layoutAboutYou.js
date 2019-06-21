@@ -146,6 +146,15 @@ const BlokRight = styled.div`
     h1 {
       font-size: 19vw;
     }
+    .p3_narrow {
+      padding: 100px 0 0 0;
+    }
+    .p2_narrow {
+      padding: 100px 0;
+    }
+    .p1_narrow {
+      padding: 25px 0 50px 0;
+    }
   }
 `
 const Trigger = styled.div`
@@ -212,7 +221,7 @@ const LayoutAboutYou = ({ children }) => (
             Chcem spoznať viac zaujímavých ľudí, ktorí sa nechcú opičiť.
           </h2>
           <BlokRight id="trigger_hide_text">
-            <p id="trigger_reveal_image_1">
+            <p id="trigger_reveal_image_1" className="p1_narrow">
               Nezáleží na tom, či si umelec, freelancer, influencer alebo známa
               osobnosť. Podstatné je, že robíš čo ťa baví a chceš aby ťa v
               online svete bolo vidieť a počuť. Uvedomuješ si akým spôsobom
@@ -230,7 +239,7 @@ const LayoutAboutYou = ({ children }) => (
                 />
               </Scene>
             </Controller>
-            <p className="padding_top">
+            <p className="padding_top p2_narrow">
               Aktuálne vo svete prebieha <strong>boj o pozornosť</strong>,
               ktorého súčasťou je stále viac ľudí ako si ty, ale aj ...
             </p>
@@ -240,7 +249,7 @@ const LayoutAboutYou = ({ children }) => (
             <h1>hackeri</h1>
             <h1>boti</h1>
             <h1>trollovia</h1>
-            <p className="padding_top">
+            <p className="padding_top p3_narrow">
               Preto je potrebné aby si sa prezentoval premyslene, a strážil si
               svoje dobré meno. S mojou pomocou budeš svoju osobnú značku,
               reputáciu a publikum vlastniť. Ja ich budem pre teba strážiť,

@@ -89,6 +89,9 @@ const BlokLeft = styled.div`
     p {
       padding: 25px 0 25px 0;
     }
+    .p1_narrow {
+      padding: 0 0 100px 0;
+    }
   }
 `
 const BlokRight = styled.div`
@@ -115,6 +118,9 @@ const BlokRight = styled.div`
     }
     h1 {
       font-size: 19vw;
+    }
+    .p2_narrow {
+      padding: 100px 0 100px 0;
     }
   }
 `
@@ -189,7 +195,7 @@ const LayoutClients = ({ children }) => (
             <img src={dusanstvo_klienti} alt="" />
           </ImageWrapper>
           <BlokLeft>
-            <p id="trigger_hide_text">
+            <p id="trigger_hide_text" className="p1_narrow">
               Tvoju osobnú značku budem chrániť celým Dušanom. Nebudem si brať
               kredit za tvoje budúce úspechy. Fungujem ako tieňový marketér pre známe osobnosti. 
               Dôveru svojich klientov si vážim a ich mená a dáta strážim.
@@ -205,7 +211,7 @@ const LayoutClients = ({ children }) => (
               </Scene>
             </Controller>
             <h1 className="content_highligh" id="trigger_hide_social">Beriem to osobne</h1>
-            <p id="trigger_hide_scroll">
+            <p id="trigger_hide_scroll" className="p2_narrow">
               Počet mojich klientov je limitovaný, každému sa venujem osobne.
               Viem tak poskytnúť najkvalitnejšiu službu. Ostatní na moju
               pozornosť čakajú v poradí.

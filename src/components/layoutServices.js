@@ -178,6 +178,21 @@ const BlokRight = styled.div`
     h1 {
       font-size: 14vw;
     }
+    h1 {
+      margin-bottom: 25px;
+    }
+    .p1_narrow {
+      padding: 25px 0 100px 0;
+    }
+    .p2_narrow {
+      padding-top: 200px;
+    }
+    .p3_narrow {
+      padding: 75px 0 100px 0;
+    }
+    .p4_narrow {
+      padding-bottom: 0;
+    }
   }
 `
 
@@ -237,7 +252,7 @@ const LayoutClients = ({ children }) => (
             chrániť.
           </h2>
           <BlokRight>
-            <p id="trigger_hide_text">
+            <p id="trigger_hide_text" className="p1_narrow">
               Som freelancer a robím marketing s dušou. Vďaka tomu, že
               spolupracujem s inými osvedčenými freelancermi z oblasti dizajnu,
               produkcie, programovania, IT bezpečnosti a duševného vlastníctva,
@@ -254,7 +269,7 @@ const LayoutClients = ({ children }) => (
                 <img src={dusanstvo_sluzby_2} alt="" />
               </Scene>
             </Controller>
-            <p className="padding_top">
+            <p className="padding_top p2_narrow">
               Pozriem sa na tvoje čísla a štatistiky, navrhnem ti bezpečnostnú
               aktualizáciu, zadefinujem tvoju značku, vymyslím ti stratégiu,
               vytvorím ti logo a webstránku, zabezpečím tvoje publikum, nastavím
@@ -262,7 +277,7 @@ const LayoutClients = ({ children }) => (
               reputáciu, nacením spolupráce, či zorganizujem event. Alebo
               čokoľvek marketingové.
             </p>
-            <p>
+            <p className="p3_narrow">
               Ak chceš vlastniť svoju Identitu, Reputáciu a Publikum, môj postup
               je nasledovný:
             </p>
@@ -276,7 +291,7 @@ const LayoutClients = ({ children }) => (
             <h1 className="six" id="trigger_hide_scroll">
               Brand Monitoring
             </h1>
-            <p className="padding_top">
+            <p className="padding_top p4_narrow">
               Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a
               návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje
               možnosti.

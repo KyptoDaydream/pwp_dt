@@ -40,10 +40,10 @@ const StoryWrapper = styled.div`
     opacity: 1;
   }
   @media (max-width: 1000px) {
-    margin-top: 70px;
+    margin-top: 100px;
     h4 {
       margin-left: 0px;
-      padding-top: 70px;
+      padding-top: 0px;
       padding-bottom: 50px;
     }
     h3 {

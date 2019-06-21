@@ -157,6 +157,7 @@ const FooterWrapper = styled.div`
     }
     form ul.actions li input {
       font-size: 24px;
+      padding-left: 10px;
     }
   }
 `
@@ -243,6 +244,9 @@ const TextWrapper = styled.div`
   @media (max-width: 1000px) {
     max-width: 100%;
     padding: 0px 25px 0px 25px;
+    .h2_narrow {
+      padding-top: 100px;
+    }
   }
 `
 
@@ -251,7 +255,7 @@ class Footer extends React.Component {
     return (
       <FooterWrapper id="trigger_hide_burger">
         <TextWrapper>
-          <h2 id="contactForm">
+          <h2 className="h2_narrow" id="contactForm">
             Na začiatok zanalyzujem tvoju online stopu a vypracujem ti zdarma
             Brand Review.
           </h2>
