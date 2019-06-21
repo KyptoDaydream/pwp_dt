@@ -206,18 +206,21 @@ class Footer extends React.Component {
           <a
             className="footerLink social"
             href="https://www.linkedin.com/in/dusantatransky/"
+            target="_new"
           >
             LINKEDIN
           </a>
           <a
             className="footerLink social"
             href="https://medium.com/@dusantatransky"
+            target="_new"
           >
             MEDIUM
           </a>
           <a
             className="footerLink social"
             href="https://www.goodreads.com/user/show/69845863-dusan-tatransky"
+            target="_new"
           >
             GOODREADS
           </a>

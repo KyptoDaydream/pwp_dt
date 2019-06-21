@@ -59,7 +59,7 @@ const PageWrapper = styled.div`
     fill: var(--white);
   }
   .hide_burger {
-    opacity: 0;
+    display: none;
   }
 `
 const TextWrapper = styled.div`

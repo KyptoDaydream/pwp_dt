@@ -10,7 +10,7 @@ import FooterHome from "./footerHome"
 import Footer from "./footer"
 import ScrollDown from "./scrollDown"
 
-import not_found from "../images/404.gif"
+import not_found from "../images/404_opt.gif"
 
 import dusanstvo_klienti from "../images/dusanstvo_klienti.jpg"
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
@@ -24,7 +24,7 @@ const PageWrapper = styled.div`
     opacity: 0;
   }
   .hide_burger {
-    opacity: 0;
+    display: none;
   }
 `
 const TextWrapper = styled.div`

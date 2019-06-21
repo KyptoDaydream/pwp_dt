@@ -23,7 +23,7 @@ const PageWrapper = styled.div`
     opacity: 0;
   }
   .hide_burger {
-    opacity: 0;
+    display: none;
   }
 `
 const TextWrapper = styled.div`

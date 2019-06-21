@@ -25,6 +25,10 @@ const PageWrapper = styled.div `
   width: 100vw;
   position: relative;
   overflow: hidden;
+  .image_wrapper {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
   h1 {
     cursor: url(${cursor}), auto !important;
   }
@@ -225,6 +229,10 @@ const ImageWrapper = styled.div`
    height: 330px;
    width: 200%;
   }
+  @media (max-width: 330px) and (max-height: 530px) {
+   height: 290px;
+   width: 200%;
+  }
   @media (min-width: 1400px) {
     width: 800px;
   }
@@ -348,9 +356,11 @@ class Layout extends React.Component {
             </div>
           </Menu>
         </WelcomeWrapper>
-        <ImageWrapper className={imageClass}>
-          <GlitchImage url={dusanstvo_landing}/>
-        </ImageWrapper>
+        <div class="image_wrapper">
+          <ImageWrapper className={imageClass}>
+            <GlitchImage url={dusanstvo_landing}/>
+          </ImageWrapper>
+        </div>
         <Footer />
         <FooterNarrow />
       </PageWrapper>

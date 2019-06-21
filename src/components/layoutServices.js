@@ -65,7 +65,7 @@ const PageWrapper = styled.div`
     fill: var(--white);
   }
   .hide_burger {
-    opacity: 0;
+    display: none;
   }
 `
 const TextWrapper = styled.div`
@@ -277,8 +277,8 @@ const LayoutClients = ({ children }) => (
               Brand Monitoring
             </h1>
             <p className="padding_top">
-              Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a
-              návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje
+              Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a
+              návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje
               možnosti.
             </p>
           </BlokRight>

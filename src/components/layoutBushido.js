@@ -14,7 +14,7 @@ import ScrollDown from "./scrollDown"
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
-import banana_surf from "../images/banana_surf_4_opt.gif"
+import banana_surf from "../images/bushido_icon.gif"
 import samurai from "../images/samurai.svg"
 
 const PageWrapper = styled.div`
@@ -47,7 +47,7 @@ const PageWrapper = styled.div`
     opacity: 0;
   }
   .hide_burger {
-    opacity: 0;
+    display: none;
   }
 `
 const TextWrapper = styled.div`

@@ -62,7 +62,7 @@ const PageWrapper = styled.div`
     opacity: 0;
   }
   .hide_burger {
-    opacity: 0;
+    display: none;
   }
 `
 const BurgerWrapper = styled.div`
@@ -232,7 +232,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 Univerzite Komenského
               </a>,
-              ". v Bratislave. Štúdium si manažujem po svojom. V jeden všedný deň pri ceste autobusom na mňa z ulice kričí stupídny billboard – “Čo kukáš jak dilino? Sprav to lepšie, keď sa ti nepáči!” A od vtedy sa to snažím robiť lepšie, pretože reklame sa nedá vyhnúť.",
+              " v Bratislave. Štúdium si manažujem po svojom. V jeden všedný deň pri ceste autobusom na mňa z ulice kričí stupídny billboard – “Čo kukáš jak dilino? Sprav to lepšie, keď sa ti nepáči!” A od vtedy sa to snažím robiť lepšie, pretože reklame sa nedá vyhnúť.",
             ]}
           />
           <Story
@@ -377,7 +377,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 1 Global Translators
               </a>,
-              " na prvých priečkach vyhľadávania pre prekladateľské služby v rôznych jazykoch",
+              " na prvých priečkach vyhľadávania pre prekladateľské služby v rôznych jazykoch.",
             ]}
           />
           <Story
@@ -392,7 +392,7 @@ const LayoutAboutMe = ({ children }) => (
             bottom="auto"
             width="390px"
             height="590px"
-            bg_pos="-70px center"
+            bg_pos="-300px center"
             bg_narrow_pos="center top"
             image={aboutme_7}
             h4_top="0px"
@@ -512,7 +512,7 @@ const LayoutAboutMe = ({ children }) => (
             year="2012"
             h3_top="100px"
             h3_left="450px"
-            headline="Späť na Ceste"
+            headline="Späť na Ceste"
             p_width="350px"
             text={[
               "Trpezlivou prácou vo voľnom čase sa mi postupne darí získať dostatok klientov, na to aby som sa uživil. Končím s Adsultingom. Som sám sebe pánom a robím pre klientov ako ",
@@ -521,7 +521,7 @@ const LayoutAboutMe = ({ children }) => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Tabačka Kulturfabrik
+                Tabačka Kulturfabrik
               </a>,
               ", ",
               <a

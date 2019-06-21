@@ -57,9 +57,9 @@ class Footer extends React.Component {
   render () {
     return (
       <FooterWrapper className="social_narrow">
-        <a className="footer_linkedin" href="https://www.linkedin.com/in/dusantatransky/"> </a>
-        <a className="footer_medium" href="https://medium.com/@dusantatransky"> </a>
-        <a className="footer_goodreads" href="https://www.goodreads.com/user/show/69845863-dusan-tatransky"> </a>
+        <a className="footer_linkedin" target="_new" href="https://www.linkedin.com/in/dusantatransky/"> </a>
+        <a className="footer_medium" target="_new" href="https://medium.com/@dusantatransky"> </a>
+        <a className="footer_goodreads" target="_new" href="https://www.goodreads.com/user/show/69845863-dusan-tatransky"> </a>
       </ FooterWrapper>
     )
   }
