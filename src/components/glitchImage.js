@@ -7,6 +7,7 @@ const ImageWrapper = styled.div`{
   background: url(${props => props.props});
   background-size: 190%;
   position: relative;
+  overflow: hidden;
   @media (max-width: 1000px) {
     background-position: -150px 0;
   }

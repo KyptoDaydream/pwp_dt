@@ -42,8 +42,8 @@ const MenuWrapper = styled.div`
   @media (max-width: 700px) {
     .bm-burger-button {
     z-index: 1000;
-    width: 20px;
-    height: 10px;
+    width: 25px;
+    height: 15px;
     position: absolute;
     right: 50px;
     top: 50px;
@@ -100,6 +100,20 @@ const MenuWrapper = styled.div`
     width: 5px !important;
     height: 40px !important;
     transition: 0.3s;
+  }
+  @media (max-width: 700px) {
+    .bm-cross-button {
+      position: absolute;
+      top: 50px !important;
+      right: 60px !important;
+      width: 25px !important;
+      height: 25px !important;
+    }
+    .bm-cross {
+      margin-top: -5px;
+      margin-left: 0px;
+      height: 20px !important;
+    }
   }
   .bm-cross-button:hover .bm-cross{
     background-image: linear-gradient(var(--orange), var(--orange));
