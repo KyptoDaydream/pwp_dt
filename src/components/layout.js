@@ -25,10 +25,6 @@ const PageWrapper = styled.div `
   width: 100vw;
   position: relative;
   overflow: hidden;
-  .image_wrapper {
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
   h1 {
     cursor: url(${cursor}), auto !important;
   }
@@ -174,6 +170,7 @@ const ImageWrapper = styled.div`
   height: 100vh;
   left: 50%;
   animation: slide_in 0.3s ease-out;
+  overflow: hidden;
   img {
     width: auto;
     width: 100%;
@@ -356,11 +353,9 @@ class Layout extends React.Component {
             </div>
           </Menu>
         </WelcomeWrapper>
-        <div class="image_wrapper">
           <ImageWrapper className={imageClass}>
             <GlitchImage url={dusanstvo_landing}/>
           </ImageWrapper>
-        </div>
         <Footer />
         <FooterNarrow />
       </PageWrapper>
