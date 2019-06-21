@@ -55,6 +55,7 @@ const TextWrapper = styled.div`
   margin: 0 auto;
   padding-bottom: 150px;
   position: relative;
+  overflow-x: hidden;
   @media (max-width: 1000px) {
     max-width: 100%;
     padding: 0px 25px 150px 25px;

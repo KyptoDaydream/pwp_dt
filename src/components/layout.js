@@ -19,6 +19,7 @@ import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import cursor from "../images/cursor.png"
+import arrow from "../images/arrow.svg"
 
 const PageWrapper = styled.div `
   width: 100vw;
@@ -34,8 +35,32 @@ const PageWrapper = styled.div `
   }
   @media (max-width: 800px) {
     h1.headlines {
+      position: relative;
       text-align: left;
       padding-left: 25px;
+      display: inline-block;
+      font-size: 9vw;
+      &:after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        right: -30px;
+        top: 5px;
+        width: 20px;
+        height: 100%;
+        background: url(${arrow});
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    h1.headlines {
+      &:after {
+        top: 2px;
+        background-size: 80% 80%;
+      }
     }
   }
 `
@@ -100,12 +125,24 @@ const Menu = styled.div`
       opacity: 0;
     }
   }
+  @media (max-width: 500px) {
+    .text_hide {
+      opacity: 1;
+      animation: none;
+    }
+  }
   @media (min-width: 1600px) {
     .home_1:hover + div,
     .home_2:hover + div {
       width: 600px;
       top: -250px;
       margin-left: -300px;
+    }
+  }
+  @media (max-width: 500px) {
+    .home_1:hover + div,
+    .home_2:hover + div {
+      display: none;
     }
   }
   @media (max-width: 800px) {
@@ -159,6 +196,13 @@ const ImageWrapper = styled.div`
       left: 100%;
     }
   }
+  @media (max-width: 500px) {
+    &.image_hide {
+      opacity: 1;
+      left: 0;
+      animation: none;
+    }
+  }
   @media (max-width: 800px) {
    bottom: 0;
    left: 0;
@@ -209,6 +253,9 @@ const H1ImageWrapper = styled.div`
     top: -250px;
     margin-left: -300px;
   }
+  @media (max-width: 500px) {
+    display: none;
+  }
 `
 const H2ImageWrapper = styled.div`
   transition: 0.3s;
@@ -223,6 +270,9 @@ const H2ImageWrapper = styled.div`
     width: 600px;
     top: -250px;
     margin-left: -300px;
+  }
+  @media (max-width: 500px) {
+    display: none;
   }
 `
 const Headline = styled.p`
@@ -246,11 +296,11 @@ const Headline = styled.p`
     text-align: left;
     margin-top: 190px;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 800px) {
     font-size: 14px;
     margin-top: 190px;
   }
-  @media (max-height: 568px) {
+  @media (max-height: 568px) and (max-width: 800px) {
     font-size: 14px;
     margin-top: 170px;
   }
