@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 import "../styles/global.css"
 
 const AboutYouPage = () => (
-  <Layout>
-    <SEO title="Dušan Tatranský – Osobná Značka a Marketing pre Freelancerov" keywords={[`influencer marketing, freelancer marketing, marketing pre umelcov, 
-    brand review, boj o pozornost`]} />
-  </Layout>
+  <>
+  <SEO title="Osobná Značka a Marketing pre Freelancerov" keywords={[`influencer marketing, freelancer marketing, marketing pre umelcov, brand review, boj o pozornost`]} />
+  <Layout />
+  </> 
 )
 
 export default AboutYouPage

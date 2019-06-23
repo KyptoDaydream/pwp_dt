@@ -6,9 +6,10 @@ import SEO from "../components/seo"
 import "../styles/global.css"
 
 const Hurray = () => (
-  <Layout>
-    <SEO title="HURRAY! Ozvem sa čoskoro" />
-  </Layout>
+  <>
+  <SEO title="HURRAY! Ozvem sa čoskoro" keywords={["dusan tatransky, osobna znacka, digitalna strategia, online bodyguard, personal marketing"]} />
+  <Layout />
+  </> 
 )
 
 export default Hurray

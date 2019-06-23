@@ -6,9 +6,10 @@ import SEO from "../components/seo"
 import "../styles/global.css"
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-  </Layout>
+  <>
+  <SEO title="404: Not found" keywords={["dusan tatransky, osobna znacka, digitalna strategia, online bodyguard, personal marketing"]} />
+  <Layout />
+  </> 
 )
 
 export default NotFoundPage
