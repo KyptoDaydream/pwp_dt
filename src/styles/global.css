@@ -31,6 +31,10 @@
 }
 /* --grey: #484A47; */
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 * {
   font-size: 16px;
   margin: 0;
