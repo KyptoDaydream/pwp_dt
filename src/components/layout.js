@@ -317,12 +317,24 @@ class Layout extends React.Component {
     this.state = {
         isHovered: false
     };
-    this.handleHover = this.handleHover.bind(this);
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handleOver = this.handleOver.bind(this);
+    this.handleLeave = this.handleLeave.bind(this);
   }
-  handleHover(){
+  handleEnter(){
       this.setState(prevState => ({
-          isHovered: !prevState.isHovered
+          isHovered: true
       }));
+  }
+  handleOver(){
+    this.setState(prevState => ({
+        isHovered: true
+    }));
+  }
+  handleLeave(){
+    this.setState(prevState => ({
+        isHovered: false
+    }));
   }
   render () {
     const imageClass = this.state.isHovered ? "image_hide" : "";
@@ -337,7 +349,7 @@ class Layout extends React.Component {
           <Avatar />
           <Menu>
             <Headline className={textClass}>Som Online Bodyguard z ďalekého východu ... z Košíc</Headline>
-            <div className="link_wrapper" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+            <div className="link_wrapper" onMouseOver={this.handleOver} onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave}>
               <Link to="/oMne">
                 <h1 className="headlines home_1">Prečítaj si o mne</h1>
                 <H1ImageWrapper>
