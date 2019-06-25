@@ -144,7 +144,10 @@ const BlokRight = styled.div`
       padding: 25px 0 25px 0;
     }
     h1 {
-      font-size: 19vw;
+      font-size: 14vw;
+    }
+    h1 {
+      margin-bottom: 25px;
     }
     .p3_narrow {
       padding: 100px 0 0 0;
