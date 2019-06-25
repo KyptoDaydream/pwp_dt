@@ -249,7 +249,7 @@ const LayoutBushido = ({ children }) => (
 )
 
 LayoutBushido.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 }
 
 export default LayoutBushido

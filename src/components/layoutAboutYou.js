@@ -284,7 +284,7 @@ const LayoutAboutYou = ({ children }) => (
 )
 
 LayoutAboutYou.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 }
 
 export default LayoutAboutYou

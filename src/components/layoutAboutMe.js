@@ -933,7 +933,7 @@ const LayoutAboutMe = ({ children }) => (
 )
 
 LayoutAboutMe.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 }
 
 export default LayoutAboutMe
