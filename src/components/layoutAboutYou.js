@@ -162,7 +162,7 @@ const BlokRight = styled.div`
     width: 500px;
     position: relative;
     margin-left: -200px;
-    padding-top: 250px;
+    padding-top: 450px;
     transition: 0.6s;
     opacity: 0;
     }
