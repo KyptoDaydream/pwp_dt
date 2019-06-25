@@ -218,9 +218,17 @@ const ImageWrapper = styled.div`
    height: 440px;
    width: 210%;
   }
+  @media (max-width: 414px) and (max-height: 500px) {
+   height: 440px;
+   width: 100%;
+  }
   @media (max-height: 667px) and (max-width: 800px){
    height: 400px;
    width: 200%;
+  }
+  @media (max-height: 667px) and (max-width: 500px){
+   height: 400px;
+   width: 100%;
   }
   @media (max-width: 370px) {
    height: 370px;
