@@ -63,6 +63,7 @@ const Menu = styled.div`
     position: relative;
     cursor: pointer !important;
     &:hover {
+      opacity: 1 !important;
       color: var(--orange) !important;
       -webkit-text-stroke: 0px !important;
     }
