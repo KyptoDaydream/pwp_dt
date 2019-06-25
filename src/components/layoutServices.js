@@ -293,7 +293,7 @@ const LayoutClients = ({ children }) => (
             </h1>
             <p className="padding_top p4_narrow">
               Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a
-              návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje
+              návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje
               možnosti.
             </p>
           </BlokRight>

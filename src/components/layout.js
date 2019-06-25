@@ -24,8 +24,18 @@ const PageWrapper = styled.div `
   width: 100vw;
   position: relative;
   overflow: hidden;
-  h1 {
+  h1.headlines {
     cursor: pointer !important;
+    &:hover {
+        color: var(--black);
+        -webkit-text-stroke: 0px; 
+    }
+    &.home_1_hovered,
+    &.home_2_hovered {
+      opacity: 1 !important;
+      color: var(--orange);
+      -webkit-text-stroke: 1px var(--white); 
+    }
   }
   @media (min-width: 1600px) {
     h1.headlines {
@@ -365,6 +375,8 @@ class Layout extends React.Component {
     const textClass = this.state.isHovered ? "text_hide" : "";
     const home_1_class = this.state.isHovered_1 ? "home_1_img hovered" : "home_1_img";
     const home_2_class = this.state.isHovered_2 ? "home_2_img hovered" : "home_2_img";
+    const home_1_text = this.state.isHovered_1 ? "headlines home_1 home_1_hovered" : "headlines home_1";
+    const home_2_text = this.state.isHovered_2 ? "headlines home_2 home_2_hovered" : "headlines home_2";
     return (
       <PageWrapper>
         <BurgerWrapper>
@@ -377,13 +389,13 @@ class Layout extends React.Component {
             <Headline className={textClass}>Som Online Bodyguard z ďalekého východu ... z Košíc</Headline>
             <div className="link_wrapper">
               <Link to="/oMne">
-                <h1 className="headlines home_1" onMouseOver={this.handleOver_1} onMouseEnter={this.handleOver_1} onMouseMove={this.handleOver_1} onMouseLeave={this.handleLeave_1}>Prečítaj si o mne</h1>
+                <h1 className={home_1_text} onMouseOver={this.handleOver_1} onMouseEnter={this.handleOver_1} onMouseMove={this.handleOver_1} onMouseLeave={this.handleLeave_1}>Prečítaj si o mne</h1>
                 <H1ImageWrapper className={home_1_class}>
                   <img src={dusanstvo_omne} alt='' />
                 </H1ImageWrapper>
               </Link>
               <Link to="/oTebe">
-              <h1 className="headlines home_2" onMouseOver={this.handleOver_2} onMouseEnter={this.handleOver_2} onMouseMove={this.handleOver_2} onMouseLeave={this.handleLeave_2}>Napíš mi</h1>
+              <h1 className={home_2_text} onMouseOver={this.handleOver_2} onMouseEnter={this.handleOver_2} onMouseMove={this.handleOver_2} onMouseLeave={this.handleLeave_2}>Napíš mi</h1>
                 <H2ImageWrapper className={home_2_class}>
                   <img src={dusanstvo_otebe} alt='' />
                 </H2ImageWrapper>

@@ -63,7 +63,8 @@ const Menu = styled.div`
     position: relative;
     cursor: pointer !important;
     &:hover {
-      -webkit-text-stroke: 0px;
+      color: var(--orange) !important;
+      -webkit-text-stroke: 0px !important;
     }
     &:before {
       position: absolute;
