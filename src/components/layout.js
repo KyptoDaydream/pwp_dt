@@ -197,7 +197,6 @@ const ImageWrapper = styled.div`
     }
   }
   @media (max-width: 500px) {
-    position: fixed;
     animation: none;
     &.image_hide {
       opacity: 1;
