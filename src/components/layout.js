@@ -119,7 +119,7 @@ const Menu = styled.div`
     top: -150px;
     margin-left: -200px;
   }
-  .link_wrapper:hover h1 {
+  .link_wrapper_hovered h1 {
     opacity: 0.3;
   }
   .text_hide {
@@ -373,6 +373,7 @@ class Layout extends React.Component {
   render () {
     const imageClass = this.state.isHovered ? "image_hide" : "";
     const textClass = this.state.isHovered ? "text_hide" : "";
+    const link_wrapper_class = this.state.isHovered ? "link_wrapper link_wrapper_hovered" : "link_wrapper";
     const home_1_class = this.state.isHovered_1 ? "home_1_img hovered" : "home_1_img";
     const home_2_class = this.state.isHovered_2 ? "home_2_img hovered" : "home_2_img";
     const home_1_text = this.state.isHovered_1 ? "headlines home_1 home_1_hovered" : "headlines home_1";
@@ -387,7 +388,7 @@ class Layout extends React.Component {
           <Avatar />
           <Menu>
             <Headline className={textClass}>Som Online Bodyguard z ďalekého východu ... z Košíc</Headline>
-            <div className="link_wrapper">
+            <div className={link_wrapper_class}>
               <Link to="/oMne">
                 <h1 className={home_1_text} onMouseOver={this.handleOver_1} onMouseEnter={this.handleOver_1} onMouseMove={this.handleOver_1} onMouseLeave={this.handleLeave_1}>Prečítaj si o mne</h1>
                 <H1ImageWrapper className={home_1_class}>
