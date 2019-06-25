@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import hand from "../images/hand.gif"
 import arrow from "../images/arrow_right.svg"
-import cursor from "../images/cursor.png"
 
 const FooterWrapper = styled.div`
   display: block;
@@ -101,7 +100,7 @@ const FooterWrapper = styled.div`
         font-size: 48px;
         color: var(--orange);
         border: 0;
-        cursor: url(${cursor}), auto;
+        cursor: pointer;
         &:hover + div {
           width: 45px;
         }

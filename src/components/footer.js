@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import hand from "../images/hand.gif"
-import cursor from "../images/cursor.png"
 
 
 const FooterWrapper = styled.div`
@@ -60,7 +59,7 @@ const Menu = styled.div`
     color: var(--white);
     font-size: 40px;
     text-align: left;
-    cursor: url(${cursor}), auto !important;
+    cursor: pointer !important;
     &:hover {
       -webkit-text-stroke: 0px;
     }

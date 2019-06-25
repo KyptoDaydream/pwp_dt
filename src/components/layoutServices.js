@@ -23,7 +23,7 @@ import five from "../images/5.svg"
 import six from "../images/6.svg"
 
 const PageWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background: var(--black);
   * {
@@ -245,7 +245,7 @@ const LayoutClients = ({ children }) => (
             Ako online bodybuilder ti pomôžem budovať tvoju osobnú značku.
           </h2>
           <ImageWrapper>
-            <img src={dusanstvo_sluzby} alt="" />
+            <img src={dusanstvo_sluzby} alt="Dusan Tatransky Sluzby" />
           </ImageWrapper>
           <h2 className="second_paragraph" id="trigger_hide_text">
             Ako online bodyguard ti zas tvoju osobnú značku a reputáciu pomôžem
@@ -274,8 +274,8 @@ const LayoutClients = ({ children }) => (
               aktualizáciu, zadefinujem tvoju značku, vymyslím ti stratégiu,
               vytvorím ti logo a webstránku, zabezpečím tvoje publikum, nastavím
               email marketing, optimalizujem vyhľadávače, monitorujem tvoju
-              reputáciu, nacením spolupráce, či zorganizujem event. Alebo
-              čokoľvek marketingové.
+              reputáciu, nacením spolupráce či zorganizujem event. Proste
+              čokoľvek marketingové potrebuješ.
             </p>
             <p className="p3_narrow">
               Ak chceš vlastniť svoju Identitu, Reputáciu a Publikum, môj postup

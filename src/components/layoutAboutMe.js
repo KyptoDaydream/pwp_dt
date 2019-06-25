@@ -41,7 +41,7 @@ import aboutme_20 from "../images/aboutme_20.jpg"
 import aboutme_21 from "../images/aboutme_21.jpg"
 
 const PageWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background: var(--white);
   transition: 0.4s;
@@ -162,7 +162,7 @@ const LayoutAboutMe = ({ children }) => (
             nezávislosti.
           </h2>
           <ImageWrapper>
-            <img src={dusanstvo_omne} alt="" />
+            <img src={dusanstvo_omne} alt="Dusan Tatransky Pribeh" />
           </ImageWrapper>
           <BlokLeft>
             <p id="trigger_hide_text">
@@ -200,7 +200,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 Galejach
               </a>,
-              ". Počítam príklady a drhnem lavice od 8-16. Chcem si získať svoju slobodu a ušetriť na osemročnom gymnáziu rok života. Som preto dobrý študent a učím sa aj to čo ma nebaví. Čo si neuvedomujem je, že poctivé štádium mi dá užitočnú vlastnosť. Všeobecný prehlaď.",
+              ". Počítam príklady a drhnem lavice od 8 do 16. Chcem si získať svoju slobodu a ušetriť na osemročnom gymnáziu rok života. Som preto dobrý študent a učím sa aj to, čo ma nebaví. Čo si neuvedomujem je, že poctivé štúdium mi dá užitočnú vlastnosť. Všeobecný prehlaď.",
             ]}
           />
           <Story
@@ -232,7 +232,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 Univerzite Komenského
               </a>,
-              " v Bratislave. Štúdium si manažujem po svojom. V jeden všedný deň pri ceste autobusom na mňa z ulice kričí stupídny billboard – “Čo kukáš jak dilino? Sprav to lepšie, keď sa ti nepáči!” A od vtedy sa to snažím robiť lepšie, pretože reklame sa nedá vyhnúť.",
+              " v Bratislave. Štúdium si manažujem po svojom. V jeden všedný deň pri ceste autobusom na mňa z ulice kričí stupídny billboard: “Čo kukáš jak dilino? Sprav to lepšie, keď sa ti nepáči!” A od vtedy sa to snažím robiť lepšie, pretože reklame sa nedá vyhnúť.",
             ]}
           />
           <Story
@@ -281,7 +281,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Neopúšťaj sa"
             p_width="350px"
             text={[
-              "Popri štúdiu chcem v marketingu aj pracovať. Ale všetky ponuky, na ktoré nepožadujú skúsenosti, sú otravní telefonisti a slizké MLM schémy. Presne tie veci, proti ktorým sa snažím bojovať. Rozhodnem sa preto radšej venovať vlastným nápadom a učiť sa experimentovaním.",
+              "Popri štúdiu chcem v marketingu aj pracovať, ale všetky ponuky, na ktoré nepožadujú skúsenosti, sú otravní telefonisti a slizké MLM schémy. Presne tie veci, proti ktorým sa snažím bojovať. Rozhodnem sa preto radšej venovať vlastným nápadom a učiť sa experimentovaním.",
             ]}
           />
           <Story
@@ -305,7 +305,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Skús to s Vašom"
             p_width="350px"
             text={[
-              "Pohlcuje ma online svet. Svojou nízko-nákladovosťou mi umožňuje experimentovať podľa fantázie. Vytváram zo srandy Facebook Gift aplikáciu Patejdl, ktorá za rok dosiahne 10 500 užívateľov. Vašovi vytváram aj ",
+              "Pohlcuje ma online svet. Svojou nízko-nákladovosťou mi umožňuje experimentovať podľa vlastnej fantázie. Vytváram zo srandy Facebook Gift aplikáciu Patejdl, ktorá za rok dosiahne 10 500 užívateľov. Vašovi vytváram aj ",
               <a
                 href="https://www.facebook.com/vpatejdl/"
                 target="_blank"
@@ -313,7 +313,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 fanpage
               </a>,
-              ", na ktorej je dodnes viac fanúšikov ako na jeho oficiálnej stránke.",
+              ", na ktorej je dodnes viac fanúšikov, ako na jeho oficiálnej stránke.",
             ]}
           />
           <Story
@@ -427,7 +427,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="WTF Factory"
             p_width="700px"
             text={[
-              "Vybavený podnikateľským plánom zakladám WTF Factory s.r.o., so špecializáciou na guerrilla marketing. Zbožňujem japonské WTF reklamy. Získavam úplnú slobodu, ale musím budovať biznis od nuly. Skúšam výstrel v tme - osloviť s nápadom môjho obľúbeného slovenského komika Andera z Košíc.",
+              "Vybavený podnikateľským plánom zakladám WTF Factory s.r.o., so špecializáciou na guerrilla marketing. Zbožňujem japonské WTF reklamy. Získavam úplnú slobodu, ale musím budovať biznis od nuly. Skúšam výstrel do tmy - osloviť s nápadom môjho obľúbeného slovenského komika Andera z Košíc.",
             ]}
           />
           <Story
@@ -515,7 +515,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Späť na Ceste"
             p_width="350px"
             text={[
-              "Trpezlivou prácou vo voľnom čase sa mi postupne darí získať dostatok klientov, na to aby som sa uživil. Končím s Adsultingom. Som sám sebe pánom a robím pre klientov ako ",
+              "Trpezlivou prácou vo voľnom čase sa mi postupne darí získať dostatok klientov na to, aby som sa uživil. Končím s Adsultingom. Som sám sebe pánom a robím pre klientov ako ",
               <a
                 href="https://www.tabacka.sk/"
                 target="_blank"
@@ -555,7 +555,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 iGenius
               </a>,
-              " a rôzne start-upy. Darí sa mi zamestnávať rôznych freelancerov a časom aj 2 ľudí full-time. Začínam sa bližšie zaujímať o virálny marketing.",
+              " a rôzne start-upy. Darí sa mi zamestnávať viacerých freelancerov a časom aj 2 ľudí full-time. Začínam sa bližšie zaujímať o virálny marketing.",
             ]}
           />
           <Story
@@ -686,7 +686,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Startup Fail"
             p_width="350px"
             text={[
-              "Mám nápad na vytvorenie globálnej siete fotografov. Pre dopyt po fotkách na mieru. Zakladám vlastný start-up a spúšťam crowdfunding-ovú kampaň pre portál ",
+              "Mám nápad na vytvorenie globálnej siete fotografov pre dopyt po fotkách na mieru. Zakladám vlastný start-up a spúšťam crowdfunding-ovú kampaň pre portál ",
               <a
                 href="https://nonstock.photography/"
                 target="_blank"
@@ -694,7 +694,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 Nonstock.Photography
               </a>,
-              ". Kampani sa síce darí rozšíriť povedomie o značke a získať nových fotografov, ale dopyt po službách nie je taký ako som očakával. Bez investícií projekt začína žiť svoj vlastný život a ja mu prestávam venovať pozornosť.",
+              ". Kampani sa síce darí rozšíriť povedomie o značke a získať nových fotografov, ale dopyt po službách nie je taký, ako som dúfal. Bez investícií projekt začína žiť svoj vlastný život a ja mu prestávam venovať pozornosť.",
             ]}
           />
           <Story
@@ -890,7 +890,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Online Bodyguard"
             p_width="350px"
             text={[
-              "Dopracujem sa k tomu, že na to aby som mohol využívať svoje silné stránky, a robiť čo ma baví zo všetkého najviac, si musím vytvoriť vlastnú pracovnú pozíciu. Začínam sa špecializovať na osobnú značku, ktorá ma ochránila pri každej kariérnej zmene. Online identita a reputácia je jednou z mála vecí, ktoré môžem mať ako freelancer v podnikaní pod kontrolou.",
+              "Dopracujem sa k tomu, že na to, aby som mohol využívať svoje silné stránky a robiť čo ma baví zo všetkého najviac, si musím vytvoriť vlastnú pracovnú pozíciu. Začínam sa špecializovať na osobnú značku, ktorá ma ochránila pri každej kariérnej zmene. Online identita a reputácia je jednou z mála vecí, ktoré môžem mať ako freelancer v podnikaní pod kontrolou.",
             ]}
           />
           <Story
@@ -914,7 +914,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Tvoja Gorila"
             p_width="350px"
             text={[
-              "Mám konečne plnú slobodu. Robím s ľuďmi, s ktorými ma baví robiť. Robím kedy ma to baví, či už v noci alebo cez deň. Robím tak ako verím, že je to správne, a robím to čo verím, že je správne a potrebné. Plne podľa vlastných predstáv a presvedčenia. A moji klienti, nakoľko sú tiež freelanceri to rešpektujú.",
+              "Mám konečne plnú slobodu. Robím s ľuďmi, s ktorými ma baví robiť. Robím kedy ma to baví. Robím tak ako verím, že je to správne, a robím to čo verím, že je správne a potrebné. Plne podľa vlastných predstáv a presvedčenia. A moji klienti, nakoľko sú tiež freelanceri, to rešpektujú.",
             ]}
           />
         </TextWrapper>

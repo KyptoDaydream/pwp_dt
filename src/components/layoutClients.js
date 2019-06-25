@@ -17,7 +17,7 @@ import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import dusanstvo_bushido from "../images/dusanstvo_landing.jpg"
 
 const PageWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background: var(--white);
   transition: 0.4s;
@@ -192,7 +192,7 @@ const LayoutClients = ({ children }) => (
             ...
           </h2>
           <ImageWrapper>
-            <img src={dusanstvo_klienti} alt="" />
+            <img src={dusanstvo_klienti} alt="Dusan Tatransky Klienti" />
           </ImageWrapper>
           <BlokLeft>
             <p id="trigger_hide_text" className="p1_narrow">

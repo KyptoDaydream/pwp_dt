@@ -16,7 +16,7 @@ import dusanstvo_klienti from "../images/dusanstvo_klienti.jpg"
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 
 const PageWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background: var(--white);
   transition: 0.4s;

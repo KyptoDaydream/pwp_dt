@@ -12,7 +12,6 @@ import medium_nav from "../images/medium_nav.svg"
 import medium_nav_hover from "../images/medium_nav_hover.svg"
 import goodreads_nav from "../images/goodreads_nav.svg"
 import goodreads_nav_hover from "../images/goodreads_nav_hover.svg"
-import cursor from "../images/cursor.png";
 
 const SocialIcon = styled.div `
   width: 25px;
@@ -20,7 +19,7 @@ const SocialIcon = styled.div `
   position: fixed;
   transition: 0.3s;
   z-index: 1002;
-  cursor: url(${cursor}), auto;
+  cursor: pointer;
   &.linkedin {
     background-image: url(${linkedin});
     background-size: cover;

@@ -18,7 +18,6 @@ import Avatar from "./avatar"
 import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
-import cursor from "../images/cursor.png"
 import arrow from "../images/arrow.svg"
 
 const PageWrapper = styled.div `
@@ -26,7 +25,7 @@ const PageWrapper = styled.div `
   position: relative;
   overflow: hidden;
   h1 {
-    cursor: url(${cursor}), auto !important;
+    cursor: pointer !important;
   }
   @media (min-width: 1600px) {
     h1.headlines {
@@ -198,6 +197,8 @@ const ImageWrapper = styled.div`
     }
   }
   @media (max-width: 500px) {
+    position: fixed;
+    animation: none;
     &.image_hide {
       opacity: 1;
       left: 0;
@@ -299,15 +300,15 @@ const Headline = styled.p`
     margin-bottom: 5px;
     font-size: 16px;
     text-align: left;
-    margin-top: 190px;
+    margin-top: 200px;
   }
   @media (max-height: 667px) and (max-width: 800px) {
     font-size: 14px;
-    margin-top: 190px;
+    margin-top: 200px;
   }
   @media (max-height: 568px) and (max-width: 800px) {
     font-size: 14px;
-    margin-top: 170px;
+    margin-top: 160px;
   }
 `
 

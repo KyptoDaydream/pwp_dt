@@ -40,7 +40,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url("../images/cursor_default.png"), auto;
   color: var(--black);
 }
 
@@ -48,7 +47,7 @@ a,
 .bm-burger-button,
 .bm-burger-cross {
   text-decoration: none;
-  cursor: url("../images/cursor.png"), auto;
+  cursor: pointer;
 }
 
 a:hover {
@@ -68,7 +67,6 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: var(--white);
   background-size: cover;
-  cursor: url("../images/cursor_default.png"), auto;
 }
 
 p {

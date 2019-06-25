@@ -17,7 +17,7 @@ import monkey from "../images/monkey_head.png"
 // import monkey from "../images/monkey.svg"
 
 const PageWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background: var(--black);
   * {
@@ -215,15 +215,15 @@ const LayoutAboutYou = ({ children }) => (
             <br /> A ja budem tvoj profesionálny follower.
           </h2>
           <ImageWrapper>
-            <img src={dusanstvo_otebe} alt="" />
+            <img src={dusanstvo_otebe} alt="Dusan Tatransky Follower" />
           </ImageWrapper>
           <h2 className="second_paragraph" id="trigger_hide_text">
             Chcem spoznať viac zaujímavých ľudí, ktorí sa nechcú opičiť.
           </h2>
           <BlokRight id="trigger_hide_text">
             <p id="trigger_reveal_image_1" className="p1_narrow">
-              Nezáleží na tom, či si umelec, freelancer, influencer alebo známa
-              osobnosť. Podstatné je, že robíš čo ťa baví a chceš aby ťa v
+              Nezáleží na tom, či si umelec, freelancer, influencer, alebo známa
+              osobnosť. Podstatné je, že robíš čo ťa baví a chceš, aby ťa v
               online svete bolo vidieť a počuť. Uvedomuješ si akým spôsobom
               chceš byť v online svete viditeľný a akým zas neviditeľný?
             </p>
@@ -241,7 +241,7 @@ const LayoutAboutYou = ({ children }) => (
             </Controller>
             <p className="padding_top p2_narrow">
               Aktuálne vo svete prebieha <strong>boj o pozornosť</strong>,
-              ktorého súčasťou je stále viac ľudí ako si ty, ale aj ...
+              ktorého súčasťou je stále viac ľudí, ako si ty, ale aj ...
             </p>
             <h1>veľké značky</h1>
             <h1>hoaxy</h1>
@@ -250,8 +250,8 @@ const LayoutAboutYou = ({ children }) => (
             <h1>boti</h1>
             <h1>trollovia</h1>
             <p className="padding_top p3_narrow">
-              Preto je potrebné aby si sa prezentoval premyslene, a strážil si
-              svoje dobré meno. S mojou pomocou budeš svoju osobnú značku,
+              Preto je potrebné, aby si sa prezentoval premyslene, a strážil si
+              svoje súkromie. S mojou pomocou budeš svoju osobnú značku,
               reputáciu a publikum vlastniť. Ja ich budem pre teba strážiť,
               pravidelne monitorovať a navrhovať aktualizácie.
             </p>

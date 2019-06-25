@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Dusan Tatransky`,
-    description: `Osobná Značka a Marketing pre Freelancerov`,
+    title: `Dušan Tatranský`,
+    description: `Od roku 2008 ma baví a od roku ľé++ ma živí marketing. Chcem aby sa viac ľudí dokázalo uživiť tým, čo ich baví`,
     author: `@erikschwarz`,
   },
   plugins: [

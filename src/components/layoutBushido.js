@@ -18,7 +18,7 @@ import banana_surf from "../images/bushido_icon.gif"
 import samurai from "../images/samurai.svg"
 
 const PageWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background: var(--white);
   transition: 0.4s;
@@ -188,7 +188,7 @@ const LayoutBushido = ({ children }) => (
         <TextWrapper>
           <h2>Som freelancer, ktorý túži mať svätý pokoj.</h2>
           <ImageWrapper>
-            <img src={dusanstvo_landing} alt="" />
+            <img src={dusanstvo_landing} alt="Dusan Tatransky Online Bodyguard" />
           </ImageWrapper>
           <BlokLeft>
             <p id="trigger_hide_text">
@@ -199,13 +199,13 @@ const LayoutBushido = ({ children }) => (
         </TextWrapper>
         <BushidoRule>
           <h2>
-            Šťastní je ten, kto dosiahne poznanie a slobodu, nie slávu alebo
+            Šťastný je ten, kto dosiahne poznanie a slobodu, nie slávu alebo
             bohatstvo
           </h2>
         </BushidoRule>
         <BushidoRule>
           <h2>
-            Úspešný je ten, kto so svojim časom môže naložiť, ako uzná za vhodné
+            Úspešný je ten, kto so svojim časom môže naložiť tak, ako uzná za vhodné
           </h2>
         </BushidoRule>
         <BushidoRule>
@@ -215,7 +215,7 @@ const LayoutBushido = ({ children }) => (
           <h2>Rob výhradne pre spriaznené duše, nervy tvoje ušetrí to</h2>
         </BushidoRule>
         <BushidoRule>
-          <h2>Keď niečo robíš, snaž sa urobiť viac ako sa od teba očakáva</h2>
+          <h2>Keď niečo robíš, snaž sa urobiť viac, ako sa od teba očakáva</h2>
         </BushidoRule>
         <BushidoRule>
           <h2>Nesľúb nikdy klientovi svojmu, čo splniť nedokážeš</h2>

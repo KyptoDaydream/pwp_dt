@@ -9,7 +9,6 @@ import burger from "../images/burger.svg"
 import burger_hover from "../images/burger_hover.svg"
 // import burger_close from "../images/burger_close.svg"
 import hand from "../images/monkey_menu.gif"
-import cursor from "../images/cursor.png"
 
 const MenuWrapper = styled.div`
   .bm-burger-button {
@@ -82,7 +81,7 @@ const MenuWrapper = styled.div`
     right: 70px !important;
     width: 50px !important;
     height: 50px !important;
-    cursor: url(${cursor}), auto !important;
+    cursor: pointer;
     span {
       background: var(--white);
       display: block;
@@ -176,7 +175,7 @@ const MenuItem = styled.span`
   color: var(--white) !important;
   font-size: 40px;
   text-align: left;
-  cursor: url(${cursor}), auto !important;
+  cursor: pointer !important;
   &:hover {
     color: var(--orange) !important;
   }
