@@ -81,7 +81,7 @@ const MenuWrapper = styled.div`
     right: 70px !important;
     width: 50px !important;
     height: 50px !important;
-    cursor: pointer;
+    cursor: pointer !important;
     span {
       background: var(--white);
       display: block;

@@ -156,6 +156,22 @@ const BlokRight = styled.div`
       padding: 25px 0 50px 0;
     }
   }
+
+  @media (max-width: 500px) {
+    img {
+    width: 500px;
+    position: relative;
+    margin-left: -200px;
+    padding-top: 250px;
+    transition: 0.6s;
+    opacity: 0;
+    }
+    img.reveal_image {
+      opacity: 1;
+      margin-left: -200px;
+      padding-top: 50px;
+    }
+  }
 `
 const Trigger = styled.div`
   width: 100%;
