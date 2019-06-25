@@ -91,7 +91,7 @@ const Menu = styled.div`
     position: relative;
     display: block;
   }
-  .home_1:hover + div {
+  .home_1_img.hovered {
     opacity: 1;
     display: block;
     position: absolute;
@@ -100,7 +100,7 @@ const Menu = styled.div`
     top: -150px;
     margin-left: -200px;
   }
-  .home_2:hover + div {
+  .home_2_img.hovered {
     opacity: 1;
     display: block;
     position: absolute;
@@ -131,16 +131,16 @@ const Menu = styled.div`
     }
   }
   @media (min-width: 1600px) {
-    .home_1:hover + div,
-    .home_2:hover + div {
+    .home_1_img.hovered,
+    .home_2_img.hovered {
       width: 600px;
       top: -250px;
       margin-left: -300px;
     }
   }
   @media (max-width: 500px) {
-    .home_1:hover + div,
-    .home_2:hover + div {
+    .home_1_img.hovered,
+    .home_2_img.hovered {
       display: none;
     }
   }
@@ -327,30 +327,44 @@ class Layout extends React.Component {
   constructor(){
     super();
     this.state = {
-        isHovered: false
+        isHovered: false,
+        isHovered_1: false,
+        isHovered_2: false
     };
-    this.handleEnter = this.handleEnter.bind(this);
-    this.handleOver = this.handleOver.bind(this);
-    this.handleLeave = this.handleLeave.bind(this);
+    this.handleLeave_1 = this.handleLeave_1.bind(this);
+    this.handleLeave_2 = this.handleLeave_2.bind(this);
+    this.handleOver_1 = this.handleOver_1.bind(this);
+    this.handleOver_2 = this.handleOver_2.bind(this);
   }
-  handleEnter(){
-      this.setState(prevState => ({
-          isHovered: true
-      }));
-  }
-  handleOver(){
+  handleOver_1(){
     this.setState(prevState => ({
-        isHovered: true
+        isHovered: true,
+        isHovered_1: true
     }));
   }
-  handleLeave(){
+  handleOver_2(){
     this.setState(prevState => ({
-        isHovered: false
+        isHovered: true,
+        isHovered_2: true
+    }));
+  }
+  handleLeave_1(){
+    this.setState(prevState => ({
+        isHovered: false,
+        isHovered_1: false
+    }));
+  }
+  handleLeave_2(){
+    this.setState(prevState => ({
+        isHovered: false,
+        isHovered_2: false
     }));
   }
   render () {
     const imageClass = this.state.isHovered ? "image_hide" : "";
     const textClass = this.state.isHovered ? "text_hide" : "";
+    const home_1_class = this.state.isHovered_1 ? "home_1_img hovered" : "home_1_img";
+    const home_2_class = this.state.isHovered_2 ? "home_2_img hovered" : "home_2_img";
     return (
       <PageWrapper>
         <BurgerWrapper>
@@ -361,16 +375,16 @@ class Layout extends React.Component {
           <Avatar />
           <Menu>
             <Headline className={textClass}>Som Online Bodyguard z ďalekého východu ... z Košíc</Headline>
-            <div className="link_wrapper" onMouseOver={this.handleOver} onMouseEnter={this.handleEnter} onMouseMove={this.handleOver} onMouseLeave={this.handleLeave}>
+            <div className="link_wrapper">
               <Link to="/oMne">
-                <h1 className="headlines home_1">Prečítaj si o mne</h1>
-                <H1ImageWrapper>
+                <h1 className="headlines home_1" onMouseOver={this.handleOver_1} onMouseEnter={this.handleOver_1} onMouseMove={this.handleOver_1} onMouseLeave={this.handleLeave_1}>Prečítaj si o mne</h1>
+                <H1ImageWrapper className={home_1_class}>
                   <img src={dusanstvo_omne} alt='' />
                 </H1ImageWrapper>
               </Link>
               <Link to="/oTebe">
-              <h1 className="headlines home_2">Napíš mi</h1>
-                <H2ImageWrapper>
+              <h1 className="headlines home_2" onMouseOver={this.handleOver_2} onMouseEnter={this.handleOver_2} onMouseMove={this.handleOver_2} onMouseLeave={this.handleLeave_2}>Napíš mi</h1>
+                <H2ImageWrapper className={home_2_class}>
                   <img src={dusanstvo_otebe} alt='' />
                 </H2ImageWrapper>
               </Link>  
