@@ -16,7 +16,7 @@ const MenuWrapper = styled.div`
     width: 40px;
     height: 20px;
     position: absolute;
-    right: 80px;
+    right: 60px;
     top: 90px;
     border-radius: 50%;
     span {
@@ -77,7 +77,7 @@ const MenuWrapper = styled.div`
   }
   .bm-cross-button {
     position: absolute;
-    top: 50px !important;
+    top: 70px !important;
     right: 70px !important;
     width: 50px !important;
     height: 50px !important;
