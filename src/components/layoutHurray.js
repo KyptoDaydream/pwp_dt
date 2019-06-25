@@ -20,7 +20,7 @@ const PageWrapper = styled.div`
   background: var(--white);
   transition: 0.4s;
   .hide_social {
-    opacity: 0;
+    display: none;
   }
   .hide_burger {
     display: none;

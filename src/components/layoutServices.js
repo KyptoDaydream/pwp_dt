@@ -56,10 +56,10 @@ const PageWrapper = styled.div`
     z-index: -1;
   }
   .hide_social {
-    opacity: 0;
+    display: none;
   }
   .hide_scroll {
-    opacity: 0;
+    display: none;
   }
   .scroll_icon_class {
     fill: var(--white);

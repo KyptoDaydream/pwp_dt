@@ -41,10 +41,10 @@ const PageWrapper = styled.div`
     z-index: -1;
   }
   .hide_social {
-    opacity: 0;
+    display: none;
   }
   .hide_scroll {
-    opacity: 0;
+    display: none;
   }
   .hide_burger {
     display: none;
