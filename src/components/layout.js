@@ -216,7 +216,7 @@ const ImageWrapper = styled.div`
   }
   @media (max-width: 414px) and (max-height: 800px) {
    height: 440px;
-   width: 210%;
+   width: 130%;
   }
   @media (max-width: 414px) and (max-height: 500px) {
    height: 440px;
@@ -224,7 +224,7 @@ const ImageWrapper = styled.div`
   }
   @media (max-height: 667px) and (max-width: 800px){
    height: 400px;
-   width: 200%;
+   width: 120%;
   }
   @media (max-height: 667px) and (max-width: 500px){
    height: 400px;
