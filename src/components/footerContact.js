@@ -112,6 +112,7 @@ const FooterWrapper = styled.div`
     padding: 25px 25px 0 25px;
     form {
       margin-top: 70px;
+      margin-bottom: 50px;
     }
     p {
       padding: 25px 0 25px 0;
@@ -211,11 +212,14 @@ const BottomWrapper = styled.div`
   }
   @media (max-width: 600px) {
     height: 50px;
+    justify-content: space-between;
+    .filler {
+      display: none;
+    }
     a.social {
       line-height: 24px;
       margin: 10px 10px;
       font-size: 12px;
-      letter-spacing: 0;
     }
   }
 `
@@ -312,7 +316,7 @@ class Footer extends React.Component {
           </a>
           <a
             className="footerLink social"
-            href="https://www.goodreads.com/user/show/69845863-dusan-tatransky"
+            href="https://www.goodreads.com/dusantatransky"
             target="_new"
           >
             GOODREADS

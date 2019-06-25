@@ -59,9 +59,18 @@ const Menu = styled.div`
     color: var(--white);
     font-size: 40px;
     text-align: left;
+    padding-left: 40px;
+    position: relative;
     cursor: pointer !important;
     &:hover {
       -webkit-text-stroke: 0px;
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: '- ';
+      width: 40px;
     }
   }
   .home_1:hover + div {
@@ -89,6 +98,10 @@ const Menu = styled.div`
     margin-top: 70px;
     h1.headlines {
       font-size: 32px;
+      padding-left: 20px;
+      &:before {
+      width: 20px;
+    }
     }
     .home_1:hover + div,
     .home_2:hover + div {
@@ -172,11 +185,14 @@ const BottomWrapper = styled.div`
   }
   @media (max-width: 600px) {
     height: 50px;
+    justify-content: space-between;
+    .filler {
+      display: none;
+    }
     a.social {
       line-height: 24px;
       margin: 10px 10px;
       font-size: 12px;
-      letter-spacing: 0;
     }
   }
 `
@@ -186,13 +202,13 @@ class Footer extends React.Component {
       <FooterWrapper id="trigger_hide_burger">
         <Menu onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
           <Link to={this.props.url_1}>
-            <h1 className="headlines home_1">- {this.props.link_1}</h1>
+            <h1 className="headlines home_1">{this.props.link_1}</h1>
             <H1ImageWrapper>
               <img src={this.props.image_1} alt="" />
             </H1ImageWrapper>
           </Link>
           <Link to={this.props.url_2}>
-            <h1 className="headlines home_2">- {this.props.link_2}</h1>
+            <h1 className="headlines home_2">{this.props.link_2}</h1>
             <H2ImageWrapper>
               <img src={this.props.image_2} alt="" />
             </H2ImageWrapper>
@@ -218,7 +234,7 @@ class Footer extends React.Component {
           </a>
           <a
             className="footerLink social"
-            href="https://www.goodreads.com/user/show/69845863-dusan-tatransky"
+            href="https://www.goodreads.com/dusantatransky"
             target="_new"
           >
             GOODREADS
