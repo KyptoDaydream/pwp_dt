@@ -337,7 +337,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Dáš si Mafin?"
             p_width="350px"
             text={[
-              "Ďalšiu príležitosť vyskúšať si marketingové remeslo mi poskytuje kamarátka z gymnázia Zuzka Kotíková. Pomáham jej rozšíriť povedomie o amatérskom filmovom festivale MAFIN tvorbou šalených ",
+              "Ďalšiu príležitosť vyskúšať si marketingové remeslo mi poskytuje kamarátka z gymnázia Zuzka Tóthová. Pomáham jej rozšíriť povedomie o amatérskom filmovom festivale MAFIN tvorbou šalených ",
               <a
                 href="https://vimeo.com/14635095"
                 target="_blank"

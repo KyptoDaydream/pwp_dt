@@ -222,6 +222,11 @@ const BottomWrapper = styled.div`
       font-size: 12px;
     }
   }
+  @media (max-width: 340px) {
+    a.social {
+      font-size: 9px;
+    }
+  }
 `
 const BlokLeft = styled.div`
   position: relative;

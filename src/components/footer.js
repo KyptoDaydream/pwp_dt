@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 
 import hand from "../images/hand.gif"
 
-
 const FooterWrapper = styled.div`
   display: block;
   width: 100vw;
@@ -71,7 +70,7 @@ const Menu = styled.div`
       position: absolute;
       left: 0;
       display: inline-block;
-      content: '- ';
+      content: "- ";
       width: 40px;
     }
   }
@@ -102,8 +101,8 @@ const Menu = styled.div`
       font-size: 32px;
       padding-left: 20px;
       &:before {
-      width: 20px;
-    }
+        width: 20px;
+      }
     }
     .home_1:hover + div,
     .home_2:hover + div {
@@ -195,6 +194,11 @@ const BottomWrapper = styled.div`
       line-height: 24px;
       margin: 10px 10px;
       font-size: 12px;
+    }
+  }
+  @media (max-width: 340px) {
+    a.social {
+      font-size: 9px;
     }
   }
 `

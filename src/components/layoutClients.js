@@ -217,7 +217,7 @@ const LayoutClients = ({ children }) => (
               pozornosť čakajú v poradí.
             </p>
             <h3>Počet klientov:</h3>
-            <h1 className="content_highligh" id="trigger_hide_social">4/9</h1>
+            <h1 className="content_highligh" id="trigger_hide_social">5/9</h1>
           </BlokRight>
         </TextWrapper>
         <Footer
