@@ -581,7 +581,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Hodiny pre Prezidenta"
             p_width="350px"
             text={[
-              "S parťákom zo štúdií manažmentu Petrom Kováčom spoluvytváram Hodiny pre prezidenta - virálny anti-darček. Spočíva v online odpočítavaní do konca funkčného obdobia prezidenta Gašparoviča. Webstránka získa počas 2 týždňov 25 000 unikátnych návštevníkov a množstvo neplatenej mediálnej pozornosti. Nápad sa rozšíri aj do Čiech, kde následne spustia vlastné ",
+              "S parťákom zo štúdií manažmentu Petrom Macinským spoluvytváram Hodiny pre prezidenta - virálny anti-darček. Spočíva v online odpočítavaní do konca funkčného obdobia prezidenta Gašparoviča. Webstránka získa počas 2 týždňov 25 000 unikátnych návštevníkov a množstvo neplatenej mediálnej pozornosti. Nápad sa rozšíri aj do Čiech, kde následne spustia vlastné ",
               <a
                 href="http://www.zemancountdown.cz/"
                 target="_blank"
