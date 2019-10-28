@@ -19,22 +19,23 @@ import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import arrow from "../images/arrow.svg"
+import home_text from "../images/home_text.png"
 
-const PageWrapper = styled.div `
+const PageWrapper = styled.div`
   width: 100vw;
   position: relative;
   overflow: hidden;
   h1.headlines {
     cursor: pointer !important;
     &:hover {
-        color: var(--black);
-        -webkit-text-stroke: 0px; 
+      color: var(--black);
+      -webkit-text-stroke: 0px;
     }
     &.home_1_hovered,
     &.home_2_hovered {
       opacity: 1 !important;
       color: var(--orange);
-      -webkit-text-stroke: 1px var(--white); 
+      -webkit-text-stroke: 1px var(--white);
     }
   }
   @media (min-width: 1600px) {
@@ -51,7 +52,7 @@ const PageWrapper = styled.div `
       font-size: 9vw;
       &:after {
         position: absolute;
-        content: '';
+        content: "";
         display: inline-block;
         right: -30px;
         top: 5px;
@@ -73,7 +74,7 @@ const PageWrapper = styled.div `
     }
   }
 `
-const WelcomeWrapper = styled.div `
+const WelcomeWrapper = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -85,7 +86,7 @@ const WelcomeWrapper = styled.div `
     align-items: flex-start;
   }
 `
-const BurgerWrapper = styled.div `
+const BurgerWrapper = styled.div`
   position: fixed;
   width: 100vw;
   height: 30px;
@@ -155,19 +156,19 @@ const Menu = styled.div`
     }
   }
   @media (max-width: 800px) {
-   .link_wrapper {
-     margin-top: 80px;
-   }
+    .link_wrapper {
+      margin-top: 80px;
+    }
   }
   @media (max-height: 667px) {
-   .link_wrapper {
-     margin-top: 40px;
-   }
+    .link_wrapper {
+      margin-top: 40px;
+    }
   }
   @media (max-height: 568px) {
-   .link_wrapper {
-     margin-top: 30px;
-   }
+    .link_wrapper {
+      margin-top: 30px;
+    }
   }
 `
 
@@ -215,42 +216,42 @@ const ImageWrapper = styled.div`
     }
   }
   @media (max-width: 800px) {
-   bottom: 0;
-   left: 0;
-   height: 500px;
-   width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
   }
   @media (max-width: 500px) {
-   height: 500px;
-   width: 100%;
+    height: 500px;
+    width: 100%;
   }
   @media (max-width: 414px) and (max-height: 800px) {
-   height: 440px;
-   width: 130%;
+    height: 440px;
+    width: 130%;
   }
   @media (max-width: 414px) and (max-height: 500px) {
-   height: 440px;
-   width: 100%;
+    height: 440px;
+    width: 100%;
   }
-  @media (max-height: 667px) and (max-width: 800px){
-   height: 400px;
-   width: 120%;
+  @media (max-height: 667px) and (max-width: 800px) {
+    height: 400px;
+    width: 120%;
   }
-  @media (max-height: 667px) and (max-width: 500px){
-   height: 400px;
-   width: 100%;
+  @media (max-height: 667px) and (max-width: 500px) {
+    height: 400px;
+    width: 100%;
   }
   @media (max-width: 370px) {
-   height: 370px;
-   width: 100%;
+    height: 370px;
+    width: 100%;
   }
   @media (max-width: 330px) {
-   height: 330px;
-   width: 100%;
+    height: 330px;
+    width: 100%;
   }
   @media (max-width: 330px) and (max-height: 530px) {
-   height: 290px;
-   width: 100%;
+    height: 290px;
+    width: 100%;
   }
   @media (min-width: 1400px) {
     width: 800px;
@@ -332,81 +333,121 @@ const Headline = styled.p`
     margin-top: 160px;
   }
 `
+const WelcomeText = styled.div`
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url(${home_text});
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+`
 
 class Layout extends React.Component {
-  constructor(){
-    super();
+  constructor() {
+    super()
     this.state = {
-        isHovered: false,
-        isHovered_1: false,
-        isHovered_2: false
-    };
-    this.handleLeave_1 = this.handleLeave_1.bind(this);
-    this.handleLeave_2 = this.handleLeave_2.bind(this);
-    this.handleOver_1 = this.handleOver_1.bind(this);
-    this.handleOver_2 = this.handleOver_2.bind(this);
+      isHovered: false,
+      isHovered_1: false,
+      isHovered_2: false,
+    }
+    this.handleLeave_1 = this.handleLeave_1.bind(this)
+    this.handleLeave_2 = this.handleLeave_2.bind(this)
+    this.handleOver_1 = this.handleOver_1.bind(this)
+    this.handleOver_2 = this.handleOver_2.bind(this)
   }
-  handleOver_1(){
+  handleOver_1() {
     this.setState(prevState => ({
-        isHovered: true,
-        isHovered_1: true
-    }));
+      isHovered: true,
+      isHovered_1: true,
+    }))
   }
-  handleOver_2(){
+  handleOver_2() {
     this.setState(prevState => ({
-        isHovered: true,
-        isHovered_2: true
-    }));
+      isHovered: true,
+      isHovered_2: true,
+    }))
   }
-  handleLeave_1(){
+  handleLeave_1() {
     this.setState(prevState => ({
-        isHovered: false,
-        isHovered_1: false
-    }));
+      isHovered: false,
+      isHovered_1: false,
+    }))
   }
-  handleLeave_2(){
+  handleLeave_2() {
     this.setState(prevState => ({
-        isHovered: false,
-        isHovered_2: false
-    }));
+      isHovered: false,
+      isHovered_2: false,
+    }))
   }
-  render () {
-    const imageClass = this.state.isHovered ? "image_hide" : "";
-    const textClass = this.state.isHovered ? "text_hide" : "";
-    const link_wrapper_class = this.state.isHovered ? "link_wrapper link_wrapper_hovered" : "link_wrapper";
-    const home_1_class = this.state.isHovered_1 ? "home_1_img hovered" : "home_1_img";
-    const home_2_class = this.state.isHovered_2 ? "home_2_img hovered" : "home_2_img";
-    const home_1_text = this.state.isHovered_1 ? "headlines home_1 home_1_hovered" : "headlines home_1";
-    const home_2_text = this.state.isHovered_2 ? "headlines home_2 home_2_hovered" : "headlines home_2";
+  render() {
+    const imageClass = this.state.isHovered ? "image_hide" : ""
+    const textClass = this.state.isHovered ? "text_hide" : ""
+    const link_wrapper_class = this.state.isHovered
+      ? "link_wrapper link_wrapper_hovered"
+      : "link_wrapper"
+    const home_1_class = this.state.isHovered_1
+      ? "home_1_img hovered"
+      : "home_1_img"
+    const home_2_class = this.state.isHovered_2
+      ? "home_2_img hovered"
+      : "home_2_img"
+    const home_1_text = this.state.isHovered_1
+      ? "headlines home_1 home_1_hovered"
+      : "headlines home_1"
+    const home_2_text = this.state.isHovered_2
+      ? "headlines home_2 home_2_hovered"
+      : "headlines home_2"
     return (
       <PageWrapper>
         <BurgerWrapper>
-          <Burger burder_color="burger_white"/>
+          <Burger burder_color="burger_white" />
         </BurgerWrapper>
-        <h1 className="name">Dušan Tatranský</h1>
+        <WelcomeText />
         <WelcomeWrapper>
           <Avatar />
           <Menu>
-            <Headline className={textClass}>Som Online Bodyguard z ďalekého východu ... z Košíc</Headline>
+            <Headline className={textClass}>
+              Som Online Bodyguard z ďalekého východu ... z Košíc
+            </Headline>
             <div className={link_wrapper_class}>
               <Link to="/oMne">
-                <h1 className={home_1_text} onMouseOver={this.handleOver_1} onMouseEnter={this.handleOver_1} onMouseMove={this.handleOver_1} onMouseLeave={this.handleLeave_1}>Prečítaj si o mne</h1>
+                <h1
+                  className={home_1_text}
+                  onMouseOver={this.handleOver_1}
+                  onMouseEnter={this.handleOver_1}
+                  onMouseMove={this.handleOver_1}
+                  onMouseLeave={this.handleLeave_1}
+                >
+                  Prečítaj si o mne
+                </h1>
                 <H1ImageWrapper className={home_1_class}>
-                  <img src={dusanstvo_omne} alt='' />
+                  <img src={dusanstvo_omne} alt="" />
                 </H1ImageWrapper>
               </Link>
               <Link to="/oTebe">
-              <h1 className={home_2_text} onMouseOver={this.handleOver_2} onMouseEnter={this.handleOver_2} onMouseMove={this.handleOver_2} onMouseLeave={this.handleLeave_2}>Napíš mi</h1>
+                <h1
+                  className={home_2_text}
+                  onMouseOver={this.handleOver_2}
+                  onMouseEnter={this.handleOver_2}
+                  onMouseMove={this.handleOver_2}
+                  onMouseLeave={this.handleLeave_2}
+                >
+                  Napíš mi
+                </h1>
                 <H2ImageWrapper className={home_2_class}>
-                  <img src={dusanstvo_otebe} alt='' />
+                  <img src={dusanstvo_otebe} alt="" />
                 </H2ImageWrapper>
-              </Link>  
+              </Link>
             </div>
           </Menu>
         </WelcomeWrapper>
-          <ImageWrapper className={imageClass}>
-            <GlitchImage url={dusanstvo_landing}/>
-          </ImageWrapper>
+        <ImageWrapper className={imageClass}>
+          <GlitchImage url={dusanstvo_landing} />
+        </ImageWrapper>
         <Footer />
         <FooterNarrow />
       </PageWrapper>
