@@ -19,7 +19,7 @@ import dusanstvo_landing from "../images/dusanstvo_landing.jpg"
 import dusanstvo_omne from "../images/dusanstvo_omne.jpg"
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import arrow from "../images/arrow.svg"
-import home_text from "../images/home_text.png"
+// import home_text from "../images/home_text.png"
 
 const PageWrapper = styled.div`
   width: 100vw;
@@ -333,6 +333,7 @@ const Headline = styled.p`
     margin-top: 160px;
   }
 `
+/*
 const WelcomeText = styled.div`
   height: 100vh;
   width: 100vw;
@@ -345,7 +346,7 @@ const WelcomeText = styled.div`
   background-position: left center;
   background-size: auto 100%;
 `
-
+*/
 class Layout extends React.Component {
   constructor() {
     super()
@@ -406,7 +407,7 @@ class Layout extends React.Component {
         <BurgerWrapper>
           <Burger burder_color="burger_white" />
         </BurgerWrapper>
-        <WelcomeText />
+        <h1 className="name">Dušan Tatranský</h1>
         <WelcomeWrapper>
           <Avatar />
           <Menu>
