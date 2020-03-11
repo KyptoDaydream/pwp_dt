@@ -16,8 +16,9 @@ const ScrollDownWrapper = styled.div`
   }
   #Layer_3 {
     position: absolute;
-    left: 15px;
-    top: 15px;
+    left: 0px;
+    top: 0px;
+    transform: translate(14px, 14px);
   }
   @keyframes spin {
     100% {
