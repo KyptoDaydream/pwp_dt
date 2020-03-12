@@ -197,8 +197,9 @@ const LayoutClients = ({ children }) => (
           <BlokLeft>
             <p id="trigger_hide_text" className="p1_narrow">
               Tvoju osobnú značku budem chrániť celým Dušanom. Nebudem si brať
-              kredit za tvoje budúce úspechy. Fungujem ako tieňový marketér pre známe osobnosti. 
-              Dôveru svojich klientov si vážim a ich mená a dáta strážim.
+              kredit za tvoje budúce úspechy. Fungujem ako tieňový marketér pre
+              známe osobnosti. Dôveru svojich klientov si vážim a ich mená a
+              dáta strážim.
             </p>
           </BlokLeft>
           <BlokRight id="trigger_orange">
@@ -210,14 +211,18 @@ const LayoutClients = ({ children }) => (
                 <ImageWrapper2 />
               </Scene>
             </Controller>
-            <h1 className="content_highligh" id="trigger_hide_social">Beriem to osobne</h1>
+            <h1 className="content_highligh" id="trigger_hide_social">
+              Beriem to osobne
+            </h1>
             <p id="trigger_hide_scroll" className="p2_narrow">
               Počet mojich klientov je limitovaný, každému sa venujem osobne.
               Viem tak poskytnúť najkvalitnejšiu službu. Ostatní na moju
               pozornosť čakajú v poradí.
             </p>
             <h3>Počet klientov:</h3>
-            <h1 className="content_highligh" id="trigger_hide_social">5/9</h1>
+            <h1 className="content_highligh" id="trigger_hide_social">
+              6/9
+            </h1>
           </BlokRight>
         </TextWrapper>
         <Footer
