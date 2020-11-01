@@ -29,7 +29,7 @@ const PageWrapper = styled.div`
   * {
     color: var(--white);
   }
-  a {
+  a.textLink {
     background-image: linear-gradient(
       120deg,
       var(--orange) 0%,
@@ -312,11 +312,18 @@ const LayoutClients = ({ children }) => (
                 href="https://budhrdina.online/"
                 target="_blanl"
                 rel="noopener noreferrer"
+                className="textLink"
               >
                 BuďHrdina.Online
               </a>{" "}
               alebo bezplatným newsletterom{" "}
-              <a href="https://www.dusantatransky.sk/oTebe/">Dushido</a>.
+              <a
+                href="https://www.dusantatransky.sk/oTebe/"
+                className="textLink"
+              >
+                Dushido
+              </a>
+              .
             </p>
           </BlokRight>
         </TextWrapper>
