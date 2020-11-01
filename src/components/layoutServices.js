@@ -278,8 +278,8 @@ const LayoutClients = ({ children }) => (
               čokoľvek marketingové potrebuješ.
             </p>
             <p className="p3_narrow">
-              Ak chceš vlastniť svoju Identitu, Reputáciu a Publikum, môj postup
-              je nasledovný:
+              Ak chceš svoj freelancing dostať na vyšší level, môj postup je
+              nasledovný:
             </p>
             <h1 className="one">Brand Review</h1>
             <h1 className="two">Brand Storming</h1>
@@ -292,14 +292,18 @@ const LayoutClients = ({ children }) => (
               Brand Monitoring
             </h1>
             <p className="padding_top p4_narrow">
-              Na začiatok ti ponúkam zdarma Brand Review, s reportom rizík a
-              návrhom riešenia, ktoré bude fungovať unikátne pre teba a tvoje
-              možnosti.
+              Ak s freelancingom ešte len začínaš, odporúčam ti začať s mojim
+              freelance kurzom{" "}
+              <a href="https://budhrdina.online/" target="_blanl">
+                BuďHrdina.Online
+              </a>{" "}
+              alebo bezplatným newsletterom
+              <a href="https://www.dusantatransky.sk/oTebe/">Dushido</a>.
             </p>
           </BlokRight>
         </TextWrapper>
         <Footer
-          link_1="Ziskaj brand review"
+          link_1="Začni freelancovať"
           url_1="/oTebe"
           image_1={dusanstvo_otebe}
           link_2="Moji klienti"

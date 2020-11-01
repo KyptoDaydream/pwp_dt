@@ -38,7 +38,7 @@ import aboutme_17 from "../images/aboutme_17.jpg"
 import aboutme_18 from "../images/aboutme_18.jpg"
 import aboutme_19 from "../images/aboutme_19.jpg"
 import aboutme_20 from "../images/aboutme_20.jpg"
-import aboutme_21 from "../images/aboutme_21.jpg"
+import aboutme_22 from "../images/aboutme_22.jpg"
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -200,7 +200,7 @@ const LayoutAboutMe = ({ children }) => (
               >
                 Galejach
               </a>,
-              ". Počítam príklady a drhnem lavice od 8 do 16. Chcem si získať svoju slobodu a ušetriť na osemročnom gymnáziu rok života. Som preto dobrý študent a učím sa aj to, čo ma nebaví. Čo si neuvedomujem je, že poctivé štúdium mi dá užitočnú vlastnosť. Všeobecný prehlaď.",
+              ". Počítam príklady a drhnem lavice od 8 do 16. Chcem si získať svoju slobodu a ušetriť na osemročnom gymnáziu rok života. Som preto dobrý študent a učím sa aj to, čo ma nebaví. Čo si neuvedomujem je, že poctivé štúdium mi dá užitočnú vlastnosť. Všeobecný prehľad.",
             ]}
           />
           <Story
@@ -337,7 +337,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Dáš si Mafin?"
             p_width="350px"
             text={[
-              "Ďalšiu príležitosť vyskúšať si marketingové remeslo mi poskytuje kamarátka z gymnázia Zuzka Tóthová. Pomáham jej rozšíriť povedomie o amatérskom filmovom festivale MAFIN tvorbou šalených ",
+              "Ďalšiu príležitosť vyskúšať si marketingové remeslo mi poskytuje kamarátka z gymnázia Zuzka Kotíková. Pomáham jej rozšíriť povedomie o amatérskom filmovom festivale MAFIN tvorbou šalených ",
               <a
                 href="https://vimeo.com/14635095"
                 target="_blank"
@@ -480,7 +480,7 @@ const LayoutAboutMe = ({ children }) => (
             year="2012"
             h3_top="100px"
             h3_left="150px"
-            headline="Kríza 1"
+            headline="Začiatočnícka kríza"
             p_width="350px"
             text={[
               "Mám holé nohy, preto robím ako foot model. Popri tom pôsobím ako manažér sociálnych sietí, ideamaker a copywriter v agentúre ",
@@ -581,7 +581,7 @@ const LayoutAboutMe = ({ children }) => (
             headline="Hodiny pre Prezidenta"
             p_width="350px"
             text={[
-              "S parťákom zo štúdií manažmentu Petrom Macinským spoluvytváram Hodiny pre prezidenta - virálny anti-darček. Spočíva v online odpočítavaní do konca funkčného obdobia prezidenta Gašparoviča. Webstránka získa počas 2 týždňov 25 000 unikátnych návštevníkov a množstvo neplatenej mediálnej pozornosti. Nápad sa rozšíri aj do Čiech, kde následne spustia vlastné ",
+              "S parťákom zo štúdií manažmentu Petrom Macinským spoluvytváram Hodiny pre prezidenta - virálnu anti-reklamu. Spočíva v online odpočítavaní do konca funkčného obdobia prezidenta Gašparoviča. Webstránka získa počas 2 týždňov 25 000 unikátnych návštevníkov a množstvo neplatenej mediálnej pozornosti. Nápad sa rozšíri aj do Čiech, kde následne spustia vlastné ",
               <a
                 href="http://www.zemancountdown.cz/"
                 target="_blank"
@@ -716,7 +716,7 @@ const LayoutAboutMe = ({ children }) => (
             year="2014"
             h3_top="100px"
             h3_left="150px"
-            headline="Kríza 2"
+            headline="Kríza Rastu"
             p_width="350px"
             text={[
               "Po neúspechu startupu utŕžim ďalšiu ranu v podobe odchodu najväčšieho klienta, Tabačky Kulturfabrik, ktorá ide do rekonštrukcie. Nesiem zodpovednosť za 2 zamestnancov a preto skúšam zákazky outsourcovať. Spúšťam direct mailingovú kampaň na fiktívnu reklamnú súťaž Grand3x. Cesta ma opäť vedie do Bratislavy.",
@@ -887,7 +887,7 @@ const LayoutAboutMe = ({ children }) => (
             year="2018"
             h3_top="100px"
             h3_left="150px"
-            headline="Online Bodyguard"
+            headline="Brand Maker"
             p_width="350px"
             text={[
               "Dopracujem sa k tomu, že na to, aby som mohol využívať svoje silné stránky a robiť čo ma baví zo všetkého najviac, si musím vytvoriť vlastnú pracovnú pozíciu. Začínam sa špecializovať na osobnú značku, ktorá ma ochránila pri každej kariérnej zmene. Online identita a reputácia je jednou z mála vecí, ktoré môžem mať ako freelancer v podnikaní pod kontrolou.",
@@ -905,22 +905,22 @@ const LayoutAboutMe = ({ children }) => (
             bottom="auto"
             width="390px"
             height="590px"
-            image={aboutme_21}
+            image={aboutme_22}
             h4_top="100px"
             h4_left="300px"
             year="2019"
             h3_top="100px"
             h3_left="450px"
-            headline="Tvoja Gorila"
+            headline="Happy Freelancer"
             p_width="350px"
             text={[
-              "Mám konečne plnú slobodu. Robím s ľuďmi, s ktorými ma baví robiť. Robím kedy ma to baví. Robím tak ako verím, že je to správne, a robím to čo verím, že je správne a potrebné. Plne podľa vlastných predstáv a presvedčenia. A moji klienti, nakoľko sú tiež freelanceri, to rešpektujú.",
+              "Mám konečne plnú slobodu. Robím s ľuďmi, s ktorými ma baví robiť. Robím kedy ma to baví. A robím to, čo verím, že je potrebné. Plne podľa vlastných predstáv a presvedčenia. A moji klienti, nakoľko sú tiež freelanceri, to rešpektujú.",
             ]}
           />
         </TextWrapper>
         <Trigger id="trigger_hide_social" />
         <Footer
-          link_1="Napíš mi o sebe"
+          link_1="Pridaj sa k nám"
           url_1="/oTebe"
           image_1={dusanstvo_otebe}
           link_2="S čím ti viem pomôcť"

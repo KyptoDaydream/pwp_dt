@@ -162,12 +162,12 @@ const BlokRight = styled.div`
 
   @media (max-width: 500px) {
     img {
-    width: 500px;
-    position: relative;
-    margin-left: -200px;
-    padding-top: 450px;
-    transition: 0.6s;
-    opacity: 0;
+      width: 500px;
+      position: relative;
+      margin-left: -200px;
+      padding-top: 450px;
+      transition: 0.6s;
+      opacity: 0;
     }
     img.reveal_image {
       opacity: 1;
@@ -231,20 +231,21 @@ const LayoutAboutYou = ({ children }) => (
           <h2>
             Si opica!
             <br />
-            <br /> A ja budem tvoj profesionálny follower.
+            <br />A ja budem tvoj marketingový sensei, ktorý ti ukáže cestu.
           </h2>
           <ImageWrapper>
             <img src={dusanstvo_otebe} alt="Dusan Tatransky Follower" />
           </ImageWrapper>
           <h2 className="second_paragraph" id="trigger_hide_text">
-            Chcem spoznať viac zaujímavých ľudí, ktorí sa nechcú opičiť.
+            Chceš byť sám sebe pánom a neopičiť sa po iných?
           </h2>
           <BlokRight id="trigger_hide_text">
             <p id="trigger_reveal_image_1" className="p1_narrow">
-              Nezáleží na tom, či si umelec, freelancer, influencer, alebo známa
-              osobnosť. Podstatné je, že robíš čo ťa baví a chceš, aby ťa v
-              online svete bolo vidieť a počuť. Uvedomuješ si akým spôsobom
-              chceš byť v online svete viditeľný a akým zas neviditeľný?
+              Život je príliš krátky na to, aby si sedel v práci, ktorá ťa
+              nebaví. Nezáleží na tom, či chceš byť umelec, freelancer alebo
+              influencer. Podstatné je, že sa chceš živiť tým čo ťa baví. A
+              preto chceš, aby ťa v online svete bolo vidieť a počuť. Problém
+              je, že tvoj aktuálny marketing, ktorý si niekde odkukal, smrdí.
             </p>
             <Controller globalSceneOptions={{ triggerHook: "onCenter" }}>
               <Scene
@@ -259,20 +260,26 @@ const LayoutAboutYou = ({ children }) => (
               </Scene>
             </Controller>
             <p className="padding_top p2_narrow">
-              Aktuálne vo svete prebieha <strong>boj o pozornosť</strong>,
-              ktorého súčasťou je stále viac ľudí, ako si ty, ale aj ...
+              Ak chceš začať podnikať na voľnej nohe, musíš si uvedomiť, že keď
+              budeš robiť to čo všetci ostatní, neprinesieš ľuďom žiadnu pridanú
+              hodnotu a zanikneš v dave. Aby si využil svoj jedinečný potenciál
+              naplno, a zaistil si stabilné miesto medzi freelancermi,
+              potrebuješ niekoho, kto si tým už prešiel. Pomôžem ti prekonať
+              prekážky na tvojej ceste k samostatnosti tým, že ti budem
+              pravidelne zasielať email so všetkým, čo by si si mal premyslieť a
+              vyskúšať. Napríklad veci ako:
             </p>
-            <h1>veľké značky</h1>
-            <h1>hoaxy</h1>
-            <h1>fake news</h1>
-            <h1>hackeri</h1>
-            <h1>boti</h1>
-            <h1>trollovia</h1>
+            <h1>BIZNIS IDEA</h1>
+            <h1>BIZNIS PLÁN</h1>
+            <h1>CENOTVORBA</h1>
+            <h1>PONUKA</h1>
+            <h1>PUBLIKUM</h1>
+            <h1>PRÁVNE VECI</h1>
             <p className="padding_top p3_narrow">
-              Preto je potrebné, aby si sa prezentoval premyslene, a strážil si
-              svoje súkromie. S mojou pomocou budeš svoju osobnú značku,
-              reputáciu a publikum vlastniť. Ja ich budem pre teba strážiť,
-              pravidelne monitorovať a navrhovať aktualizácie.
+              Nepoužívam žiadne zaručené návody. Inšpirácia formou pravidelného
+              emailu, ktorú ti ponúkam, spočíva v hľadaní funkčnosti a riešenia
+              tvojej unikátnej situácie. 2x za mesiac ťa tak posuniem o krok
+              bližšie k slobode.
             </p>
             <Trigger id="trigger_hide_social" />
           </BlokRight>

@@ -264,14 +264,13 @@ class Footer extends React.Component {
       <FooterWrapper id="trigger_hide_burger">
         <TextWrapper>
           <h2 className="h2_narrow" id="contactForm">
-            Na začiatok zanalyzujem tvoju online stopu a vypracujem ti zdarma
-            Brand Review.
+            Chcem spoznať viac zaujímavých ľudí, ktorí sa nechcú opičiť.
           </h2>
           <BlokLeft>
             <p>
-              Nepoužívam žiadne zaručené návody. Zanalyzujem tvoju situáciu a
-              prídem s riešením, ktoré bude fungovať unikátne pre teba a tvoje
-              možnosti.{" "}
+              Staň sa mojim spolupútnikom. Každý mesiac v rovnaký deň 13. a 26.
+              ti zašlem zdarma Dushido, pravidelný email o mojej ceste
+              freelancingu, o práci a živote online.
             </p>
           </BlokLeft>
           <form

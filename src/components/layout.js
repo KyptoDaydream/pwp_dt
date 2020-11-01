@@ -412,7 +412,7 @@ class Layout extends React.Component {
           <Avatar />
           <Menu>
             <Headline className={textClass}>
-              Som Online Bodyguard z ďalekého východu ... z Košíc
+              Som Marketing Ninja z ďalekého východu ... z Košíc
             </Headline>
             <div className={link_wrapper_class}>
               <Link to="/oMne">
@@ -437,7 +437,7 @@ class Layout extends React.Component {
                   onMouseMove={this.handleOver_2}
                   onMouseLeave={this.handleLeave_2}
                 >
-                  Napíš mi
+                  O tebe
                 </h1>
                 <H2ImageWrapper className={home_2_class}>
                   <img src={dusanstvo_otebe} alt="" />

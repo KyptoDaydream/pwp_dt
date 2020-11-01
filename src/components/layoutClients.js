@@ -216,8 +216,8 @@ const LayoutClients = ({ children }) => (
             </h1>
             <p id="trigger_hide_scroll" className="p2_narrow">
               Počet mojich klientov je limitovaný, každému sa venujem osobne.
-              Viem tak poskytnúť najkvalitnejšiu službu. Ostatní na moju
-              pozornosť čakajú v poradí.
+              Viem tak poskytnúť najkvalitnejšiu službu. Ostatným sa venujem cez{" "}
+              <a href="https://www.dusantatransky.sk/oTebe/">email</a>.
             </p>
             <h3>Počet klientov:</h3>
             <h1 className="content_highligh" id="trigger_hide_social">
@@ -226,7 +226,7 @@ const LayoutClients = ({ children }) => (
           </BlokRight>
         </TextWrapper>
         <Footer
-          link_1="Staň sa mojim klientom"
+          link_1="Staň sa mojim spolupútnikom"
           url_1="/oTebe"
           image_1={dusanstvo_otebe}
           link_2="Moje zásady"
