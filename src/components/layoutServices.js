@@ -29,6 +29,20 @@ const PageWrapper = styled.div`
   * {
     color: var(--white);
   }
+  a {
+    background-image: linear-gradient(
+      120deg,
+      var(--orange) 0%,
+      var(--orange) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 7%;
+    background-position: 0 100%;
+    transition: 0.3s linear;
+    &:hover {
+      background-size: 100% 20%;
+    }
+  }
   .bm-burger-bars {
     background-image: linear-gradient(var(--white), var(--white));
   }
@@ -294,10 +308,14 @@ const LayoutClients = ({ children }) => (
             <p className="padding_top p4_narrow">
               Ak s freelancingom ešte len začínaš, odporúčam ti začať s mojim
               freelance kurzom{" "}
-              <a href="https://budhrdina.online/" target="_blanl">
+              <a
+                href="https://budhrdina.online/"
+                target="_blanl"
+                rel="noopener noreferrer"
+              >
                 BuďHrdina.Online
               </a>{" "}
-              alebo bezplatným newsletterom
+              alebo bezplatným newsletterom{" "}
               <a href="https://www.dusantatransky.sk/oTebe/">Dushido</a>.
             </p>
           </BlokRight>
