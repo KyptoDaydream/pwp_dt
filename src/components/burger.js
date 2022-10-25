@@ -11,6 +11,10 @@ import burger_hover from "../images/burger_hover.svg"
 import hand from "../images/monkey_menu.gif"
 
 const MenuWrapper = styled.div`
+  .email_link {
+    color: #f68848;
+    margin-top: 24px;
+  }
   .bm-burger-button {
     z-index: 1000;
     width: 40px;
@@ -250,6 +254,7 @@ class Burger extends React.Component {
           <Link to="/bushido" onClick={this.overBushido}>
             <MenuItem className={bushido_class}>Bushido</MenuItem>
           </Link>
+          <a class="email_link" href="mailto:dusan@tatransky.sk">dusan@tatransky.sk</a>
         </Menu>
       </MenuWrapper>
     )

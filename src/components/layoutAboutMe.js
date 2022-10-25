@@ -38,7 +38,7 @@ import aboutme_17 from "../images/aboutme_17.jpg"
 import aboutme_18 from "../images/aboutme_18.jpg"
 import aboutme_19 from "../images/aboutme_19.jpg"
 import aboutme_20 from "../images/aboutme_20.jpg"
-import aboutme_22 from "../images/aboutme_22.jpg"
+import aboutme_22 from "../images/aboutme_23.jpg"
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -688,7 +688,7 @@ const LayoutAboutMe = ({ children }) => (
             text={[
               "Mám nápad na vytvorenie globálnej siete fotografov pre dopyt po fotkách na mieru. Zakladám vlastný start-up a spúšťam crowdfunding-ovú kampaň pre portál ",
               <a
-                href="https://nonstock.photography/"
+                href="https://www.startitup.sk/nonstock-photography-fotky-site-na-mieru/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -920,7 +920,7 @@ const LayoutAboutMe = ({ children }) => (
         </TextWrapper>
         <Trigger id="trigger_hide_social" />
         <Footer
-          link_1="Pridaj sa k nám"
+          link_1="Buď hrdina online"
           url_1="/oTebe"
           image_1={dusanstvo_otebe}
           link_2="S čím ti viem pomôcť"

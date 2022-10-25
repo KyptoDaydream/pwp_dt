@@ -236,7 +236,7 @@ const LayoutBushido = ({ children }) => (
           <h2>Nevezmeš meno klientovo nadarmo, lež ochraňovať budeš ho</h2>
         </BushidoRule>
         <Footer
-          link_1="Premysli si to aj ty"
+          link_1="Buď hrdina online"
           url_1="/oTebe"
           image_1={dusanstvo_otebe}
           link_2="Ako som sa k tomu dopracoval "

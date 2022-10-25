@@ -30,6 +30,9 @@ const FooterWrapper = styled.div`
     height: 100px;
     margin-bottom: 25px;
   }
+  form .field.dontDisplay {
+    display: none;
+  }
   form .field input:-webkit-autofill,
   form .field input:-webkit-autofill:hover,
   form .field input:-webkit-autofill:focus,
@@ -264,13 +267,11 @@ class Footer extends React.Component {
       <FooterWrapper id="trigger_hide_burger">
         <TextWrapper>
           <h2 className="h2_narrow" id="contactForm">
-            Chcem spoznať viac zaujímavých ľudí, ktorí sa nechcú opičiť.
+          Buď hrdina online
           </h2>
           <BlokLeft>
             <p>
-              Staň sa mojim spolupútnikom. Každý mesiac v rovnaký deň 13. a 26.
-              ti zašlem zdarma Dushido, pravidelný email o mojej ceste
-              freelancingu, o práci a živote online.
+            Pritiahni pohľady ľudí pre ktorých budeš hrdina. Nasledujúcich 12 mesiacov odo mňa do schránky vždy 13-teho dostaneš nový marketingový level. Čím skôr ho splníš, tým skôr sa dostaneš do ďalšieho. Ak prejdeš celým kurzom poskytnem ti zdarma poradenstvo, aby tvoj marketing naozaj šlapal.
             </p>
           </BlokLeft>
           <form
@@ -286,7 +287,7 @@ class Footer extends React.Component {
               <input type="text" name="name" id="name" required />
               <label htmlFor="name">Meno a priezvisko</label>
             </div>
-            <div className="field">
+            <div className="field dontDisplay">
               <input type="text" name="social_link" id="social_link" required />
               <label htmlFor="social_link">Social media profil (link)</label>
             </div>

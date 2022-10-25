@@ -109,6 +109,11 @@ const BlokRight = styled.div`
   p {
     padding: 50px 25px 25px 0;
   }
+  .p2_narrow {
+    a {
+      text-decoration: underline;
+    }
+  }
   @media (max-width: 1000px) {
     width: 100%;
     margin-left: 0;
@@ -121,6 +126,9 @@ const BlokRight = styled.div`
     }
     .p2_narrow {
       padding: 100px 0 100px 0;
+      a {
+        text-decoration: underline;
+      }
     }
   }
 `
@@ -226,7 +234,7 @@ const LayoutClients = ({ children }) => (
           </BlokRight>
         </TextWrapper>
         <Footer
-          link_1="Staň sa mojim spolupútnikom"
+          link_1="Buď hrdina online"
           url_1="/oTebe"
           image_1={dusanstvo_otebe}
           link_2="Moje zásady"

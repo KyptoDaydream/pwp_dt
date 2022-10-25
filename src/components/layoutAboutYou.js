@@ -13,6 +13,7 @@ import ScrollDown from "./scrollDownMail"
 
 import dusanstvo_otebe from "../images/dusanstvo_otebe.jpg"
 import dusanstvo_otebe_2 from "../images/dusanstvo_otebe_2.jpg"
+import dusanstvo_otebe_6 from "../images/dusanstvo_otebe_6.jpg"
 import monkey from "../images/monkey_head.png"
 // import monkey from "../images/monkey.svg"
 
@@ -122,6 +123,12 @@ const BlokRight = styled.div`
     margin-top: 200px;
   }
   .padding_top {
+    padding: 150px 0 0 0;
+  }
+  .padding_topSmall_bottom {
+    padding: 75px 0 150px 0;
+  }
+  .padding_top_bottom {
     padding: 150px 0;
   }
   img {
@@ -241,11 +248,7 @@ const LayoutAboutYou = ({ children }) => (
           </h2>
           <BlokRight id="trigger_hide_text">
             <p id="trigger_reveal_image_1" className="p1_narrow">
-              Život je príliš krátky na to, aby si sedel v práci, ktorá ťa
-              nebaví. Nezáleží na tom, či chceš byť umelec, freelancer alebo
-              influencer. Podstatné je, že sa chceš živiť tým čo ťa baví. A
-              preto chceš, aby ťa v online svete bolo vidieť a počuť. Problém
-              je, že tvoj aktuálny marketing, ktorý si niekde odkukal, smrdí.
+            Život je príliš krátky na to, aby si sedel v práci, ktorá ťa nebaví. Ale živiť sa podnikaním alebo na voľnej nohe si od teba vyžaduje okrem iného robiť aj marketing. A preto si zavítal na moju stránku. Pretože tvoj aktuálny marketing, ktorý si niekde odkukal, nikoho nebaví.
             </p>
             <Controller globalSceneOptions={{ triggerHook: "onCenter" }}>
               <Scene
@@ -260,27 +263,29 @@ const LayoutAboutYou = ({ children }) => (
               </Scene>
             </Controller>
             <p className="padding_top p2_narrow">
-              Ak chceš začať podnikať na voľnej nohe, musíš si uvedomiť, že keď
-              budeš robiť to čo všetci ostatní, neprinesieš ľuďom žiadnu pridanú
-              hodnotu a zanikneš v dave. Aby si využil svoj jedinečný potenciál
-              naplno, a zaistil si stabilné miesto medzi freelancermi,
-              potrebuješ niekoho, kto si tým už prešiel. Pomôžem ti prekonať
-              prekážky na tvojej ceste k samostatnosti tým, že ti budem
-              pravidelne zasielať email so všetkým, čo by si si mal premyslieť a
-              vyskúšať. Napríklad veci ako:
+            Ak si chceš v digitálnom svete zaslúžiť pozornosť, nemôžeš robiť to čo všetci ostatní. Lebo zanikneš v ruchu. Miesto toho si nájdi vlastnú cestu a staň sa v online svete hrdinom, ktorým si vždy chcel byť!
             </p>
-            <h1>BIZNIS IDEA</h1>
-            <h1>BIZNIS PLÁN</h1>
-            <h1>CENOTVORBA</h1>
-            <h1>PONUKA</h1>
-            <h1>PUBLIKUM</h1>
-            <h1>PRÁVNE VECI</h1>
-            <p className="padding_top p3_narrow">
-              Nepoužívam žiadne zaručené návody. Inšpirácia formou pravidelného
-              emailu, ktorú ti ponúkam, spočíva v hľadaní funkčnosti a riešenia
-              tvojej unikátnej situácie. 2x za mesiac ťa tak posuniem o krok
-              bližšie k slobode.
+            <p className="padding_topSmall_bottom p2_narrow">
+            Aby som ti s tým pomohol poskytnem ti úplne zdarma kurz Buď Hrdina Online (300€). Vďaka jeho 12- tim levelom vo svojej komunikácii využiješ guerrilla marketingový prístup a vo svojich divákoch komunikáciou vzbudíš pocity ako:
             </p>
+            <h1>OMG</h1>
+            <h1>WTF</h1>
+            <h1>LOL</h1>
+            <h1>WOW</h1>
+            <h1>PPČ</h1>
+            <p id="trigger_reveal_image_2" className="padding_top p3_narrow">
+            Nepoužívam žiadne zaručené návody. Spolu s príkladmi a praktickými úlohami ti v 12-tich leveloch podám zábavnou formou to najpodstatnejšie, čo potrebuješ vedieť, aby si v marketingu uspel vlastnou cestou.
+            </p>
+            <Scene
+                classToggle="reveal_image"
+                triggerElement="#trigger_reveal_image_2"
+              >
+                <img
+                  src={dusanstvo_otebe_6}
+                  alt=""
+                  id="trigger_reveal_image_2"
+                />
+              </Scene>
             <Trigger id="trigger_hide_social" />
           </BlokRight>
         </TextWrapper>

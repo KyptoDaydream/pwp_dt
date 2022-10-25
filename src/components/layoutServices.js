@@ -256,22 +256,17 @@ const LayoutClients = ({ children }) => (
         </Controller>
         <TextWrapper>
           <h2>
-            Ako online bodybuilder ti pomôžem budovať tvoju osobnú značku.
+            Poskytujem komplexné marketingové služby na voľnej nohe.
           </h2>
           <ImageWrapper>
             <img src={dusanstvo_sluzby} alt="Dusan Tatransky Sluzby" />
           </ImageWrapper>
           <h2 className="second_paragraph" id="trigger_hide_text">
-            Ako online bodyguard ti zas tvoju osobnú značku a reputáciu pomôžem
-            chrániť.
+            Vďaka minimalizmu nájdem riešenie pre každý budget.
           </h2>
           <BlokRight>
             <p id="trigger_hide_text" className="p1_narrow">
-              Som freelancer a robím marketing s dušou. Vďaka tomu, že
-              spolupracujem s inými osvedčenými freelancermi z oblasti dizajnu,
-              produkcie, programovania, IT bezpečnosti a duševného vlastníctva,
-              dokážem pre teba zabezpečiť komplexné brandingové služby a
-              riešenia.
+              Väčšina brandov zakladá svoj marketing na míňaní veľkých peňazí. Kupujú si priestor a vnucujú sa ti do pozornosti. Ale dá sa to aj inak. Tým, že si pozornosť ľudí zaslúžiš. A tu prichádzam na scénu ja. V duchu guerrilla marketingu ti pomôžem využiť efektívne všetko čo máš k dispozícii.
             </p>
           </BlokRight>
           <BlokRight className="margin-top" id="trigger_reveal_image">
@@ -284,51 +279,37 @@ const LayoutClients = ({ children }) => (
               </Scene>
             </Controller>
             <p className="padding_top p2_narrow">
-              Pozriem sa na tvoje čísla a štatistiky, navrhnem ti bezpečnostnú
-              aktualizáciu, zadefinujem tvoju značku, vymyslím ti stratégiu,
-              vytvorím ti logo a webstránku, zabezpečím tvoje publikum, nastavím
-              email marketing, optimalizujem vyhľadávače, monitorujem tvoju
-              reputáciu, nacením spolupráce či zorganizujem event. Proste
-              čokoľvek marketingové potrebuješ.
+            Vytvorím pre teba premyslenú značku, funkčnú stratégiu a hodnotný obsah, ktorými docielime organické šírenie tvojho posolstva a tvorby.
+            </p>
+            <p className="p2_narrow">
+            Vďaka tomu, že spolupracujem s inými osvedčenými freelancermi, dokážem pre teba zabezpečiť komplexné brandingové služby a riešenia. Nadizajnujeme ti logo, naprogramujeme webstránku, zabezpečíme tvoje publikum, nastavíme email marketing, optimalizujeme vyhľadávače, monitorujeme tvoju reputáciu, naceníme spolupráce či zorganizujeme event. Proste čokoľvek marketingové potrebuješ.
             </p>
             <p className="p3_narrow">
-              Ak chceš svoj freelancing dostať na vyšší level, môj postup je
-              nasledovný:
+            Ak chceš svoj brand dostať na vyšší level, môj postup je nasledovný:
             </p>
-            <h1 className="one">Brand Review</h1>
-            <h1 className="two">Brand Storming</h1>
-            <h1 className="three">Brand Book</h1>
-            <h1 className="four">Brand Design</h1>
+            <h1 className="one">Brand Storming</h1>
+            <h1 className="two">Brand Book</h1>
+            <h1 className="three">Brand Design</h1>
+            <h1 className="four">Brand Strategy</h1>
             <h1 className="five" id="trigger_hide_social">
-              Brand Strategy
+              Brand Content
             </h1>
             <h1 className="six" id="trigger_hide_scroll">
-              Brand Monitoring
+              Brand Management
             </h1>
             <p className="padding_top p4_narrow">
-              Ak s freelancingom ešte len začínaš, odporúčam ti začať s mojim
-              freelance kurzom{" "}
+            Ak nemáš k dispozícii financie, ktoré by si do marketingu investoval, ale máš dostatok času, odporúčam ti začať svoju komunikáciu vylepšovať hneď teraz s pomocou môjho kurzu{" "}
               <a
-                href="https://budhrdina.online/"
-                target="_blanl"
-                rel="noopener noreferrer"
+                href="/oTebe"
                 className="textLink"
               >
-                BuďHrdina.Online
-              </a>{" "}
-              alebo bezplatným newsletterom{" "}
-              <a
-                href="https://www.dusantatransky.sk/oTebe/"
-                className="textLink"
-              >
-                Dushido
-              </a>
-              .
+                Buď Hrdina Online
+              </a>.
             </p>
           </BlokRight>
         </TextWrapper>
         <Footer
-          link_1="Začni freelancovať"
+          link_1="Buď hrdina online"
           url_1="/oTebe"
           image_1={dusanstvo_otebe}
           link_2="Moji klienti"
