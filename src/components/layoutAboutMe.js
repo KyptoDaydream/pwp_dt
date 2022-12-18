@@ -893,6 +893,7 @@ const LayoutAboutMe = ({ children }) => (
               "Dopracujem sa k tomu, že na to, aby som mohol využívať svoje silné stránky a robiť čo ma baví zo všetkého najviac, si musím vytvoriť vlastnú pracovnú pozíciu. Začínam sa špecializovať na osobnú značku, ktorá ma ochránila pri každej kariérnej zmene. Online identita a reputácia je jednou z mála vecí, ktoré môžem mať ako freelancer v podnikaní pod kontrolou.",
             ]}
           />
+          
           <Story
             margin_top="100px"
             trigger="#trigger_about_23"
