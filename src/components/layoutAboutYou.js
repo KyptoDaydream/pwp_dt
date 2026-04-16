@@ -265,16 +265,13 @@ const LayoutAboutYou = ({ children }) => (
             <p className="padding_top p2_narrow">
             Ak si chceš v digitálnom svete zaslúžiť pozornosť, nemôžeš robiť to čo všetci ostatní. Lebo zanikneš v ruchu. Miesto toho si nájdi vlastnú cestu a staň sa v online svete hrdinom, ktorým si vždy chcel byť!
             </p>
-            <p className="padding_topSmall_bottom p2_narrow">
-            Aby som ti s tým pomohol poskytnem ti úplne zdarma kurz Buď Hrdina Online (300€). Vďaka jeho 12- tim levelom vo svojej komunikácii využiješ guerrilla marketingový prístup a vo svojich divákoch komunikáciou vzbudíš pocity ako:
-            </p>
             <h1>OMG</h1>
             <h1>WTF</h1>
             <h1>LOL</h1>
             <h1>WOW</h1>
             <h1>PPČ</h1>
             <p id="trigger_reveal_image_2" className="padding_top p3_narrow">
-            Nepoužívam žiadne zaručené návody. Spolu s príkladmi a praktickými úlohami ti v 12-tich leveloch podám zábavnou formou to najpodstatnejšie, čo potrebuješ vedieť, aby si v marketingu uspel vlastnou cestou.
+            Nepoužívam žiadne zaručené návody. Netvorím pravidelne len preto, aby som tvoril. Keď ti už niečo pošlem, bude to stáť za to. Obsah, ktorý zdieľam, ti pomôže pritiahnuť pozornosť ľudí, pre ktorých budeš hrdina.
             </p>
             <Scene
                 classToggle="reveal_image"

@@ -78,6 +78,38 @@ const FooterWrapper = styled.div`
     line-height: 80px;
     transform: translate3d(0, -10px, 0);
   }
+  div ul.actions {
+    margin-top: 25px;
+    position: relative;
+    li {
+      list-style: none;
+      .arrow {
+        display: inline-block;
+        transition: 0.3s;
+        width: 0px;
+        height: 30px;
+        margin-left: 40px;
+        background: url(${arrow});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+      a {
+        font-family: "Raleway", sans-serif;
+        font-weight: 900;
+        padding-left: 25px;
+        height: 100px;
+        background: transparent;
+        font-size: 48px;
+        color: var(--orange);
+        border: 0;
+        cursor: pointer;
+        &:hover + div {
+          width: 45px;
+        }
+      }
+    }
+  }
   form ul.actions {
     margin-top: 25px;
     position: relative;
@@ -267,13 +299,14 @@ class Footer extends React.Component {
       <FooterWrapper id="trigger_hide_burger">
         <TextWrapper>
           <h2 className="h2_narrow" id="contactForm">
-          Buď hrdina online
+          Marketing Circus
           </h2>
           <BlokLeft>
             <p>
-            Pritiahni pohľady ľudí pre ktorých budeš hrdina. Nasledujúcich 12 mesiacov odo mňa do schránky vždy 13-teho dostaneš nový marketingový level. Čím skôr ho splníš, tým skôr sa dostaneš do ďalšieho. Ak prejdeš celým kurzom poskytnem ti zdarma poradenstvo, aby tvoj marketing naozaj šlapal.
+            Marketing Circus je pohľad zvnútra na svet, kde sa značky menia na klaunov. Píšem o tom, čo funguje, čo je bullshit a ako si zachovať vlastnú tvár – aby si v marketingu uspel po svojom.
             </p>
           </BlokLeft>
+          {/* Netlify form 
           <form
             name="contact"
             method="post"
@@ -302,6 +335,15 @@ class Footer extends React.Component {
               </li>
             </ul>
           </form>
+          */}
+          <div className="actions">
+            <ul>
+              <li>
+                <a href="https://marketingcircus.substack.com/" target="_black">Prihlás sa na odber</a>
+                <div className="arrow" />
+              </li>
+            </ul>
+          </div>
         </TextWrapper>
 
         <BottomWrapper>

@@ -39,6 +39,7 @@ import aboutme_18 from "../images/aboutme_18.jpg"
 import aboutme_19 from "../images/aboutme_19.jpg"
 import aboutme_20 from "../images/aboutme_20.jpg"
 import aboutme_22 from "../images/aboutme_23.jpg"
+import aboutme_23 from "../images/aboutme_24.jpg"
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -897,7 +898,7 @@ const LayoutAboutMe = ({ children }) => (
           <Story
             margin_top="100px"
             trigger="#trigger_about_23"
-            triggering_class="dont_trigger"
+            triggering_class="trigger_about_24"
             triggering_class_secondary="dont_trigger"
             triggering_class_image="dont_trigger"
             right="auto"
@@ -916,6 +917,30 @@ const LayoutAboutMe = ({ children }) => (
             p_width="350px"
             text={[
               "Mám konečne plnú slobodu. Robím s ľuďmi, s ktorými ma baví robiť. Robím kedy ma to baví. A robím to, čo verím, že je potrebné. Plne podľa vlastných predstáv a presvedčenia. A moji klienti, nakoľko sú tiež freelanceri, to rešpektujú.",
+            ]}
+          />
+          <Story
+            margin_top="0px"
+            trigger="#trigger_about_24"
+            triggering_class="dont_trigger"
+            triggering_class_secondary="dont_trigger"
+            triggering_class_image="dont_trigger"
+            right="-50px"
+            top="0"
+            left="auto"
+            bottom="auto"
+            width="390px"
+            height="590px"
+            image={aboutme_23}
+            h4_top="0px"
+            h4_left="400px"
+            year="2024"
+            h3_top="100px"
+            h3_left="150px"
+            headline="Promiseo"
+            p_width="350px"
+            text={[
+              "Po dlhšej dobe som sa opäť upísal agentúre – Promiseo. Áno, aj to sa stáva. Má to svoje výhody. Robím len to, čo ma baví, spoznávam nových ľudí a občas ma pustia hodnotiť, čo sa urodilo v reklame.",
             ]}
           />
         </TextWrapper>
